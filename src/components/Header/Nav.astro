@@ -1,0 +1,153 @@
+---
+import ThemeIcon from './ThemeIcon.astro';
+// import smallLogo from '/images/logos/Mulrem_logo_M_blue.svg';
+// import bigLogo from '/images/logos/Mulrem_logo_white.svg';
+interface Menu {
+  label: string;
+  href: string;
+  external?: boolean;
+  badge?: string;
+}
+const leftmenu: Menu[] = [
+  {
+    label: 'Home',
+    href: '/',
+  },
+  {
+    label: 'About',
+    href: '/about',
+  },
+  {
+    label: 'Contact',
+    href: '/contact',
+  },
+];
+
+const rightmenu: Menu[] = [
+  {
+    label: 'Archive',
+    href: '/archive',
+  },
+  {
+    label: 'Projects',
+    href: '/projects',
+    // external: true,
+    // badge: "new",
+  },
+  {
+    label: 'Blog',
+    href: '/blog',
+  },
+];
+const mobilemenu: Menu[] = [...leftmenu, ...rightmenu];
+---
+
+<nav class='p-5'>
+  <div class='flex flex-wrap justify-between md:gap-10 md:flex-nowrap'>
+    <!-- LEFT MENU -->
+    <div
+      class='flex-col items-center justify-start order-1 hidden w-full md:flex md:flex-row md:justify-end md:w-auto md:order-none md:flex-1'
+    >
+      {
+        leftmenu.map((item) => (
+          <a
+            href={item.href}
+            class='px-5 py-2 text-md text-primary-900  hover:text-primary-300 underline decoration-primary-500/20 hover:decoration-primary-500/80 '
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </div>
+    <!-- LOGO & MENU ICON -->
+    <div class='flex w-full justify-around'>
+      <div class='md:hidden'>
+        <ThemeIcon />
+      </div>
+      <a class='hidden md:block w-20' href='/home'>
+        <!-- <img src={smallLogo} alt=' Logo' /> -->
+        <h2>Maria</h2>
+      </a>
+      <a class='md:hidden w-32' href='/home'>
+        <!-- <img src={bigLogo} alt=' Logo' /> -->
+        <h1>M</h1>
+      </a>
+      <!-- <a class='w-28 dark:hidden' href='/'>
+      <img  src={smallLogo} alt=' Logo' />
+      </a> -->
+      <!-- 
+      <a class='hidden w-28 dark:block' href='/'>
+      <img src={bigLogo} alt='Logo' />
+      </a> -->
+
+      <button
+        id='menu'
+        aria-label='Toggle Menu'
+        class='md:hidden text-neutral-500 rounded-md focus:text-primary-500 focus:outline-none dark:text-primary-300'
+      >
+        <svg
+          class='w-8 h-8 fill-current'
+          xmlns='http://www.w3.org/2000/svg'
+          viewBox='0 0 24 24'
+        >
+          <path
+            class='navmenu-toggle'
+            fill-rule='evenodd'
+            d='M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z'
+          ></path>
+
+          <path
+            class='navmenu-toggle hidden'
+            fill-rule='evenodd'
+            clip-rule='evenodd'
+            d='M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z'
+          ></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- RIGHT MENU -->
+    <div
+      class='flex-col items-center justify-start order-2 hidden w-full md:flex md:flex-row md:w-auto md:flex-1 md:order-none'
+    >
+      {
+        rightmenu.map((item) => (
+          <a
+            href={item.href}
+            class='px-5 py-2 text-md text-primary-900  hover:text-primary-300 underline decoration-primary-500/20 hover:decoration-primary-500/80 '
+          >
+            {item.label}
+          </a>
+        ))
+      }
+      <ThemeIcon class='hidden md:inline-flex' />
+    </div>
+  </div>
+  <!-- PHONE MENU -->
+  <div class='navmenu-toggle hidden'>
+    <div
+      class='flex flex-col items-center justify-start order-2 w-full md:hidden'
+    >
+      {
+        mobilemenu.map((item, index) => (
+          <a
+            href={item.href}
+            class='px-5 py-2  text-primary-700 underline decoration-neutral-500/20 '
+            target={item.external ? '_blank' : ''}
+            rel={item.external ? 'noopener' : ''}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</nav>
+<script is:inline>
+  const menuButton = document.getElementById('menu');
+  menuButton.addEventListener('click', () => {
+    [...document.querySelectorAll('.navmenu-toggle')].forEach((Element) => {
+      Element.classList.toggle('hidden');
+    });
+  });
+</script>
