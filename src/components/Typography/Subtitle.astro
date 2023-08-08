@@ -1,0 +1,10 @@
+---
+export interface Props {
+  subTitle: string;
+}
+const { subTitle } = Astro.props;
+---
+
+<p class='my-2 capitalize font-medium text-gray-700 dark:text-gray-300 text-lg'>
+  {subTitle}
+</p>

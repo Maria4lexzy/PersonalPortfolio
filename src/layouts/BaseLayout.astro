@@ -22,7 +22,9 @@ const {
     seoTitle={seoTitle}
     seoDescription={seoDescription}
   />
-  <body class='bg-white dark:bg-slate-800 text-slate-800 dark:text-white'>
+  <body
+    class='bg-pink-100 dark:bg-slate-950/90 text-neutral-700 dark:text-cyan-500'
+  >
     <Nav />
     <slot />
 
@@ -32,7 +34,9 @@ const {
       body {
         font-family: 'REM', sans-serif;
         min-height: 100vh;
+        min-width: 100%;
       }
     </style>
-  </body>
+  </body><!--     class='bg-gradient-to-br from-pink-300 to-blue-300 dark:bg-gradient-to-br dark:from-pink-800 dark:via-pink-700 dark:to-blue-900 text-slate-800 dark:text-gray-200'
+ -->
 </html>

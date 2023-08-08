@@ -1,0 +1,27 @@
+---
+import SkillBar from './SkillBar';
+import Subtitle from '../Typography/Subtitle.astro';
+---
+
+<div class='flex flex-col'>
+  <Subtitle subTitle='Web development' />
+
+  <div class='flex flex-wrap gap-8'>
+    <SkillBar
+      client:only='react'
+      iconSrc='/images/astro.svg'
+      skillName='Astro'
+      progress={4}
+      skillUrl='https://astro.build/'
+      backgroundColor=''
+    />
+    <SkillBar
+      client:only='react'
+      iconSrc='/images/react.svg'
+      skillName='ReactJS'
+      progress={4}
+      skillUrl='https://react.dev/'
+      backgroundColor=''
+    />
+  </div>
+</div>

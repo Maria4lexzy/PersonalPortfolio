@@ -1,0 +1,76 @@
+$transition-cubic: cubic-bezier(0.1, 0.6, 0.2, 0.5);
+
+$transition-cubic-fast: cubic-bezier(0.19, 1, 0.22, 1);
+
+::-webkit-scrollbar {
+  width: 6px;
+  background: #acb7e1;
+  &-thumb {
+    background: #4577af;
+    border-radius: 10px;
+  }
+}
+
+.cubic-transition {
+  transition: 0.8s $transition-cubic;
+}
+.glass {
+  /* From https://css.glass */
+  /* From https://css.glass */
+  --header-bg: rgba(2, 14, 39, 0.2);
+  --body-bg: rgba(2, 14, 39, 0.3);
+  --button-bg: rgba(2, 14, 39, 0.2);
+  --button-bg-hover: rgba(255, 255, 255, 0.1);
+  --button-highlight-bg: rgba(2, 14, 39, 0.5);
+
+  border: 1px solid transparent;
+  background-color: var(--button-bg);
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+  border: 1px solid rgb(255 255 255 / 13%);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  transition: all 0.8s $transition-cubic-fast;
+  will-change: auto;
+  z-index: 2;
+
+  &:hover {
+    box-shadow: 0px 10px 25px rgba(4, 37, 100, 0.12);
+    border-radius: 4px;
+    background-color: var(--button-bg-hover);
+    border-color: rgba(255, 255, 255, 0.15);
+    z-index: 5;
+    transform: scale(1.1);
+  }
+}
+
+.glass-2 {
+  //   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+  box-shadow: 0px 6px 12px -3px rgba(228, 226, 226, 0.1);
+  backdrop-filter: blur(1rem);
+  border: 1px solid rgba(243, 243, 243, 0.12);
+
+  //   border: 1px solid rgba(255, 255, 255, 0.25);
+  //   border-top: 1px solid rgba(255, 255, 255, 0.5);
+  //   border-left: 1px solid rgba(255, 255, 255, 0.5);
+
+  transition: all 0.4s $transition-cubic;
+  &:hover {
+    box-shadow: 0px 12px 24px -3px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    background-color: rgba(192, 181, 181, 0.12);
+    border-color: rgba(255, 255, 255, 0.15);
+    z-index: 5;
+    transform: scale(1.02);
+  }
+}
+
+.myBorder {
+  border: 2px solid purple;
+}
