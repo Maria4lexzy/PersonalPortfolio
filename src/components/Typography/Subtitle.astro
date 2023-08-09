@@ -5,6 +5,11 @@ export interface Props {
 const { subTitle } = Astro.props;
 ---
 
-<p class='my-2 capitalize font-medium text-gray-700 dark:text-gray-300 text-lg'>
-  {subTitle}
-</p>
+<div class='flex flex-row gap-2 items-center'>
+  <p
+    class='my-2 capitalize font-medium text-gray-700 dark:text-gray-300 text-lg'
+  >
+    {subTitle}
+  </p>
+  <div class='bg-gray-200 dark:bg-gray-600/50 h-px grow'></div>
+</div>

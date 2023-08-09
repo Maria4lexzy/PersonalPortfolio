@@ -1,15 +1,15 @@
 ---
 import Languages from '@components/Languages/Languages.astro';
+import Title from '@components/Typography/Title.astro';
 ---
 
 <div
-  class='backdrop-filter backdrop-blur-md bg-opacity-10 w-3/4 mx-auto p-8 rounded-2xl shadow-md'
+  class='my-4 backdrop-filter backdrop-blur-lg bg-neutral-50 dark:bg-slate-950/95 w-3/4 mx-auto p-8 rounded-2xl shadow-xl'
 >
-  <h1 class='tracking-wide uppercase'>Skills</h1>
+  <Title title='languages' />
 
   <div class='flex flex-col gap-8'>
     <Languages />
-    <div class='bg-gray-200 dark:bg-gray-600 h-px w-full'></div>
   </div>
   <!-- Use the "border" and "border-t" utility classes to create a horizontal rule -->
 </div>

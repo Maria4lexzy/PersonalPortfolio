@@ -3,7 +3,12 @@ module.exports = {
 	darkMode: ['class'],
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {},
+		extend: {
+
+			listStyleImage: {
+				checkmark: 'url("/images/checkmark.svg")',
+			},
+		},
 	},
 	plugins: [],
 }

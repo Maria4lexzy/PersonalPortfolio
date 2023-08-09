@@ -1,0 +1,195 @@
+---
+import PlainPill from '@components/DomElements/PlainPill';
+import Title from '@components/Typography/Title.astro';
+import SDUCourses from '@data/SDUCourses';
+---
+
+<div
+  id='exp'
+  class='my-4 flex flex-col md:flex-row md:gap-4 backdrop-filter backdrop-blur-lg bg-neutral-50 dark:bg-slate-950/95 w-3/4 mx-auto p-8 rounded-2xl shadow-xl'
+>
+  <div class='flex flex-col gap-4'>
+    <Title title='Experience' />
+
+    <!-- Experience 1 -->
+    <div class='flex flex-row gap-4'>
+      <div>
+        <img
+          src='/images/startupCentral.png'
+          alt='Startup Central Logo'
+          decoding='async'
+          loading='lazy'
+          class='rounded-lg h-12 w-auto'
+        />
+      </div>
+      <div class='flex flex-col gap-1'>
+        <h1 class='tracking-wide capitalize text-xl font-semibold'>
+          Startup Central - Dit iværksætternetværk Denmark
+        </h1>
+        <p>Software Developer Intern</p>
+        <span class=''>February 2020 - July 2020</span>
+      </div>
+    </div>
+
+    <div>
+      <ul class='list-disc ml-6'>
+        <li class='mb-4'>
+          Acquired proficiency in Umbraco and actively contributed to web
+          development projects.
+        </li>
+        <li class='mb-4'>
+          Worked in an agile team environment, participating in sprint stand-ups
+          and collaborating with cross-functional teams.
+        </li>
+        <li class='mb-4'>
+          Engaged in technical discussions and contributed innovative ideas to
+          enhance technical solutions.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Experience 2 -->
+    <div class='flex flex-row gap-4'>
+      <div>
+        <img
+          src='/images/Biamp-Logo.jpg'
+          alt='Biamp Logo'
+          decoding='async'
+          loading='lazy'
+          class='rounded-lg h-12 w-auto'
+        />
+      </div>
+      <div class='flex flex-col gap-1'>
+        <h1 class='tracking-wide capitalize text-xl font-semibold'>
+          Biamp Denmark
+        </h1>
+        <p>Juinor Hardware Tester</p>
+        <span class=''>February 2017 - August 2018</span>
+      </div>
+    </div>
+
+    <div>
+      <ul class='list-disc ml-6'>
+        <li class='mb-4'>
+          Tested new releases of the company's software and ensured seamless
+          integration with hardware.
+        </li>
+        <li class='mb-4'>
+          Assisted in the assembly of electronic devices, contributing to the
+          production of high-quality products.
+        </li>
+        <li class='mb-4'>
+          Collaborated with cross-functional teams to identify areas of
+          improvement and enhance overall product performance.
+        </li>
+      </ul>
+    </div>
+
+    <!-- More experience sections can be added similarly -->
+
+    <div class='bg-gray-200 dark:bg-gray-600/50 h-px w-full my-4'></div>
+
+    <!-- Experience 3 -->
+    <div class='flex flex-row gap-4'>
+      <div>
+        <img
+          src='/images/kakring-el-logo.png'
+          alt='Klakring El Logo'
+          decoding='async'
+          loading='lazy'
+          class='rounded-lg h-12 w-auto'
+        />
+      </div>
+      <div class='flex flex-col gap-1'>
+        <h1 class='tracking-wide capitalize text-xl font-semibold'>
+          Klakring El Denmark
+        </h1>
+        <p>Assitant Electronics Technician</p>
+        <span class=''>Start Date - End Date</span>
+      </div>
+    </div>
+
+    <div>
+      <ul class='list-disc ml-6'>
+        <li class='mb-4'>
+          Conducted soldering of electronic components and effectively mounted
+          control panels used in mechanic shops.
+        </li>
+        <li class='mb-4'>
+          Ensured the quality and reliability of electronic assemblies by
+          adhering to industry standards and specifications.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Experience 4 -->
+    <div class='flex flex-row gap-4'>
+      <div>
+        <img
+          src='/images/geltec-logo.png'
+          alt='Geltec Logo'
+          decoding='async'
+          loading='lazy'
+          class='rounded-lg h-12 w-auto'
+        />
+      </div>
+      <div class='flex flex-col gap-1'>
+        <h1 class='tracking-wide capitalize text-xl font-semibold'>
+          Geltec LTD Paignton, UK
+        </h1>
+        <p>Electronics Technican Intern</p>
+        <span class=''>Start Date - End Date</span>
+      </div>
+    </div>
+
+    <div>
+      <ul class='list-disc ml-6'>
+        <li class='mb-4'>
+          Assisted in the development and documentation of a vibration detection
+          sensor circuit for the company.
+        </li>
+        <li class='mb-4'>
+          Conducted maintenance tasks for 3D printers, amplifiers, and other
+          electronic appliances.
+        </li>
+        <li class='mb-4'>
+          Contributed to the development of water detection sensors and
+          optimized battery life for improved efficiency.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Experience 5 -->
+    <div class='flex flex-row gap-4'>
+      <div>
+        <img
+          src='/images/lens-logo.png'
+          alt='LENS Logo'
+          decoding='async'
+          loading='lazy'
+          class='rounded-lg h-12 w-auto'
+        />
+      </div>
+      <div class='flex flex-col gap-1'>
+        <h1 class='tracking-wide capitalize text-xl font-semibold'>
+          European Laboratory for Non-Linear Spectroscopy - LENS
+        </h1>
+        <p>Electronics Technican Intern</p>
+        <span class=''>Start Date - End Date</span>
+      </div>
+    </div>
+
+    <div>
+      <ul class='list-disc ml-6'>
+        <li class='mb-4'>
+          Assisted in the development of hardware components for power lasers
+          within the physics department.
+        </li>
+        <li class='mb-4'>
+          Integrated Arduino IDE with Processing IDE and hardware components to
+          create seamless connections.
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

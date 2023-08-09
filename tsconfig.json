@@ -15,6 +15,9 @@
       "@sections/*": [
         "src/sections/*"
       ],
+      "@data/*": [
+        "src/data/*"
+      ],
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"

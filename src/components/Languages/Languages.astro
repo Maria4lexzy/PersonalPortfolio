@@ -1,5 +1,5 @@
 ---
-import SkillBar from './SkillBar';
+import Pill from '../DomElements/Pill';
 import Subtitle from '../Typography/Subtitle.astro';
 ---
 
@@ -7,37 +7,12 @@ import Subtitle from '../Typography/Subtitle.astro';
   <Subtitle subTitle=' Languages I Speak' />
 
   <div class='flex flex-wrap gap-8'>
-    <SkillBar
-      client:only='react'
-      iconSrc='/images/gb-ukm.svg'
-      skillName='English'
-      progress={90}
-      skillUrl='/'
-      backgroundColor=''
-    />
-    <SkillBar
-      client:only='react'
+    <Pill iconSrc='/images/gb-ukm.svg' description='English - Fluent/Native' />
+    <Pill
       iconSrc='/images/italianflag.svg'
-      skillName='Italian'
-      progress={90}
-      skillUrl='/'
-      backgroundColor=''
+      description='Italian - Second Language'
     />
-    <SkillBar
-      client:only='react'
-      iconSrc='/images/danish.svg'
-      skillName='Danish'
-      progress={50}
-      skillUrl='/'
-      backgroundColor=''
-    />
-    <SkillBar
-      client:only='react'
-      iconSrc='/images/czech.svg'
-      skillName='Czech'
-      progress={20}
-      skillUrl='/'
-      backgroundColor=''
-    />
+    <Pill iconSrc='/images/danish.svg' description='Danish - A2' />
+    <Pill iconSrc='/images/czech.svg' description='Czech A1' />
   </div>
 </div>

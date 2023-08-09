@@ -1,0 +1,27 @@
+const VIACourses: string[] = [
+  "Semester Project: Single User System",
+  "Discrete Mathematics and Algorithms",
+  "Software Development with UML and Java",
+  "Web Development",
+  "Database Systems",
+  "Software Engineering",
+  "Semester Project: Client/Server System",
+  "Database Systems",
+  "Network and Security",
+  "Computer Architecture and Organization",
+  "Semester project: Heterogeneous Systems",
+  ".NET Programming",
+  "Algorithms and Data Structures",
+  "DevOps & Cloud",
+  "Embedded Software",
+  "Semester Project: Internet of Things",
+  "Engineering Internship",
+  "Applied Linear Algebra",
+  "No-SQL versus relational databases",
+  "IT Security and Cryptography in Practice",
+  "Programming Concepts and Languages",
+  "Digital Multi Media",
+  "Digital Signal Processing",
+];
+
+export default VIACourses;
