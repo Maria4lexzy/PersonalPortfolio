@@ -1,26 +1,28 @@
 ---
 import SkillBar from './SkillBar';
 import Subtitle from '../Typography/Subtitle.astro';
+import databaseManagementSystems from '@data/databaseManagementSystems';
 ---
 
 <div class='flex flex-col'>
   <Subtitle subTitle='Database Management' />
   <div class='flex flex-wrap gap-8'>
-    <SkillBar
-      client:only='react'
-      iconSrc='/images/astro.svg'
-      skillName='Postgres'
-      progress={4}
-      skillUrl='https://astro.build/'
-      backgroundColor=''
-    />
-    <SkillBar
-      client:only='react'
-      iconSrc='/images/react.svg'
-      skillName='ReactJS'
-      progress={4}
-      skillUrl='https://react.dev/'
-      backgroundColor=''
-    />
+    {
+      databaseManagementSystems.map((sys, index) => (
+        <SkillBar
+          client:only='react'
+          id={sys + '' + index}
+          skillName={sys.name}
+          progress={sys.progress}
+          skillUrl={sys.url}
+          iconSrc={sys.icon}
+          backgroundColor={sys.backgroundColor}
+        />
+      ))
+    }
   </div>
+</div>
+
+<div class='w-full bg-slate-300 rounded-sm h-2.5 dark:bg-gray-700'>
+  <div class='rounded-full bg-pink-300' style={{ width: `${20}%` }}></div>
 </div>

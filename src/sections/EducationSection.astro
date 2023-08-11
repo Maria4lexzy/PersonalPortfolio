@@ -1,14 +1,15 @@
 ---
 import PlainPill from '@components/DomElements/PlainPill';
-import Subtitle from '@components/Typography/Subtitle.astro';
 import Title from '@components/Typography/Title.astro';
-import SDUCourses from '@data/SDUCourses';
-import VIACourses from '@data/VIACourses';
+import sduCourses from '@data/sduCourses';
+import viaCourses from '@data/viaCourses';
+import CardLayout from '@layouts/CardLayout.astro';
 ---
 
-<div
+<CardLayout
   id='education'
-  class='my-4 flex flex-col md:flex-row md:gap-4 backdrop-filter backdrop-blur-lg bg-neutral-50 dark:bg-slate-950/95 w-3/4 mx-auto p-8 rounded-2xl shadow-xl'
+  dataAos='fade-up'
+  classStyle='flex flex-col md:flex-row md:gap-4 '
 >
   <div class='flex flex-col gap-4'>
     <Title title='education' />
@@ -65,7 +66,7 @@ import VIACourses from '@data/VIACourses';
 
           <div class='flex flex-wrap gap-4 justify-stretch'>
             {
-              SDUCourses.map((course, index) => (
+              sduCourses.map((course, index) => (
                 <PlainPill id={index} description={course} />
               ))
             }
@@ -125,7 +126,7 @@ import VIACourses from '@data/VIACourses';
 
           <div class='flex flex-wrap gap-4 justify-stretch'>
             {
-              VIACourses.map((course, index) => (
+              viaCourses.map((course, index) => (
                 <PlainPill id={index} description={course} />
               ))
             }
@@ -134,4 +135,17 @@ import VIACourses from '@data/VIACourses';
       </div>
     </div>
   </div>
-</div>
+</CardLayout>
+<style>
+  .item {
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
+    padding-top: 75px;
+    background: #ccc;
+    text-align: center;
+    color: #fff;
+    font-size: 3em;
+  }
+</style>
+@data/sdu @data/viaCourses

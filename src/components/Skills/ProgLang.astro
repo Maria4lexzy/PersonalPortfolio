@@ -1,27 +1,25 @@
 ---
 import SkillBar from './SkillBar';
 import Subtitle from '../Typography/Subtitle.astro';
+import programmingLanguages from '@data/programmingLanguages';
 ---
 
 <div class='flex flex-col'>
   <Subtitle subTitle='Programming Languages' />
 
   <div class='flex flex-wrap gap-8'>
-    <SkillBar
-      client:only='react'
-      iconSrc='/images/java.svg'
-      skillName='Java'
-      progress={4}
-      skillUrl='https://dev.java/'
-      backgroundColor=''
-    />
-    <SkillBar
-      client:only='react'
-      iconSrc='/images/csharp.svg'
-      skillName='C Sharp'
-      progress={4}
-      skillUrl='https://learn.microsoft.com/en-us/docs/'
-      backgroundColor=''
-    />
+    {
+      programmingLanguages.map((language, index) => (
+        <SkillBar
+          client:only='react'
+          id={language + '' + index}
+          skillName={language.name}
+          progress={language.progress}
+          skillUrl={language.url}
+          iconSrc={language.icon}
+          backgroundColor={language.backgroundColor}
+        />
+      ))
+    }
   </div>
 </div>

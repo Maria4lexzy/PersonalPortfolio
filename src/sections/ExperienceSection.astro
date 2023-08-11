@@ -1,12 +1,12 @@
 ---
-import PlainPill from '@components/DomElements/PlainPill';
 import Title from '@components/Typography/Title.astro';
-import SDUCourses from '@data/SDUCourses';
+import CardLayout from '@layouts/CardLayout.astro';
 ---
 
-<div
+<CardLayout
+  dataAos='fade-up'
   id='exp'
-  class='my-4 flex flex-col md:flex-row md:gap-4 backdrop-filter backdrop-blur-lg bg-neutral-50 dark:bg-slate-950/95 w-3/4 mx-auto p-8 rounded-2xl shadow-xl'
+  classStyle='flex flex-col md:flex-row md:gap-4'
 >
   <div class='flex flex-col gap-4'>
     <Title title='Experience' />
@@ -125,13 +125,7 @@ import SDUCourses from '@data/SDUCourses';
     <!-- Experience 4 -->
     <div class='flex flex-row gap-4'>
       <div>
-        <img
-          src='/images/geltec-logo.png'
-          alt='Geltec Logo'
-          decoding='async'
-          loading='lazy'
-          class='rounded-lg h-12 w-auto'
-        />
+        <h1>GELTEC</h1>
       </div>
       <div class='flex flex-col gap-1'>
         <h1 class='tracking-wide capitalize text-xl font-semibold'>
@@ -192,4 +186,4 @@ import SDUCourses from '@data/SDUCourses';
       </ul>
     </div>
   </div>
-</div>
+</CardLayout>

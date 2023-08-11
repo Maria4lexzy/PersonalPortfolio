@@ -1,10 +1,10 @@
-const VIACourses: string[] = [
+const viaCourses: string[] = [
   "Semester Project: Single User System",
   "Discrete Mathematics and Algorithms",
-  "Software Development with UML and Java",
+  "SW Development with UML and Java",
   "Web Development",
   "Database Systems",
-  "Software Engineering",
+  "SW Engineering",
   "Semester Project: Client/Server System",
   "Database Systems",
   "Network and Security",
@@ -13,7 +13,7 @@ const VIACourses: string[] = [
   ".NET Programming",
   "Algorithms and Data Structures",
   "DevOps & Cloud",
-  "Embedded Software",
+  "Embedded SW",
   "Semester Project: Internet of Things",
   "Engineering Internship",
   "Applied Linear Algebra",
@@ -24,4 +24,4 @@ const VIACourses: string[] = [
   "Digital Signal Processing",
 ];
 
-export default VIACourses;
+export default viaCourses;

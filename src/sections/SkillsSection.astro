@@ -4,12 +4,10 @@ import ProgLang from '@components/Skills/ProgLang.astro';
 import WebDev from '@components/Skills/WebDev.astro';
 import SoftwareDevLifeCycle from '@components/Skills/SoftwareDevLifeCycle.astro';
 import Title from '@components/Typography/Title.astro';
+import CardLayout from '@layouts/CardLayout.astro';
 ---
 
-<div
-  id='skills'
-  class='my-4 backdrop-filter backdrop-blur-lg bg-neutral-50 dark:bg-slate-950/95 w-3/4 mx-auto p-8 rounded-2xl shadow-xl'
->
+<CardLayout dataAos='fade-up' id='skills' classStyle=''>
   <Title title='skills' />
   <div class='flex flex-col gap-8'>
     <ProgLang />
@@ -18,4 +16,4 @@ import Title from '@components/Typography/Title.astro';
     <SoftwareDevLifeCycle />
   </div>
   <!-- Use the "border" and "border-t" utility classes to create a horizontal rule -->
-</div>
+</CardLayout>
