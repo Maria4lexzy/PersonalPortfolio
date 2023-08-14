@@ -74,3 +74,48 @@ $transition-cubic-fast: cubic-bezier(0.19, 1, 0.22, 1);
 .myBorder {
   border: 2px solid purple;
 }
+
+// a {
+//   display: inline-block;
+//   position: relative;
+//   color: #0087ca;
+//   text-decoration: none;
+
+//   &::after {
+//     content: '';
+//     position: absolute;
+//     width: 100%;
+//     transform: scaleX(0);
+//     border-radius: 5px;
+//     height: 0.05em;
+//     bottom: 0;
+//     left: 0;
+//     background: currentcolor;
+//     transform-origin: bottom right;
+//     transition: transform 0.25s ease-out;
+//   }
+//   &:hover::after {
+//     transform: scaleX(1);
+//     transform-origin: bottom left;
+//   }
+// }
+
+img {
+  filter: drop-shadow(0px 5px 45px rgba(39, 245, 131, 0.6));
+  // --f: 0.8; /* the parallax factor (the smaller the better) */
+  // --r: 10px; /* radius */
+
+  // --_f: calc(100% * var(--f) / (1 + var(--f)));
+  // --_a: calc(90deg * var(--f));
+  // width: 250px; /* the image size */
+  // aspect-ratio: calc(1 + var(--f));
+  // object-fit: cover;
+  // clip-path: inset(0 var(--_f) 0 0 round var(--r));
+  // transform: perspective(400px) var(--_t, rotateY(var(--_a)));
+  // transition: 0.5s;
+  // cursor: pointer;
+  // &:hover {
+  //   clip-path: inset(0 0 0 var(--_f) round var(--r));
+  //   --_t: translateX(calc(-1 * var(--_f))) rotateY(calc(-1 * var(--_a)));
+  // }
+}

@@ -16,30 +16,53 @@ const {
 ---
 
 <!DOCTYPE html>
-<html lang='en' class='test'>
+<html lang='en' class='scroll-smooth'>
   <LayoutHeader
     pageTitle={pageTitle}
     seoTitle={seoTitle}
     seoDescription={seoDescription}
   />
   <body
-    class='bg-neutral-100 dark:bg-slate-950/90 text-neutral-700 dark:text-neutral-400'
+    class='bg-primary/80 dark:bg-secondary-dark/90 text-neutral-700 dark:text-neutral-300 font-quicksand transition-colors delay-150 ease-custom-bezier duration-500'
   >
-    <Nav />
+    <Nav class='' />
     <slot />
 
     <!-- <Footer /> -->
 
     <style>
       body {
-        font-family: 'REM', sans-serif;
         min-height: 100vh;
         min-width: 100%;
+        /* font-family: 'Quicksand', sans-serif;
+        font-family: 'Source Code Pro', monospace; */
+      }
+
+      a.active {
+        color: blueviolet;
       }
     </style>
 
     <script>
       AOS.init();
+      // console.log('hello');
+      // const navLinks = document.querySelectorAll('.nav__link');
+      // const sections = document.querySelectorAll('section');
+
+      // function updateActiveLink() {
+      //   sections.forEach((section, index) => {
+      //     const rect = section.getBoundingClientRect();
+      //     if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+      //       navLinks.forEach((navLink) => {
+      //         navLink.classList.remove('active');
+      //       });
+      //       navLinks[index].classList.add('active');
+      //     }
+      //   });
+      // }
+
+      // window.addEventListener('scroll', updateActiveLink);
+      // window.addEventListener('resize', updateActiveLink);
     </script>
   </body>
 </html>

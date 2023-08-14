@@ -1,0 +1,44 @@
+---
+export interface Props {
+  url: string;
+  content: string;
+  classItems: string;
+}
+const { url, content, classItems } = Astro.props;
+---
+
+<a
+  href={url}
+  class=`${classItems} font-sourceCode hover:text-myTextBlue active:text-myTextBlue`
+  >{content}</a
+>
+
+<style>
+  a {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+  }
+
+  a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    border-radius: 5px;
+    height: 0.05em;
+    bottom: 0;
+    left: 0;
+    background: currentcolor;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  a.active {
+    color: red;
+  }
+</style>

@@ -1,10 +1,51 @@
 ---
 import Title from '@components/Typography/Title.astro';
 import CardLayout from '@layouts/CardLayout.astro';
+const allProjects = await Astro.glob('../pages/projects/*.md');
 ---
 
 <CardLayout dataAos='fade-up' id='projects' classStyles=''>
   <Title title='Projects' />
 
-  <!-- Use the "border" and "border-t" utility classes to create a horizontal rule -->
+  <div class='w-8/12 lg:w-6/12 mx-auto'>
+    <div
+      class='grid md:grid-cols-2 gap-2 drop-shadow-[0px_35px_35px_rgba(39,245,131,0.6)]'
+    >
+      {
+        allProjects.map((project) => (
+          <div>
+            <a href={project.url}>
+              <h1>{project.frontmatter.title}</h1>
+              <p>{project.frontmatter.description}</p>
+
+              <img
+                src={project.frontmatter.image.src}
+                alt={project.frontmatter.image.alt}
+              />
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </div>
 </CardLayout>
+<style>
+  img {
+    --f: 0.1; /* the parallax factor (the smaller the better) */
+    --r: 10px; /* radius */
+
+    --_f: calc(100% * var(--f) / (1 + var(--f)));
+    --_a: calc(90deg * var(--f));
+    width: 250px; /* the image size */
+    aspect-ratio: calc(1 + var(--f));
+    object-fit: cover;
+    clip-path: inset(0 var(--_f) 0 0 round var(--r));
+    transform: perspective(400px) var(--_t, rotateY(var(--_a)));
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  img:hover {
+    clip-path: inset(0 0 0 var(--_f) round var(--r));
+    --_t: translateX(calc(-1 * var(--_f))) rotateY(calc(-1 * var(--_a)));
+  }
+</style>

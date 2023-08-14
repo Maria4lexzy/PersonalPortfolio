@@ -1,0 +1,21 @@
+---
+import Pill from '@components/DomElements/Pill';
+import Subtitle from '@components/Typography/Subtitle.astro';
+import sWConcpetSkills from '@data/swConceptsSkills';
+---
+
+<div class='flex flex-col'>
+  <Subtitle subTitle='Software Concepts & Approaches' />
+
+  <div class='flex flex-wrap gap-8'>
+    {
+      sWConcpetSkills.map((skill) => (
+        <Pill
+          client:only='react'
+          iconSrc={skill.icon}
+          description={skill.description}
+        />
+      ))
+    }
+  </div>
+</div>

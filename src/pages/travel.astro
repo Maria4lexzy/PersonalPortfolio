@@ -1,0 +1,74 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+const pageTitle = 'Travels';
+const seoTitle = "Maria's travels";
+const seoDescription = 'Discover a world of ...';
+---
+
+<BaseLayout
+  pageTitle={pageTitle}
+  seoTitle={seoTitle}
+  seoDescription={seoDescription}
+>
+  <img
+    src='https://picsum.photos/id/669/300/300'
+    alt='the back of random person'
+  />
+  <img
+    src='https://assets.codepen.io/1480814/pexels-pixabay-62655.jpg'
+    alt='an eagle'
+    style='--f:.12;--r:5px'
+  />
+  <img
+    src='https://picsum.photos/id/326/300/300'
+    alt='a cup of something to drink, probably some tea'
+    style='--f:.08;--r:20px'
+  />
+  <img
+    src='images/maria.jpg'
+    alt='a cup of something to drink, probably some tea'
+    style='--f:.08;--r:20px'
+  />
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, itaque
+    totam saepe illum corporis tenetur? Quaerat culpa repudiandae ratione nobis
+    odio, sint facere est et deleniti vel nostrum impedit dignissimos officiis
+    sapiente aliquam commodi distinctio. Quos, provident velit quibusdam quasi
+    distinctio eius laudantium possimus dolorum nobis quaerat labore, explicabo
+    modi perferendis numquam vero qui, soluta corrupti fuga eum tempore
+    praesentiubitis eligendi consequatur quibusdam modi provident, mollitia
+    consectetur rerum? Eum nostrum ullam doloribus, consectetur reiciendis
+    laborum aliquam reprehenderit rerum provident quam in assumenda tempora iure
+    ab quis excepturi totam, alias tenetur sapiente iste inventore voluptates!
+    Alias modi tempore voluptate delectus perferendis, eius, sequi molestias non
+    consequatur quas voluptas. Dolores, atque. Maiores cupiditate eligendi fugit
+    suscipit voluptate quis. Tenetur sint optio quidem illum nemo eaque atque
+    laudantium eveniet aliquid quo magnam beatae, temporibus reprehenderit
+    sequi, nisi ex, magni numquam voluptatum eius soluta accusamus? Odio placeat
+    repellendus aliquam dolorum libero? Autem dicta, aliquam dolorem commodi
+    ratione in molestias, nisi quas incidunt facere voluptatum labore id
+    architecto? Velit, quasi voluptatum. Atque aspernatur quia sequi delectus
+    magnam voluptatibus similique iusto? Nisi hic labore incidunt sit dolorum
+    commodi, dolore eaque libero quasi ipsa delectus ea architecto harum.
+  </p>
+</BaseLayout>
+<style>
+  img {
+    --f: 0.1; /* the parallax factor (the smaller the better) */
+    --r: 10px; /* radius */
+
+    --_f: calc(100% * var(--f) / (1 + var(--f)));
+    --_a: calc(90deg * var(--f));
+    width: 250px; /* the image size */
+    aspect-ratio: calc(1 + var(--f));
+    object-fit: cover;
+    clip-path: inset(0 var(--_f) 0 0 round var(--r));
+    transform: perspective(400px) var(--_t, rotateY(var(--_a)));
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  img:hover {
+    clip-path: inset(0 0 0 var(--_f) round var(--r));
+    --_t: translateX(calc(-1 * var(--_f))) rotateY(calc(-1 * var(--_a)));
+  }
+</style>
