@@ -1,9 +1,10 @@
 ---
 import PlainPill from '@components/DomElements/PlainPill';
 import Title from '@components/Typography/Title.astro';
-import sduCourses from '@data/sduCourses';
 // import viaCourses from '@data/viaCourses';
 import CardLayout from '@layouts/CardLayout.astro';
+import viaCourseList from '@data/viaCourseList';
+import sduCourseList from '@data/sduCourseList';
 ---
 
 <CardLayout
@@ -68,8 +69,8 @@ import CardLayout from '@layouts/CardLayout.astro';
 
           <div class='flex flex-wrap gap-4 justify-stretch'>
             {
-              sduCourses.map((course, index) => (
-                <PlainPill id={index} description={course.title} />
+              sduCourseList.map((course, index) => (
+                <PlainPill id={index} description={course.courseName} />
               ))
             }
           </div>
@@ -120,11 +121,11 @@ import CardLayout from '@layouts/CardLayout.astro';
           </summary>
 
           <div class='flex flex-wrap gap-4 justify-stretch'>
-            <!-- {
-              viaCourses.map((course, index) => (
-                <PlainPill id={index} description={course} />
+            {
+              viaCourseList.map((course, index) => (
+                <PlainPill id={index} description={course.courseName} />
               ))
-            } -->
+            }
           </div>
         </details>
       </div>
