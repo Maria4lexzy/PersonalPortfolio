@@ -14,14 +14,14 @@ import sduCourseList from '@data/sduCourseList';
 >
   <div class='flex flex-col gap-4'>
     <Title title='education' />
-    <div class='flex flex-row gap-4'>
-      <span class='h-12 w-12 text-white bg-slate-100'>
+    <div class='flex flex-row gap-8'>
+      <div class=''>
         <img
-          src='/images/SDU.png'
+          src='/images/companies/SDU_B.jpg'
           alt='Maria Failli'
           decoding='async'
           loading='lazy'
-          class='rounded-lg h-12 w-auto'
+          class='rounded-lg w-16 md:w-28 h-auto'
         />
         <!-- <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 742.58 197.82'
           ><title>sdu</title><path
@@ -38,7 +38,7 @@ import sduCourseList from '@data/sduCourseList';
             d='M181.33,165.53V54.32c7.68,0,15.27-.11,22.86,0,15.19.27,29.32,3.49,40.62,14.69,28,27.71,18.63,79.44-17,93.15a45.26,45.26,0,0,1-14,3.2C203.13,165.85,192.36,165.53,181.33,165.53Z'
             fill='currentColor'></path></svg
         > -->
-      </span>
+      </div>
       <div class='flex flex-col gap-1'>
         <h1 class='tracking-wide capitalize text-xl font-semibold'>
           University of Southern Denmark
@@ -48,7 +48,7 @@ import sduCourseList from '@data/sduCourseList';
       </div>
     </div>
     <div>
-      <p class='mb-4 text-justify'>
+      <p class='mb-2 text-justify'>
         My education at SDU, has provided me with a comprehensive understanding
         of software engineering, allowing me to independently take
         responsibility for the entire software development lifecycle, from
@@ -57,12 +57,9 @@ import sduCourseList from '@data/sduCourseList';
       </p>
 
       <div class='flex flex-col'>
-        <details
-          class='open:bg-white dark:open:bg-slate-900 p-6 rounded-lg mt-4'
-          open
-        >
+        <details class='open:transition delay-150' open>
           <summary
-            class='my-8 capitalize font-medium text-gray-700 dark:text-gray-300 text-lg cursor-pointer'
+            class='my-2 capitalize font-medium text-gray-700 dark:text-gray-300 text-lg cursor-pointer'
           >
             Courses
           </summary>
@@ -81,14 +78,14 @@ import sduCourseList from '@data/sduCourseList';
     <div class='bg-gray-200 dark:bg-gray-600/50 h-px w-full my-4'></div>
     <!-- via university -->
 
-    <div class='flex flex-row gap-4'>
+    <div class='flex flex-row gap-8'>
       <div>
         <img
-          src='/images/VIA.png'
+          src='/images/companies/VIA.png'
           alt='VIA University College'
           decoding='async'
           loading='lazy'
-          class='rounded-lg h-12 w-auto'
+          class='rounded-lg w-16 md:w-28 h-auto'
         />
       </div>
       <div class='flex flex-col gap-1'>
@@ -100,7 +97,7 @@ import sduCourseList from '@data/sduCourseList';
       </div>
     </div>
     <div>
-      <p class='mb-4'>
+      <p class='mb-2'>
         My education at VIA has equipped me with a strong foundation in software
         engineering, and a broad understanding of industry dynamics.
         Additionally, it has nurtured my passion for technology and prepared me
@@ -110,10 +107,7 @@ import sduCourseList from '@data/sduCourseList';
       </p>
 
       <div class='flex flex-col'>
-        <details
-          class='open:transition delay-150 open:bg-white dark:open:bg-slate-900 p-6 rounded-lg'
-          open
-        >
+        <details class='open:transition delay-150' open>
           <summary
             class='my-2 capitalize font-medium text-gray-700 dark:text-gray-300 text-lg cursor-pointer'
           >

@@ -1,4 +1,5 @@
 ---
+import LinkCode from '@components/Typography/LinkCode.astro';
 import Title from '@components/Typography/Title.astro';
 import CardLayout from '@layouts/CardLayout.astro';
 ---
@@ -13,31 +14,30 @@ import CardLayout from '@layouts/CardLayout.astro';
   <div
     class='md:flex md:flex-col md:justify-center md:items-center md:space-y-4'
   >
-    <p>
-      TODO: add splash screen, finish projects section, add animations, fix
-      colors, add active to navbar, change cursor to someting cool
-    </p>
     <img
-      src='/images/maria.jpg'
+      src='/images/profile.jpeg'
       alt='Maria Failli'
       decoding='async'
       loading='lazy'
       class='rounded-lg h-24 max-w-none md:h-52 md:w-52 sm:h-36 sm:w-36 w-24'
     />
-    <a
+    <!-- <a
       href='/cv.pdf'
       class='font-medium items-center active:translate-y-px cursor-pointer h-10 inline-flex px-4 rounded-md select-none text-base'
       >Download CV</a
-    >
+    > -->
   </div>
   <!-- Right Side -->
-  <div class='md:flex md:flex-col md:justify-between md:py-2'>
+  <div class='mx-auto md:flex md:flex-col md:justify-between md:py-2'>
+    <!-- <div class='bg-green-400 md:flex md:flex-col md:justify-between md:py-2'> -->
     <div class='md:space-y-2'>
       <Title title='Maria Failli' />
 
-      <h3 class='text-lg font-medium'>Software Developer</h3>
-      <div class='md:flex md:space-x-4'>
-        <div class='flex flex-row gap-4'>
+      <h3 class='sm:text-base md:text-md font-medium text-neutral-500'>
+        Frontend Developer
+      </h3>
+      <div class='flex flex-col lg:flex-row nowrap gap-4 md:gap-y-2 md:gap-x-8'>
+        <div class='flex flex-row gap-1'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             width='24'
@@ -48,13 +48,14 @@ import CardLayout from '@layouts/CardLayout.astro';
               d='m16.556 12.906l-.455.453s-1.083 1.076-4.038-1.862s-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61c.09 1.587.808 5 4.812 8.982c4.247 4.222 8.232 4.39 9.861 4.238c.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.438-1.787-.309-2.417.317Z'
             ></path></svg
           >
-          <a
-            href='mailto:mariafailli42@gmail.com'
-            class='text-sm font-normal leading-relaxed sm:text-base underline'
-            target='_self'>mariafailli42@gmail.com</a
-          >
+          <LinkCode
+            url='mailto:mariafailli42@gmail.com'
+            classItems='text-sm font-normal leading-relaxed sm:text-base '
+            urlTarget='_self'
+            content='mariafailli42@gmail.com'
+          />
         </div>
-        <div class='flex flex-row gap-4'>
+        <div class='flex flex-row gap-1'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             width='24'
@@ -65,15 +66,16 @@ import CardLayout from '@layouts/CardLayout.astro';
               d='M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-.4 4.25l-7.07 4.42c-.32.2-.74.2-1.06 0L4.4 8.25a.85.85 0 1 1 .9-1.44L12 11l6.7-4.19a.85.85 0 1 1 .9 1.44z'
             ></path></svg
           >
-          <a
-            href='tel:91 15 47 99'
-            class='text-sm font-normal leading-relaxed sm:text-base underline'
-            target='_self'>+45 91 15 47 99</a
-          >
+          <LinkCode
+            url='tel:91 15 47 99'
+            classItems='text-sm font-normal leading-relaxed sm:text-base '
+            urlTarget='_self'
+            content='+45 91 15 47 99'
+          />
         </div>
       </div>
     </div>
-    <p class='mt-4 md:mt-0'>
+    <p class='mt-4'>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec ex sit
       amet nisl tincidunt posuere. Vivamus vehicula malesuada metus, vel gravida
       ipsum iaculis at. Sed ut erat felis.

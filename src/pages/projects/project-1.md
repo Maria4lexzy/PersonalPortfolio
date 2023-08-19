@@ -1,57 +1,54 @@
 ---
 layout: ../../layouts/MarkdownProjectLayout.astro
-title: 'Project Showcase: Amazing Website'
-pubDate: 2023-07-15
-description: 'Introducing our latest project - a stunning and interactive website.'
-author: 'Your Name'
-image:
-  src: '/images/maria.jpg'
-  alt: 'Preview of the Amazing Website project.'
-tags: ['web development', 'interactive design', 'software projects']
+title: 'Artcaffe Sabinov Web Application'
+role: 'frontend developer'
+teamNum: '2'
+organization: 'Mulrem'
+description: 'The Artcaffe Sabinov website is a project that aimed to create a friendly website for Artcaffe, a cafe located in Sabinov, Slovakia.'
+images:
+  [
+    { url: '/images/projects/artcaffe/home.png', alt: 'Art caffe home' },
+    {
+      url: '/images/projects/artcaffe/menu.png',
+      alt: 'Art caffe project - menu',
+    },
+    {
+      url: '/images/projects/artcaffe/reservation.png',
+      alt: 'Art caffe project - reservation',
+    },
+  ]
+technologies: ['javascript', 'firebase', 'astro', 'react']
+externals: [{ name: 'web', url: 'https://artcaffe.sk/' }]
 ---
 
-# Project Showcase: Amazing Website
+# Artcaffe Sabinov Website Project
 
-Welcome to the project showcase for "Amazing Website," our latest creation that combines innovative design and cutting-edge technology. In this post, we are excited to share the details of this project and the journey of building it.
+## Description
 
-## Overview
+The Artcaffe Sabinov website is a project that aimed to create an interactive and user-friendly website for Artcaffe, a cafe located in Sabinov. The website provides information about the cafe's menu, opening hours, location, and more. It was developed using modern web technologies such as Astro, React, and Firebase to deliver a seamless and dynamic user experience.
 
-The "Amazing Website" project is a showcase of our software development company's capabilities. It was developed for our esteemed client, who wanted a visually striking and user-friendly website to represent their brand online. Our team took on the challenge and created an exceptional online platform that captures the essence of the client's business.
+## Technologies Used
 
-## Key Features
+- Astro: A static site generator that combines the best of static and dynamic rendering.
+- React: A JavaScript library for building user interfaces.
+- Firebase: A platform that provides various services for building web and mobile applications, including hosting, authentication, and database.
 
-The website boasts several key features that set it apart:
+## Features
 
-1. **Interactive User Interface**: The website offers a captivating and interactive user interface that engages visitors and keeps them exploring.
+- **Menu Display:** The website showcases the cafe's menu, allowing users to explore the variety of food and beverages offered.
+- **Opening Hours:** Users can easily find the cafe's opening and closing hours, helping them plan their visits.
+- **Location Information:** The website provides the cafe's address and location on an interactive map.
+- **Contact Information:** Users can get in touch with the cafe through provided contact details.
+- **Interactive Reservation System:** Users can reserve a table through an interactive view where they are able to see the layout of the caffe and click on available seats depending on the number of guests and prefered location in the caffe.
+- **Email and Phone Cofirmation:** Users can automatically recieve a confirmation when a reservation is made.
+- **Admin Management System:** The owner of the caffe is able to manage reservations through a reserved page for admin purposes.
 
-2. **Responsive Design**: We ensured that the website is fully responsive, providing a seamless experience across various devices and screen sizes.
+## My Role
 
-3. **Smooth Animations**: Carefully crafted animations enhance the user experience, adding a touch of elegance to the overall design.
+I played a key role in the development of the Artcaffe Sabinov website. As a frontend developer, I utilized Astro and React to design and implement the user interface components, ensuring a responsive and visually appealing design. I integrated Firebase to handle data storage and retrieval, enabling dynamic content updates on the website. Additionally, I worked on optimizing the website's performance and ensuring a smooth user experience.
 
-4. **Performance Optimization**: Our team optimized the website for speed and performance, ensuring quick loading times and smooth navigation.
+## Website
 
-## Technology Stack
+For a visual overview of the Artcaffe Sabinov website, you can access it [here](https://artcaffe.sk/).
 
-The "Amazing Website" project utilized a modern and robust technology stack, including:
-
-- **Frontend**: React.js for building the dynamic user interface and Redux for state management.
-
-- **Styling**: We adopted Sass for efficient and maintainable CSS styles.
-
-- **Backend**: Node.js with Express for handling server-side logic and API integration.
-
-- **Database**: MongoDB for data storage and retrieval.
-
-- **Deployment**: The website is hosted on AWS to ensure reliability and scalability.
-
-## Challenges and Solutions
-
-Throughout the development process, we encountered various challenges, such as implementing complex animations and ensuring cross-browser compatibility. However, our team of talented developers collaborated effectively to devise innovative solutions and overcome these obstacles.
-
-## Conclusion
-
-The "Amazing Website" project showcases our dedication to excellence in software development. It reflects the successful collaboration between our team and our client, resulting in a remarkable online presence for their business.
-
-Stay tuned for more exciting projects as we continue to deliver exceptional solutions for our clients. If you're interested in discussing your next project, don't hesitate to [contact us](https://example.com/contact)!
-
-![Project Preview](https://example.com/images/project-preview.jpg)
+This project was an exciting opportunity to combine the power of Astro, React, and Firebase to create a modern and engaging website for Artcaffe Sabinov.

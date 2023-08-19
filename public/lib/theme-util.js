@@ -28,3 +28,4 @@ function toggleState() {
 
     setPreference(themeName);
 })();
+

@@ -15,11 +15,12 @@ const $$Travel = createComponent(async ($$result, $$props, $$slots) => {
   const pageTitle = "Travels";
   const seoTitle = "Maria's travels";
   const seoDescription = "Discover a world of ...";
-  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "pageTitle": pageTitle, "seoTitle": seoTitle, "seoDescription": seoDescription, "class": "astro-WHIPUGJR" }, { "default": ($$result2) => renderTemplate`
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "pageTitle": pageTitle, "seoTitle": seoTitle, "seoDescription": seoDescription, "class": "astro-WHIPUGJR" }, {
+    "default": ($$result2) => renderTemplate`
   ${maybeRenderHead()}<img src="https://picsum.photos/id/669/300/300" alt="the back of random person" class="astro-WHIPUGJR">
   <img src="https://assets.codepen.io/1480814/pexels-pixabay-62655.jpg" alt="an eagle" style="--f:.12;--r:5px" class="astro-WHIPUGJR">
   <img src="https://picsum.photos/id/326/300/300" alt="a cup of something to drink, probably some tea" style="--f:.08;--r:20px" class="astro-WHIPUGJR">
-  <img src="images/maria.jpg" alt="a cup of something to drink, probably some tea" style="--f:.08;--r:20px" class="astro-WHIPUGJR">
+  <img src="images/profile.jpeg" alt="a cup of something to drink, probably some tea" style="--f:.08;--r:20px" class="astro-WHIPUGJR">
   <p class="astro-WHIPUGJR">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, itaque
     totam saepe illum corporis tenetur? Quaerat culpa repudiandae ratione nobis
