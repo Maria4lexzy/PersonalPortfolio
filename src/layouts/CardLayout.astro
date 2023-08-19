@@ -5,7 +5,9 @@ const { classStyle, id, dataAos } = Astro.props;
 <section
   data-aos={dataAos}
   id={id}
-  class={` ${classStyle} section my-4 backdrop-filter backdrop-blur-lg bg-primary-light dark:bg-secondary/95 w-3/4 mx-auto p-8 rounded-2xl shadow-xl`}
+  class={` ${classStyle} section my-4 backdrop-filter backdrop-blur-lg
+   bg-primary-light dark:bg-secondary/95 w-11/12 md:w-3/4  mx-auto p-8 
+   rounded-xl shadow-xl lg:space-y-8`}
 >
   <slot />
 </section>

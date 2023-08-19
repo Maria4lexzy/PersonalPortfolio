@@ -1,3 +1,13 @@
+body {
+  min-height: 100vh;
+  min-width: 100%;
+  /* font-family: 'Quicksand', sans-serif;
+        font-family: 'Source Code Pro', monospace; */
+}
+
+a.active {
+  color: blueviolet;
+}
 $transition-cubic: cubic-bezier(0.1, 0.6, 0.2, 0.5);
 
 $transition-cubic-fast: cubic-bezier(0.19, 1, 0.22, 1);
@@ -99,9 +109,12 @@ $transition-cubic-fast: cubic-bezier(0.19, 1, 0.22, 1);
 //     transform-origin: bottom left;
 //   }
 // }
+section div {
+  border: solid 2px solid green !important;
+}
 
 img {
-  filter: drop-shadow(0px 5px 45px rgba(39, 245, 131, 0.6));
+  filter: drop-shadow(0px 5px 20px rgba(0, 171, 214, 0.426));
   // --f: 0.8; /* the parallax factor (the smaller the better) */
   // --r: 10px; /* radius */
 
