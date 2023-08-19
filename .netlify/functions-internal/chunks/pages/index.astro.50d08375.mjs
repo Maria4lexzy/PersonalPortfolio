@@ -35,7 +35,8 @@ const $$Astro$c = createAstro();
 const $$AboutSection = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$c, $$props, $$slots);
   Astro2.self = $$AboutSection;
-  return renderTemplate`${renderComponent($$result, "CardLayout", $$CardLayout, { "dataAos": "fade-up", "id": "about", "classStyle": "flex flex-col md:flex-row md:gap-4 " }, { "default": ($$result2) => renderTemplate`
+  return renderTemplate`${renderComponent($$result, "CardLayout", $$CardLayout, { "dataAos": "fade-up", "id": "about", "classStyle": "flex flex-col md:flex-row md:gap-4 " }, {
+    "default": ($$result2) => renderTemplate`
   
 
   ${maybeRenderHead()}<div class="md:flex md:flex-col md:justify-center md:items-center md:space-y-4">
@@ -43,7 +44,7 @@ const $$AboutSection = createComponent(async ($$result, $$props, $$slots) => {
       TODO: add splash screen, finish projects section, add animations, fix
       colors, add active to navbar, change cursor to someting cool
     </p>
-    <img src="/images/maria.jpg" alt="Maria Failli" decoding="async" loading="lazy" class="rounded-lg h-24 max-w-none md:h-52 md:w-52 sm:h-36 sm:w-36 w-24">
+    <img src="/images/profile.jpeg" alt="Maria Failli" decoding="async" loading="lazy" class="rounded-lg h-24 max-w-none md:h-52 md:w-52 sm:h-36 sm:w-36 w-24">
     <a href="/cv.pdf" class="font-medium items-center active:translate-y-px cursor-pointer h-10 inline-flex px-4 rounded-md select-none text-base">Download CV</a>
   </div>
   
@@ -334,7 +335,8 @@ const $$Astro$6 = createAstro();
 const $$SkillsSection = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$6, $$props, $$slots);
   Astro2.self = $$SkillsSection;
-  return renderTemplate`${renderComponent($$result, "CardLayout", $$CardLayout, { "dataAos": "fade-up", "id": "skills", "classStyle": "" }, { "default": ($$result2) => renderTemplate`
+  return renderTemplate`${renderComponent($$result, "CardLayout", $$CardLayout, { "dataAos": "fade-up", "id": "skills", "classStyle": "" }, {
+    "default": ($$result2) => renderTemplate`
   ${renderComponent($$result2, "Title", $$Title, { "title": "skills" })}
   ${maybeRenderHead()}<div class="flex flex-col gap-8">
     ${renderComponent($$result2, "ProgLang", $$ProgLang, {})}
@@ -385,7 +387,8 @@ const $$Astro$4 = createAstro();
 const $$LanguageSection = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$4, $$props, $$slots);
   Astro2.self = $$LanguageSection;
-  return renderTemplate`${renderComponent($$result, "CardLayout", $$CardLayout, { "dataAos": "fade-up", "id": "languages", "classStyles": "" }, { "default": ($$result2) => renderTemplate`
+  return renderTemplate`${renderComponent($$result, "CardLayout", $$CardLayout, { "dataAos": "fade-up", "id": "languages", "classStyles": "" }, {
+    "default": ($$result2) => renderTemplate`
   ${renderComponent($$result2, "Title", $$Title, { "title": "languages" })}
 
   ${maybeRenderHead()}<div class="flex flex-col gap-8">
@@ -456,7 +459,8 @@ const $$Astro$3 = createAstro();
 const $$EducationSection = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$3, $$props, $$slots);
   Astro2.self = $$EducationSection;
-  return renderTemplate`${renderComponent($$result, "CardLayout", $$CardLayout, { "id": "education", "dataAos": "fade-up", "classStyle": "flex flex-col md:flex-row md:gap-4 " }, { "default": ($$result2) => renderTemplate`
+  return renderTemplate`${renderComponent($$result, "CardLayout", $$CardLayout, { "id": "education", "dataAos": "fade-up", "classStyle": "flex flex-col md:flex-row md:gap-4 " }, {
+    "default": ($$result2) => renderTemplate`
   ${maybeRenderHead()}<div class="flex flex-col gap-4">
     ${renderComponent($$result2, "Title", $$Title, { "title": "education" })}
     <div class="flex flex-row gap-4">
@@ -545,7 +549,8 @@ const $$Astro$2 = createAstro();
 const $$ExperienceSection = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$2, $$props, $$slots);
   Astro2.self = $$ExperienceSection;
-  return renderTemplate`${renderComponent($$result, "CardLayout", $$CardLayout, { "dataAos": "fade-up", "id": "exp", "classStyle": "flex flex-col md:flex-row md:gap-4" }, { "default": ($$result2) => renderTemplate`
+  return renderTemplate`${renderComponent($$result, "CardLayout", $$CardLayout, { "dataAos": "fade-up", "id": "exp", "classStyle": "flex flex-col md:flex-row md:gap-4" }, {
+    "default": ($$result2) => renderTemplate`
   ${maybeRenderHead()}<div class="flex flex-col gap-4">
     ${renderComponent($$result2, "Title", $$Title, { "title": "Experience" })}
 
@@ -707,8 +712,9 @@ const $$Astro$1 = createAstro();
 const $$ProjectSection = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$ProjectSection;
-  const allProjects = await Astro2.glob(/* #__PURE__ */ Object.assign({"../pages/projects/project-1.md": () => import('./project-1.md.0ae605a5.mjs')}), () => "../pages/projects/*.md");
-  return renderTemplate`${renderComponent($$result, "CardLayout", $$CardLayout, { "dataAos": "fade-up", "id": "projects", "classStyles": "", "class": "astro-NDAQEW3E" }, { "default": ($$result2) => renderTemplate`
+  const allProjects = await Astro2.glob(/* #__PURE__ */ Object.assign({ "../pages/projects/project-1.md": () => import('./project-1.md.0ae605a5.mjs') }), () => "../pages/projects/*.md");
+  return renderTemplate`${renderComponent($$result, "CardLayout", $$CardLayout, { "dataAos": "fade-up", "id": "projects", "classStyles": "", "class": "astro-NDAQEW3E" }, {
+    "default": ($$result2) => renderTemplate`
   ${renderComponent($$result2, "Title", $$Title, { "title": "Projects", "class": "astro-NDAQEW3E" })}
 
   ${maybeRenderHead()}<div class="w-8/12 lg:w-6/12 mx-auto astro-NDAQEW3E">
@@ -733,7 +739,8 @@ const $$Index = createComponent(async ($$result, $$props, $$slots) => {
   const pageTitle = "Home";
   const seoTitle = "Maria's Portfolio";
   const seoDescription = "Discover a world of cutting-edge software solutions and creative craftsmanship at Mulrem. Our team of experts offers full-stack services, from software development and architecture to photography, videography, and design. Explore our portfolio of remarkable projects and immerse yourself in our insightful blogs covering cloud architecture, React Native performance, crochet works, travel adventures, and more. Experience excellence, responsibility, and quality in every aspect of our work. Join us on this exciting journey of innovation and creativity";
-  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "pageTitle": pageTitle, "seoTitle": seoTitle, "seoDescription": seoDescription }, { "default": ($$result2) => renderTemplate`
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "pageTitle": pageTitle, "seoTitle": seoTitle, "seoDescription": seoDescription }, {
+    "default": ($$result2) => renderTemplate`
   ${renderComponent($$result2, "AboutSection", $$AboutSection, {})}
   ${renderComponent($$result2, "SkillsSection", $$SkillsSection, {})}
   ${renderComponent($$result2, "LanguageSection", $$LanguageSection, {})}

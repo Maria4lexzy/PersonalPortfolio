@@ -138,7 +138,7 @@ ${Astro2.props.extend && renderTemplate`${renderComponent($$result, "ExtendedTag
 ${Astro2.props.languageAlternates && renderTemplate`${renderComponent($$result, "LanguageAlternatesTags", $$LanguageAlternatesTags, { ...Astro2.props })}`}`;
 }, "C:/Users/maria/Documents/GitHub/MyPortfolio/maria/node_modules/astro-seo/src/SEO.astro", void 0);
 
-const tabLogo = "/images/maria.jpg";
+const tabLogo = "/images/profile.jpeg";
 
 var __freeze$1 = Object.freeze;
 var __defProp$1 = Object.defineProperty;
@@ -271,7 +271,7 @@ const $$BaseLayout = createComponent(async ($$result, $$props, $$slots) => {
 const $$Astro = createAstro();
 const Astro = $$Astro;
 async function getStaticPaths() {
-  const allPosts = await Astro.glob(/* #__PURE__ */ Object.assign({"../projects/project-1.md": () => import('./project-1.md.0ae605a5.mjs')}), () => "../projects/*.md");
+  const allPosts = await Astro.glob(/* #__PURE__ */ Object.assign({ "../projects/project-1.md": () => import('./project-1.md.0ae605a5.mjs') }), () => "../projects/*.md");
   const uniqueTags = [
     ...new Set(allPosts.map((post) => post.frontmatter.tags).flat())
   ];
@@ -293,10 +293,12 @@ const $$projects = createComponent(async ($$result, $$props, $$slots) => {
   const pageTitle = "About";
   const seoTitle = "Mulrem  About";
   const seoDescription = "About me";
-  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "pageTitle": pageTitle, "seoTitle": seoTitle, "seoDescription": seoDescription }, { "default": ($$result2) => renderTemplate`
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "pageTitle": pageTitle, "seoTitle": seoTitle, "seoDescription": seoDescription }, {
+    "default": ($$result2) => renderTemplate`
   ${maybeRenderHead()}<p>Posts tagged with ${tag}</p>
   <ul>
-    ${posts.map((post) => renderTemplate`${renderComponent($$result2, "Fragment", Fragment, {}, { "default": ($$result3) => renderTemplate`
+    ${posts.map((post) => renderTemplate`${renderComponent($$result2, "Fragment", Fragment, {}, {
+      "default": ($$result3) => renderTemplate`
           <h1>${post.frontmatter.title}</h1>
           <p> ${post.url}</p>
         ` })}`)}

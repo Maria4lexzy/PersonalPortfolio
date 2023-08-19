@@ -1,33 +1,104 @@
 ---
-const allPosts = await Astro.glob('../pages/projects/*.md');
+const allProjects = await Astro.glob('../pages/projects/*.md');
+import Pill from '@components/DomElements/Pill';
+import Gallery from '@sections/Gallery';
 import BaseLayout from './BaseLayout.astro';
+import CardLayout from './CardLayout.astro';
+import Title from '@components/Typography/Title.astro';
+import Subtitle from '@components/Typography/Subtitle.astro';
 const { frontmatter } = Astro.props;
-const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
-
+type FormattedImage = {
+  url: string;
+  alt: string;
+};
 const seoTitle = 'Maria Projects';
 const seoDescription = 'Projects';
+
+const title = 'My Awesome Software Project';
+const imagess = frontmatter.images;
+const formattedImages = frontmatter.images.map((imageUrl: FormattedImage) => ({
+  largeURL: imageUrl.url,
+  thumbnailURL: imageUrl.url,
+  width: 1500, // Set the actual width
+  height: 'auto', // Set the actual height
+}));
 ---
 
 <BaseLayout
-  pageTitle={frontmatter.title}
-  seoTitle={seoTitle}
+  pageTitle={title}
+  seoTitle={frontmatter.title}
   seoDescription={seoDescription}
 >
-  <p>{frontmatter.pubDate.slice(0, 10)}</p>
-  <p><em>{frontmatter.description}</em></p>
-  <p>Written by: {frontmatter.author}</p>
-  <img src={frontmatter.image.src} width='300' alt={frontmatter.image.alt} />
-  <div class='tags'>
-    {
-      tags.map((tag) => (
-        <p class='tag'>
-          <a href={`/tags/${tag}`}>{tag}</a>
-        </p>
-      ))
-    }
-  </div>
+  <CardLayout dataAos='fade-left' id={frontmatter.title} classStyles=''>
+    <div class='container mx-auto py-8'>
+      <div class='flex flex-row gap-4 justify-between'>
+        <div>
+          <Title title={frontmatter.title} />
 
-  <slot />
+          <div class='text-sm mb-4'>
+            <div class='flex flex-row gap-2'>
+              <span class='text-neutral-950 dark:text-neutral-100'>
+                My role:
+              </span>
+              <p class='text-neutral-500 capitalize'>
+                {frontmatter.role}
+              </p>
+            </div>
+            <div class='flex flex-row gap-2'>
+              <span class='text-neutral-950 dark:text-neutral-100'>
+                Team size:
+              </span>
+              <p class='text-neutral-500 capitalize'>
+                {frontmatter.teamNum}
+              </p>
+            </div>
+            <div class='flex flex-row gap-2'>
+              <span class='text-neutral-950 dark:text-neutral-100'>
+                Company/Organization:
+              </span>
+              <p class='text-neutral-500 capitalize'>
+                {frontmatter.organization}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class='flex gap-2 flex-wrap'>
+          {
+            frontmatter.externals.map((external: any) => (
+              <a href={external.url} class='cursor-pointer' target='_blank'>
+                <Pill iconSrc={`../images/${external.name}.svg`} />
+              </a>
+            ))
+          }
+        </div>
+      </div>
+
+      <div>
+        <p class='mb-4 italic'>{frontmatter.description}</p>
+        <div>
+          <p class='text-sm text-neutral-500 my-2'>Technologies Used:</p>
+          <div class='flex flex-wrap gap-4'>
+            {
+              frontmatter.technologies.map((tech: any) => (
+                <Pill iconSrc={`../images/${tech}.svg`} description={tech} />
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+    <Subtitle subTitle='Project Gallery' />
+    {console.log(formattedImages + 'hdhdh')}
+
+    <Gallery
+      client:only='react'
+      galleryID='my-test-gallery'
+      images={formattedImages}
+    />
+
+    <slot />
+  </CardLayout>
 </BaseLayout>
 <style>
   a {
