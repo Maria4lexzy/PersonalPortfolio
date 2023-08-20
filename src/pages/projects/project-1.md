@@ -7,14 +7,33 @@ organization: 'Mulrem'
 description: 'The Artcaffe Sabinov website is a project that aimed to create a friendly website for Artcaffe, a cafe located in Sabinov, Slovakia.'
 images:
   [
-    { url: '/images/projects/artcaffe/home.png', alt: 'Art caffe home' },
+    {
+      url: '/images/projects/artcaffe/home.png',
+      thumbNailUrl: '/images/projects/artcaffe/homeThumb.png',
+      alt: 'Art caffe home',
+      width: 1295,
+      height: 2000,
+    },
     {
       url: '/images/projects/artcaffe/menu.png',
+      thumbNailUrl: '/images/projects/artcaffe/menuThumb.png',
       alt: 'Art caffe project - menu',
+      width: 2392,
+      height: 2990,
+    },
+    {
+      url: '/images/projects/artcaffe/about.png',
+      thumbNailUrl: '/images/projects/artcaffe/aboutThumb.png',
+      alt: 'Art caffe project - about',
+      width: 2392,
+      height: 1446,
     },
     {
       url: '/images/projects/artcaffe/reservation.png',
+      thumbNailUrl: '/images/projects/artcaffe/reservationThumb.png',
       alt: 'Art caffe project - reservation',
+      width: 2392,
+      height: 2017,
     },
   ]
 technologies: ['javascript', 'firebase', 'astro', 'react']

@@ -31,12 +31,14 @@ const SkillBar: React.FC<ISkillBarProps> = ({
     <div
       key={id}
       onClick={handleOpenModal}
-      className=' gap-2 w-1/5  text-slate-700 dark:text-slate-400 cursor-pointer'
+      className=' gap-2 w-3/12 text-slate-700 dark:text-slate-400 cursor-pointer'
     >
       <div>
-        <div className='flex gap-2 mb-1'>
+        <div className='flex gap1 md:gap-2 mb-1'>
           <img src={iconSrc} alt={skillName} />
-          <p className='text-xs md:text-sm'>{skillName}</p>
+          <p className='text-xs md:text-sm truncate overflow-hidden ...'>
+            {skillName}
+          </p>
         </div>
         {isModalOpen && (
           <ModalIframe

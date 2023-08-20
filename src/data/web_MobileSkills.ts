@@ -7,7 +7,7 @@ export interface IWebMobileSkills {
 }
 const web_MobileSkills: IWebMobileSkills[] = [
   {
-    name: 'Reactjs',
+    name: 'ReactJs',
     progress: 80,
     icon: '/images/react.svg',
     url: 'https://reactjs.org/',
@@ -17,7 +17,7 @@ const web_MobileSkills: IWebMobileSkills[] = [
     name: 'React Native',
     progress: 75,
     icon: '/images/react-native.svg',
-    url: 'https://reactnative.dev/',
+    url: 'https://en.wikipedia.org/wiki/React_Native',
     backgroundColor: 'bg-blue-600',
   },
   {
@@ -60,7 +60,7 @@ const web_MobileSkills: IWebMobileSkills[] = [
     name: 'Node.js',
     progress: 65,
     icon: '/images/nodejs.svg',
-    url: 'https://nodejs.org/',
+    url: 'https://en.wikipedia.org/wiki/Node.js/',
     backgroundColor: 'bg-green-500',
   },
 

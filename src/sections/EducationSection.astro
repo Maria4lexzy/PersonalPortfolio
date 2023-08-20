@@ -7,15 +7,11 @@ import viaCourseList from '@data/viaCourseList';
 import sduCourseList from '@data/sduCourseList';
 ---
 
-<CardLayout
-  id='education'
-  dataAos='fade-up'
-  classStyle='flex flex-col md:flex-row md:gap-4 '
->
+<CardLayout id='education' classStyle='flex flex-col md:flex-row md:gap-4 '>
   <div class='flex flex-col gap-4'>
     <Title title='education' />
     <div class='flex flex-row gap-8'>
-      <div class=''>
+      <div class='hidden md:block'>
         <img
           src='/images/companies/SDU_B.jpg'
           alt='Maria Failli'
@@ -40,11 +36,11 @@ import sduCourseList from '@data/sduCourseList';
         > -->
       </div>
       <div class='flex flex-col gap-1'>
-        <h1 class='tracking-wide capitalize text-xl font-semibold'>
+        <h1 class='capitalize text-lg font-semibold'>
           University of Southern Denmark
         </h1>
-        <p>MSc Software Engineering</p>
-        <span class=''>February 2018 - July 2021</span>
+        <p class='text-md'>MSc Software Engineering</p>
+        <span class='text-xs text-neutral-500'>February 2018 - July 2021</span>
       </div>
     </div>
     <div>
@@ -57,7 +53,7 @@ import sduCourseList from '@data/sduCourseList';
       </p>
 
       <div class='flex flex-col'>
-        <details class='open:transition delay-150' open>
+        <details class='open:transition delay-150' !open>
           <summary
             class='my-2 capitalize font-medium text-gray-700 dark:text-gray-300 text-lg cursor-pointer'
           >
@@ -79,7 +75,7 @@ import sduCourseList from '@data/sduCourseList';
     <!-- via university -->
 
     <div class='flex flex-row gap-8'>
-      <div>
+      <div class='hidden md:block'>
         <img
           src='/images/companies/VIA.png'
           alt='VIA University College'
@@ -89,15 +85,15 @@ import sduCourseList from '@data/sduCourseList';
         />
       </div>
       <div class='flex flex-col gap-1'>
-        <h1 class='tracking-wide capitalize text-xl font-semibold'>
+        <h1 class='capitalize text-lg font-semibold'>
           BEng Software Technology Engineering
         </h1>
-        <p>VIA University College</p>
-        <span class=''>September 2021 - July 2023</span>
+        <p class='text-md'>VIA University College</p>
+        <span class='text-xs text-neutral-500'>September 2021 - July 2023</span>
       </div>
     </div>
     <div>
-      <p class='mb-2'>
+      <p class='mb-2 text-justify'>
         My education at VIA has equipped me with a strong foundation in software
         engineering, and a broad understanding of industry dynamics.
         Additionally, it has nurtured my passion for technology and prepared me
@@ -107,7 +103,7 @@ import sduCourseList from '@data/sduCourseList';
       </p>
 
       <div class='flex flex-col'>
-        <details class='open:transition delay-150' open>
+        <details class='open:transition delay-150' !open>
           <summary
             class='my-2 capitalize font-medium text-gray-700 dark:text-gray-300 text-lg cursor-pointer'
           >

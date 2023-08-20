@@ -1,126 +1,94 @@
 ---
 import Pill from '@components/DomElements/Pill';
-import Title from '@components/Typography/Title.astro';
-import CardLayout from '@layouts/CardLayout.astro';
+import LinkCode from '@components/Typography/LinkCode.astro';
 import Subtitle from '@components/Typography/Subtitle.astro';
+import Title from '@components/Typography/Title.astro';
 const allProjects = await Astro.glob('../pages/projects/*.md');
 ---
 
-<CardLayout dataAos='fade-up' id='projects' classStyles=''>
+<CardLayout id='projects' classStyles=''>
   <Title title='Projects' />
 
   {
     allProjects.map((project) => (
-      <div class='container mx-auto py-8 '>
-        <div class='flex flex-row gap-4 justify-between'>
-          <div>
-            <a href={project.url}>
-              <h1 class='tracking-wide capitalize text-xl font-semibold'>
-                {' '}
-                {project.frontmatter.title}{' '}
-              </h1>
-            </a>
-            <div class='text-sm mb-4'>
-              <div class='flex flex-row gap-2'>
-                <span class='text-neutral-950  dark:text-neutral-100'>
-                  My role:
-                </span>
-                <p class='text-neutral-500 capitalize'>
-                  {project.frontmatter.role}
-                </p>
+      <>
+        <div class='flex flex-col gap-8'>
+          <div class='flex flex-col gap-3 '>
+            <div class='flex gap-2 justify-between w-full'>
+              <div class='flex gap-4'>
+                <div class='flex-col'>
+                  <div>
+                    <a href={project.url}>
+                      <h1 class='tracking-wide capitalize text-xl font-semibold'>
+                        {project.frontmatter.title}
+                      </h1>
+                    </a>
+                  </div>
+                  <div class='flex flex-col gap-3'>
+                    {' '}
+                    <div class='text-sm mb-4'>
+                      <div class='flex flex-row gap-2'>
+                        <span class='text-neutral-950  dark:text-neutral-100'>
+                          My role:
+                        </span>
+                        <p class='text-neutral-500 capitalize'>
+                          {project.frontmatter.role}
+                        </p>
+                      </div>
+                      <div class='flex flex-row gap-2'>
+                        <span class='text-neutral-950  dark:text-neutral-100'>
+                          Team size:
+                        </span>
+                        <p class='text-neutral-500 capitalize'>
+                          {project.frontmatter.teamNum}
+                        </p>
+                      </div>
+                      <div class='flex flex-row gap-2'>
+                        <span class='text-neutral-950  dark:text-neutral-100'>
+                          Company:
+                        </span>
+                        <p class='text-neutral-500 capitalize'>
+                          {project.frontmatter.organization}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class='flex flex-row gap-2'>
-                <span class='text-neutral-950  dark:text-neutral-100'>
-                  Team size:
-                </span>
-                <p class='text-neutral-500 capitalize'>
-                  {project.frontmatter.teamNum}
-                </p>
+              <div class='flex gap-3 flex-wrap sm:flex-nowrap'>
+                {project.frontmatter.externals.map((external: any) => (
+                  <a href={external.url} class='cursor-pointer' target='_blank'>
+                    <Pill iconSrc={`../images/${external.name}.svg`} />
+                  </a>
+                ))}
               </div>
-              <div class='flex flex-row gap-2'>
-                <span class='text-neutral-950  dark:text-neutral-100'>
-                  Company/Organization:
-                </span>
-                <p class='text-neutral-500 capitalize'>
-                  {project.frontmatter.organization}
+            </div>
+            <div class='flex flex-col gap-3'>
+              <>
+                <p class='mb-4 italic'>
+                  {project.frontmatter.description}{' '}
+                  <LinkCode
+                    content='Read More'
+                    url={project.url}
+                    classItems='text-myTextBlue'
+                  />{' '}
                 </p>
+              </>
+              <div>
+                <p class='text-sm text-neutral-500 '>Technologies Used:</p>
+                <div class='flex flex-wrap gap-4'>
+                  {project.frontmatter.technologies.map((tech: any) => (
+                    <Pill iconSrc={`images/${tech}.svg`} description={tech} />
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-          <div class='flex flex-wrap gap-2 '>
-            {project.frontmatter.externals.map((external: any) => (
-              <a href={external.url} class='cursor-pointer' target='_blank'>
-                {' '}
-                <Pill iconSrc={`images/${external.name}.svg`} />
-              </a>
-            ))}
-          </div>
         </div>
-        <div>
-          <p class='mb-4 italic'>{project.frontmatter.description}</p>
-          <div>
-            <p class='text-sm text-neutral-500 my-2'>Technologies Used:</p>
-            <div class='flex flex-wrap gap-4'>
-              {project.frontmatter.technologies.map((tech: any) => (
-                <Pill iconSrc={`images/${tech}.svg`} description={tech} />
-              ))}
-            </div>
-          </div>
-        </div>
-        <Subtitle subTitle='More Coming Soon' />
-      </div>
+        <div class='bg-gray-400 my-4 h-px last:hidden w-full' />
+        <Subtitle subTitle='more comming soon after my vacation 😎✈️' />
+      </>
+
     ))
   }
-
-  <!-- <div class='w-8/12 lg:w-6/12 mx-auto'>
-    <div
-      class='grid md:grid-cols-2 gap-2 drop-shadow-[0px_35px_35px_rgba(39,245,131,0.6)]'
-    >
-      {
-        allProjects.map((project) => (
-          <div>
-            <a href={project.url}>
-              <h1>{project.frontmatter.title}</h1>
-              <p>{project.frontmatter.description}</p>
-
-              <img
-                src={project.frontmatter.image.src}
-                alt={project.frontmatter.image.alt}
-              />
-            </a>
-          </div>
-        ))
-      }
-    </div>
-  </div> -->
-  <!-- <Gallery
-    galleryID='my-test-gallery'
-    client:only='react'
-    images={[
-      {
-        largeURL:
-          'https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg',
-        thumbnailURL:
-          'https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg',
-        width: 1875,
-        height: 2500,
-      },
-      {
-        largeURL:
-          'https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg',
-        thumbnailURL:
-          'https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg',
-        width: 1669,
-        height: 2500,
-      },
-      {
-        largeURL:
-          'https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg',
-        thumbnailURL:
-          'https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg',
-        width: 2500,
-        height: 1666,
-      },
-    ]}
-  /> -->
 </CardLayout>
