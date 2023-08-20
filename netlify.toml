@@ -1,8 +1,3 @@
-[build.environment]
-
-[context.production.branch-deploy]
-    command = "mv robots.txt robots.txt"
-
-
-[context.production]
-    command = "mv sitemap.xml sitemap.xml"
+[build]
+    command = "mv ./sitemap.xml ./opt/build/repo/sitemap.xml"
+    command = "mv ./robots.txt ./opt/build/repo/robots.txt"
