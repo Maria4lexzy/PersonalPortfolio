@@ -25,8 +25,8 @@ module.exports = {
 				'myTextBlue': '#0087ca'
 			},
 			fontFamily: {
-				quicksand: ['Quicksand'],
-				sourceCode: ['"Source Code Pro"']
+				sourceCode: ['"Source Code Pro"'],
+				doses: ['Dosis']
 			},
 		},
 	},

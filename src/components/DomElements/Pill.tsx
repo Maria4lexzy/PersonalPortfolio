@@ -5,7 +5,7 @@ interface PillProps {
 
 const Pill: React.FC<PillProps> = ({ iconSrc, description }) => {
   return (
-    <div className='flex items-center bg-violet-500/20 rounded dark:bg-gray-700 dark:text-gray-100 font-medium gap-x-1.5 h-6 px-1.5 md:px-2.5 text-gray-700   w-fit dark:hover:bg-gray-600 hover:bg-gray-200 transition ease-in-out delay-150 cursor-pointer'>
+    <div className='flex items-center bg-violet-500/20 rounded dark:bg-gray-700 dark:text-gray-100 font-medium gap-x-1.5 h-6 px-1.5 md:px-2.5 text-gray-700 text-ellipsis ...  w-fit dark:hover:bg-gray-600 hover:bg-gray-200 transition ease-in-out delay-150 cursor-pointer'>
       <div className='flex gap-2'>
         <img src={iconSrc} alt={description} />
         {description ? (

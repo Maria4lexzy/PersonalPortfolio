@@ -11,14 +11,14 @@ const dataCloudSkills: IDdataCloudSkill[] = [
     name: 'MySQL',
     progress: 76,
     icon: '/images/mysql.svg',
-    url: 'https://www.mysql.com/',
+    url: 'https://en.wikipedia.org/wiki/MySQL',
     backgroundColor: 'bg-blue-500',
   },
   {
     name: 'MongoDB',
     progress: 65,
     icon: '/images/mongodb.svg',
-    url: 'https://www.mongodb.com/',
+    url: 'https://en.wikipedia.org/wiki/MongoDB',
     backgroundColor: 'bg-green-500',
   },
   // {
@@ -46,7 +46,7 @@ const dataCloudSkills: IDdataCloudSkill[] = [
     name: 'Microsoft Azure',
     progress: 40,
     icon: '/images/azure.svg',
-    url: 'https://azure.microsoft.com/',
+    url: 'https://en.wikipedia.org/wiki/Microsoft_Azure',
     backgroundColor: 'bg-sky-600',
   },
   // {
@@ -60,7 +60,7 @@ const dataCloudSkills: IDdataCloudSkill[] = [
     name: 'Docker',
     progress: 30,
     icon: '/images/docker.svg',
-    url: 'https://www.docker.com/',
+    url: 'https://en.wikipedia.org/wiki/Docker_(software)',
     backgroundColor: 'bg-sky-500',
   },
   {
