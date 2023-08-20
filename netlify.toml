@@ -1,3 +1,3 @@
 [build]
-    command = "mv ./sitemap.xml ./opt/build/repo/sitemap.xml"
-    command = "mv ./robots.txt ./opt/build/repo/robots.txt"
+    command = "mv ./sitemap.xml ./sitemap.xml"
+    command = "mv ./robots.txt ./robots.txt"
