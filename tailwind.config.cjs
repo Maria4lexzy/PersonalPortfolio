@@ -22,7 +22,8 @@ module.exports = {
 				'secondary': '#1e293b',
 				'secondary-light': '#334155',
 				'secondary-dark': '#020617',
-				'myTextBlue': '#0087ca'
+				'myTextBlue': '#0087ca',
+				'myTextBlue-light': '#46006C'
 			},
 			fontFamily: {
 				sourceCode: ['"Source Code Pro"'],

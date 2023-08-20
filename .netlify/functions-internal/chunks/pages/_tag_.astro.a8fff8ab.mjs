@@ -1,8 +1,8 @@
-/* empty css                           */import { c as createAstro, a as createComponent, r as renderTemplate, b as addAttribute, s as spreadAttributes, u as unescapeHTML, d as renderComponent, e as renderHead, m as maybeRenderHead, f as renderSlot, F as Fragment } from '../astro.6fa2bed6.mjs';
+/* empty css                        */import { c as createAstro, a as createComponent, r as renderTemplate, b as addAttribute, s as spreadAttributes, u as unescapeHTML, d as renderComponent, e as renderHead, m as maybeRenderHead, f as renderSlot } from '../astro.6fa2bed6.mjs';
 /* empty css                               */
-const $$Astro$d = createAstro();
+const $$Astro$e = createAstro("https://maria-louisa.com/");
 const $$OpenGraphArticleTags = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$d, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$e, $$props, $$slots);
   Astro2.self = $$OpenGraphArticleTags;
   const { publishedTime, modifiedTime, expirationTime, authors, section, tags } = Astro2.props.openGraph.article;
   return renderTemplate`${publishedTime ? renderTemplate`<meta property="article:published_time"${addAttribute(publishedTime, "content")}>` : null}
@@ -13,9 +13,9 @@ ${section ? renderTemplate`<meta property="article:section"${addAttribute(sectio
 ${tags ? tags.map((tag) => renderTemplate`<meta property="article:tag"${addAttribute(tag, "content")}>`) : null}`;
 }, "C:/Users/maria/Documents/GitHub/MyPortfolio/maria/node_modules/astro-seo/src/components/OpenGraphArticleTags.astro", void 0);
 
-const $$Astro$c = createAstro();
+const $$Astro$d = createAstro("https://maria-louisa.com/");
 const $$OpenGraphBasicTags = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$c, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$d, $$props, $$slots);
   Astro2.self = $$OpenGraphBasicTags;
   const { openGraph } = Astro2.props;
   return renderTemplate`<meta property="og:title"${addAttribute(openGraph.basic.title, "content")}>
@@ -24,9 +24,9 @@ const $$OpenGraphBasicTags = createComponent(async ($$result, $$props, $$slots) 
 <meta property="og:url"${addAttribute(openGraph.basic.url || Astro2.url.href, "content")}>`;
 }, "C:/Users/maria/Documents/GitHub/MyPortfolio/maria/node_modules/astro-seo/src/components/OpenGraphBasicTags.astro", void 0);
 
-const $$Astro$b = createAstro();
+const $$Astro$c = createAstro("https://maria-louisa.com/");
 const $$OpenGraphImageTags = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$b, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$c, $$props, $$slots);
   Astro2.self = $$OpenGraphImageTags;
   const { image } = Astro2.props.openGraph.basic;
   const { secureUrl, type, width, height, alt } = Astro2.props.openGraph.image;
@@ -38,9 +38,9 @@ ${!(height === null) ? renderTemplate`<meta property="og:image:height"${addAttri
 ${!(alt === null) ? renderTemplate`<meta property="og:image:alt"${addAttribute(alt, "content")}>` : null}`;
 }, "C:/Users/maria/Documents/GitHub/MyPortfolio/maria/node_modules/astro-seo/src/components/OpenGraphImageTags.astro", void 0);
 
-const $$Astro$a = createAstro();
+const $$Astro$b = createAstro("https://maria-louisa.com/");
 const $$OpenGraphOptionalTags = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$a, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$b, $$props, $$slots);
   Astro2.self = $$OpenGraphOptionalTags;
   const { optional } = Astro2.props.openGraph;
   return renderTemplate`${optional.audio ? renderTemplate`<meta property="og:audio"${addAttribute(optional.audio, "content")}>` : null}
@@ -52,18 +52,18 @@ ${optional.siteName ? renderTemplate`<meta property="og:site_name"${addAttribute
 ${optional.video ? renderTemplate`<meta property="og:video"${addAttribute(optional.video, "content")}>` : null}`;
 }, "C:/Users/maria/Documents/GitHub/MyPortfolio/maria/node_modules/astro-seo/src/components/OpenGraphOptionalTags.astro", void 0);
 
-const $$Astro$9 = createAstro();
+const $$Astro$a = createAstro("https://maria-louisa.com/");
 const $$ExtendedTags = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$9, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$a, $$props, $$slots);
   Astro2.self = $$ExtendedTags;
   const { props } = Astro2;
   return renderTemplate`${props.extend.link?.map((attributes) => renderTemplate`<link${spreadAttributes(attributes)}>`)}
 ${props.extend.meta?.map(({ content, httpEquiv, name, property }) => renderTemplate`<meta${addAttribute(content, "content")}${addAttribute(httpEquiv, "http-equiv")}${addAttribute(name, "name")}${addAttribute(property, "property")}>`)}`;
 }, "C:/Users/maria/Documents/GitHub/MyPortfolio/maria/node_modules/astro-seo/src/components/ExtendedTags.astro", void 0);
 
-const $$Astro$8 = createAstro();
+const $$Astro$9 = createAstro("https://maria-louisa.com/");
 const $$TwitterTags = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$8, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$9, $$props, $$slots);
   Astro2.self = $$TwitterTags;
   const { card, site, title, creator, description, image, imageAlt } = Astro2.props.twitter;
   return renderTemplate`${card ? renderTemplate`<meta name="twitter:card"${addAttribute(card, "content")}>` : null}
@@ -75,17 +75,17 @@ ${description ? renderTemplate`<meta name="twitter:description"${addAttribute(de
 ${creator ? renderTemplate`<meta name="twitter:creator"${addAttribute(creator, "content")}>` : null}`;
 }, "C:/Users/maria/Documents/GitHub/MyPortfolio/maria/node_modules/astro-seo/src/components/TwitterTags.astro", void 0);
 
-const $$Astro$7 = createAstro();
+const $$Astro$8 = createAstro("https://maria-louisa.com/");
 const $$LanguageAlternatesTags = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$7, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$8, $$props, $$slots);
   Astro2.self = $$LanguageAlternatesTags;
   const { languageAlternates } = Astro2.props;
   return renderTemplate`${languageAlternates.map((alternate) => renderTemplate`<link rel="alternate"${addAttribute(alternate.hrefLang, "hreflang")}${addAttribute(alternate.href, "href")}>`)}`;
 }, "C:/Users/maria/Documents/GitHub/MyPortfolio/maria/node_modules/astro-seo/src/components/LanguageAlternatesTags.astro", void 0);
 
-const $$Astro$6 = createAstro();
+const $$Astro$7 = createAstro("https://maria-louisa.com/");
 const $$SEO = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$6, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$7, $$props, $$slots);
   Astro2.self = $$SEO;
   Astro2.props.surpressWarnings = true;
   function validateProps(props) {
@@ -140,13 +140,13 @@ ${Astro2.props.languageAlternates && renderTemplate`${renderComponent($$result, 
 
 const tabLogo = "/images/profile.jpeg";
 
-var __freeze$2 = Object.freeze;
-var __defProp$2 = Object.defineProperty;
-var __template$2 = (cooked, raw) => __freeze$2(__defProp$2(cooked, "raw", { value: __freeze$2(raw || cooked.slice()) }));
-var _a$2;
-const $$Astro$5 = createAstro();
+var __freeze$1 = Object.freeze;
+var __defProp$1 = Object.defineProperty;
+var __template$1 = (cooked, raw) => __freeze$1(__defProp$1(cooked, "raw", { value: __freeze$1(raw || cooked.slice()) }));
+var _a$1;
+const $$Astro$6 = createAstro("https://maria-louisa.com/");
 const $$LayoutHeader = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$5, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$6, $$props, $$slots);
   Astro2.self = $$LayoutHeader;
   const {
     pageTitle,
@@ -155,12 +155,12 @@ const $$LayoutHeader = createComponent(async ($$result, $$props, $$slots) => {
     seoDescription,
     image = "/placeholder-social.jpg"
   } = Astro2.props;
-  return renderTemplate(_a$2 || (_a$2 = __template$2(["<!-- Global Metadata --><head>\n  ", '\n  <meta charset="UTF-8">\n  <meta http-equiv="X-UA-Compatible" content="IE=edge">\n  <meta name="viewport" content="width=device-width,initial-scale=1">\n  <link rel="icon" type="image/svg+xml"', ">\n  <title>", '</title>\n  <link rel="preconnect" href="https://fonts.googleapis.com">\n  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600&family=Source+Code+Pro:wght@200;400;600&display=swap" rel="stylesheet">\n\n  <link rel="stylesheet">\n  <link rel="stylesheet" href="node_modules/aos/dist/aos.css">\n  <script src="node_modules/aos/dist/aos.js"><\/script>\n  <script src="/lib/theme-util.js" type="text/javascript"><\/script>\n  >', "</head>"])), renderComponent($$result, "SEO", $$SEO, { "title": seoTitle, "description": seoDescription }), addAttribute(tabLogo, "href"), pageTitle, renderHead());
+  return renderTemplate(_a$1 || (_a$1 = __template$1(['<!-- Global Metadata --><head>\n  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7WTEYMG4ZZ"><\/script>\n  \n  ', '\n  <meta charset="UTF-8">\n  <meta http-equiv="X-UA-Compatible" content="IE=edge">\n  <meta name="viewport" content="width=device-width,initial-scale=1">\n  <link rel="icon" type="image/svg+xml"', ">\n  <title>", '</title>\n  <link rel="preconnect" href="https://fonts.googleapis.com">\n  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;600&family=Source+Code+Pro:wght@200;400;600&display=swap" rel="stylesheet">\n  <!-- Google tag (gtag.js) -->\n\n  <script src="/lib/theme-util.js" type="text/javascript"><\/script>\n', "</head>"])), renderComponent($$result, "SEO", $$SEO, { "title": seoTitle, "description": seoDescription }), addAttribute(tabLogo, "href"), pageTitle, renderHead());
 }, "C:/Users/maria/Documents/GitHub/MyPortfolio/maria/src/components/LayoutHeader.astro", void 0);
 
-const $$Astro$4 = createAstro();
+const $$Astro$5 = createAstro("https://maria-louisa.com/");
 const $$ThemeIcon = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$4, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$5, $$props, $$slots);
   Astro2.self = $$ThemeIcon;
   return renderTemplate`${maybeRenderHead()}<button onclick="toggleState()" class="border-none bg-transparent hover:opacity-60 transition delay-75 ease-custom-bezier duration-500 astro-N5CD7LW7">
   <svg width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="astro-N5CD7LW7">
@@ -170,21 +170,21 @@ const $$ThemeIcon = createComponent(async ($$result, $$props, $$slots) => {
 </button>`;
 }, "C:/Users/maria/Documents/GitHub/MyPortfolio/maria/src/components/Header/ThemeIcon.astro", void 0);
 
-const $$Astro$3 = createAstro();
+const $$Astro$4 = createAstro("https://maria-louisa.com/");
 const $$LinkCode = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$3, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$4, $$props, $$slots);
   Astro2.self = $$LinkCode;
-  const { url, content, classItems } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<a${addAttribute(url, "href")}${addAttribute(`${classItems} font-sourceCode hover: dark:text-mytextBlue text-myTextBlue-dark active: dark:text-mytextBlue text-myTextBlue-dark astro-WDYU34QM`, "class")}>${content}</a>`;
+  const { url, content, classItems, urlTarget } = Astro2.props;
+  return renderTemplate`${maybeRenderHead()}<a${addAttribute(url, "href")}${addAttribute(`${classItems} font-sourceCode hover: dark:text-mytextBlue text-myTextBlue-dark active: dark:text-mytextBlue text-myTextBlue-dark astro-WDYU34QM`, "class")}${addAttribute(urlTarget ? urlTarget : "", "target")}>${content}</a>`;
 }, "C:/Users/maria/Documents/GitHub/MyPortfolio/maria/src/components/Typography/LinkCode.astro", void 0);
 
-var __freeze$1 = Object.freeze;
-var __defProp$1 = Object.defineProperty;
-var __template$1 = (cooked, raw) => __freeze$1(__defProp$1(cooked, "raw", { value: __freeze$1(raw || cooked.slice()) }));
-var _a$1;
-const $$Astro$2 = createAstro();
+var __freeze = Object.freeze;
+var __defProp = Object.defineProperty;
+var __template = (cooked, raw) => __freeze(__defProp(cooked, "raw", { value: __freeze(raw || cooked.slice()) }));
+var _a;
+const $$Astro$3 = createAstro("https://maria-louisa.com/");
 const $$Nav = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$2, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$3, $$props, $$slots);
   Astro2.self = $$Nav;
   Astro2.url.pathname;
   const leftmenu = [
@@ -197,11 +197,15 @@ const $$Nav = createComponent(async ($$result, $$props, $$slots) => {
       href: "/#skills"
     },
     {
-      label: "Education",
-      href: "#education"
+      label: "Languages",
+      href: "#languages"
     }
   ];
   const rightmenu = [
+    {
+      label: "Education",
+      href: "#education"
+    },
     {
       label: "Experience",
       href: "/#exp"
@@ -211,14 +215,14 @@ const $$Nav = createComponent(async ($$result, $$props, $$slots) => {
       href: "/#projects"
       // external: true,
       // badge: "new",
-    },
-    {
-      label: "Travel",
-      href: "/travel"
     }
+    // {
+    //   label: 'Travel',
+    //   href: '/travel',
+    // },
   ];
   const mobilemenu = [...leftmenu, ...rightmenu];
-  return renderTemplate(_a$1 || (_a$1 = __template$1(["", '<nav class="px-5 py-2 shadow-md sticky top-0 z-50 w-full mx-auto rounded-lg navbar transition ease-custom-bezier duration-400 font-extrabold astro-IJ45LGIX">\n  <div class="flex flex-wrap justify-between md:gap-10 md:flex-nowrap astro-IJ45LGIX">\n    <!-- LEFT MENU -->\n    <div class="flex-col items-center justify-start order-1 hidden w-full md:flex md:flex-row md:justify-end md:w-auto md:order-none md:flex-1 astro-IJ45LGIX">\n      ', '\n    </div>\n    <!-- LOGO & MENU ICON -->\n    <div class="flex w-full justify-around astro-IJ45LGIX">\n      <div class="md:hidden astro-IJ45LGIX">\n        ', `
+  return renderTemplate(_a || (_a = __template(["", '<nav class="px-5 py-2 shadow-md sticky top-0 z-50 w-full mx-auto rounded-lg navbar transition ease-custom-bezier duration-400 font-extrabold astro-IJ45LGIX">\n  <div class="flex flex-wrap justify-between md:gap-10 md:flex-nowrap astro-IJ45LGIX">\n    <!-- LEFT MENU -->\n    <div class="flex-col items-center justify-start order-1 hidden w-full md:flex md:flex-row md:justify-end md:w-auto md:order-none md:flex-1 astro-IJ45LGIX">\n      ', '\n    </div>\n    <!-- LOGO & MENU ICON -->\n    <div class="flex w-full justify-around astro-IJ45LGIX">\n      <div class="md:hidden astro-IJ45LGIX">\n        ', `
       </div>
 
       <a id="smallLogo" class="w-32 astro-IJ45LGIX" href="/">
@@ -243,11 +247,20 @@ const $$Nav = createComponent(async ($$result, $$props, $$slots) => {
       `, "\n      ", '\n    </div>\n  </div>\n  <!-- PHONE MENU -->\n  <div class="navmenu-toggle hidden astro-IJ45LGIX">\n    <div class="flex flex-col items-center justify-start order-2 w-full md:hidden astro-IJ45LGIX">\n      ', "\n    </div>\n  </div>\n</nav>\n<script>\n  const menuButton = document.getElementById('menu');\n  const smallLogo = document.getElementById('smallLogo');\n  const bigLogo = document.getElementById('bigLogo');\n  const navbar = document.querySelector('.navbar');\n  const htmlElement = document.documentElement;\n  menuButton.addEventListener('click', () => {\n    [...document.querySelectorAll('.navmenu-toggle')].forEach((Element) => {\n      Element.classList.toggle('hidden');\n    });\n  });\n\n  const updateScrollAttribute = () => {\n    const scrollTop = htmlElement.scrollTop || document.body.scrollTop;\n    if (scrollTop > 0) {\n      htmlElement.setAttribute('data-scroll', '1');\n      navbar.classList.add(\n        'shadow-lg',\n        'bg-primary-light',\n        'dark:bg-secondary'\n      );\n      navbar.classList.remove('shadow-md');\n      bigLogo.classList.remove('hidden');\n      smallLogo.classList.add('hidden');\n    } else {\n      htmlElement.setAttribute('data-scroll', '0');\n      navbar.classList.remove(\n        'shadow-lg',\n        'bg-primary-light',\n        'dark:bg-secondary'\n      );\n      navbar.classList.add('shadow-md');\n      // bigLogo.classList.remove('hidden');\n      // smallLogo.classList.add('hidden');\n\n      bigLogo.classList.add('hidden');\n      smallLogo.classList.remove('hidden');\n    }\n  };\n  // Attach scroll event listener\n  window.addEventListener('scroll', updateScrollAttribute);\n  // Initial call to update the scroll attribute on page load\n  updateScrollAttribute();\n<\/script>"])), maybeRenderHead(), leftmenu.map((item) => renderTemplate`${renderComponent($$result, "LinkCode", $$LinkCode, { "url": item.href, "content": item.label, "classItems": " nav__link px-2 lg:px-5 py-2 md:text-sm", "class": "astro-IJ45LGIX" })}`), renderComponent($$result, "ThemeIcon", $$ThemeIcon, { "class": "astro-IJ45LGIX" }), rightmenu.map((item) => renderTemplate`${renderComponent($$result, "LinkCode", $$LinkCode, { "url": item.href, "content": item.label, "classItems": "nav__link px-2 lg:px-5 py-2 md:text-sm", "class": "astro-IJ45LGIX" })}`), renderComponent($$result, "ThemeIcon", $$ThemeIcon, { "class": "hidden md:inline-flex astro-IJ45LGIX" }), mobilemenu.map((item, index) => renderTemplate`${renderComponent($$result, "LinkCode", $$LinkCode, { "url": item.href, "content": item.label, "classItems": "px-5 py-2", "class": "astro-IJ45LGIX" })}`));
 }, "C:/Users/maria/Documents/GitHub/MyPortfolio/maria/src/components/Header/Nav.astro", void 0);
 
-var __freeze = Object.freeze;
-var __defProp = Object.defineProperty;
-var __template = (cooked, raw) => __freeze(__defProp(cooked, "raw", { value: __freeze(raw || cooked.slice()) }));
-var _a;
-const $$Astro$1 = createAstro();
+const $$Astro$2 = createAstro("https://maria-louisa.com/");
+const $$Footer = createComponent(async ($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro$2, $$props, $$slots);
+  Astro2.self = $$Footer;
+  return renderTemplate`${maybeRenderHead()}<section id="footer" class="backdrop-filter backdrop-blur-lg bg-primary-light dark:bg-secondary/95 w-full p-4 rounded-t-xl shadow-xl lg:space-y-8">
+  <div class="flex justify-center items-center">
+    <p class="text-neutral-500 dark:text-neutral-400">
+      &copy; ${(new Date()).getFullYear()} Maria Louisa Failli. All rights reserved.
+    </p>
+  </div>
+</section>`;
+}, "C:/Users/maria/Documents/GitHub/MyPortfolio/maria/src/components/Footer.astro", void 0);
+
+const $$Astro$1 = createAstro("https://maria-louisa.com/");
 const $$BaseLayout = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$BaseLayout;
@@ -257,50 +270,19 @@ const $$BaseLayout = createComponent(async ($$result, $$props, $$slots) => {
     seoDescription,
     image = "/placeholder-social.jpg"
   } = Astro2.props;
-  return renderTemplate(_a || (_a = __template(['<html lang="en" class="scroll-smooth">\n  ', "\n  ", '<body class="overflow-x-hidden bg-primary/80 dark:bg-secondary-dark/90 text-neutral-700 dark:text-neutral-300 font-quicksand transition-colors delay-150 ease-custom-bezier duration-500">\n    ', "\n    ", `
-    <div class="pswp-gallery pswp-gallery--single-column" id="my-gallery">
-      <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg" data-pswp-width="1669" data-pswp-height="2500" target="_blank">
-        <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg" alt="">
-      </a>
-      <!-- cropped thumbnail: -->
-      <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/7/img-2500.jpg" data-pswp-width="1875" data-pswp-height="2500" data-cropped="true" target="_blank">
-        <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/7/img-200.jpg" alt="">
-        Cropped
-      </a>
-      <!-- data-pswp-src with custom URL in href -->
-      <a href="https://unsplash.com" data-pswp-src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg" data-pswp-width="2500" data-pswp-height="1666" target="_blank">
-        <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg" alt="">
-      </a>
-      <!-- Without thumbnail: -->
-      <a href="http://example.com" data-pswp-src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/5/img-2500.jpg" data-pswp-width="2500" data-pswp-height="1668" target="_blank">
-        No thumbnail
-      </a>
-      <!-- wrapped with any element: -->
-      <div>
-        <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-2500.jpg" data-pswp-width="2500" data-pswp-height="1667" target="_blank">
-          <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-200.jpg" alt="">
-        </a>
-      </div>
-    </div>
-    <script type="module">
-      AOS.init();
-      import PhotoSwipeLightbox from 'node_modules/photoswipe/dist/types/lightbox';
-
-      const lightbox = new PhotoSwipeLightbox({
-        gallery: '#my-gallery',
-        children: 'a',
-        pswpModule: () => import('photoswipe'),
-      });
-      lightbox.init();
-    <\/script>
-  </body>
-</html>`])), renderComponent($$result, "LayoutHeader", $$LayoutHeader, { "pageTitle": pageTitle, "seoTitle": seoTitle, "seoDescription": seoDescription }), maybeRenderHead(), renderComponent($$result, "Nav", $$Nav, { "class": "" }), renderSlot($$result, $$slots["default"]));
+  return renderTemplate`<html lang="en" class="scroll-smooth">
+  ${renderComponent($$result, "LayoutHeader", $$LayoutHeader, { "pageTitle": pageTitle, "seoTitle": seoTitle, "seoDescription": seoDescription })}
+  ${maybeRenderHead()}<body class="overflow-x-hidden bg-primary/80 dark:bg-secondary-dark/90 text-neutral-700 dark:text-neutral-300 font-dosis transition-colors ease-in duration-450">
+    ${renderComponent($$result, "Nav", $$Nav, { "class": "" })}
+    ${renderSlot($$result, $$slots["default"])}
+    ${renderComponent($$result, "Footer", $$Footer, {})}
+  </body></html>`;
 }, "C:/Users/maria/Documents/GitHub/MyPortfolio/maria/src/layouts/BaseLayout.astro", void 0);
 
-const $$Astro = createAstro();
+const $$Astro = createAstro("https://maria-louisa.com/");
 const Astro = $$Astro;
 async function getStaticPaths() {
-  const allPosts = await Astro.glob(/* #__PURE__ */ Object.assign({ "../projects/project-1.md": () => import('./project-1.md.afa91fc8.mjs') }), () => "../projects/*.md");
+  const allPosts = await Astro.glob(/* #__PURE__ */ Object.assign({ "../projects/project-1.md": () => import('./project-1.md.206ed828.mjs') }), () => "../projects/*.md");
   const uniqueTags = [
     ...new Set(allPosts.map((post) => post.frontmatter.tags).flat())
   ];
@@ -314,36 +296,36 @@ async function getStaticPaths() {
     };
   });
 }
-const $$projects = createComponent(async ($$result, $$props, $$slots) => {
+const $$tag = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
-  Astro2.self = $$projects;
+  Astro2.self = $$tag;
+  const pageTitle = "Home";
+  const seoTitle = "Maria's Portfolio";
+  const seoDescription = "Discover a world of cutting-edge software solutions and creative craftsmanship at Mu";
   const { tag } = Astro2.params;
   const { posts } = Astro2.props;
-  const pageTitle = "About";
-  const seoTitle = "Mulrem  About";
-  const seoDescription = "About me";
   return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "pageTitle": pageTitle, "seoTitle": seoTitle, "seoDescription": seoDescription }, {
     "default": ($$result2) => renderTemplate`
   ${maybeRenderHead()}<p>Posts tagged with ${tag}</p>
   <ul>
-    ${posts.map((post) => renderTemplate`${renderComponent($$result2, "Fragment", Fragment, {}, {
-      "default": ($$result3) => renderTemplate`
-          <h1>${post.frontmatter.title}</h1>
-          <p> ${post.url}</p>
-        ` })}`)}
+    ${posts.map((post) => renderTemplate`<li>
+          ${" "}
+          <p>${post.frontmatter.title}</p>
+          <a${addAttribute(post.url, "href")}></a>
+        </li>`)}
   </ul>
 ` })}`;
-}, "C:/Users/maria/Documents/GitHub/MyPortfolio/maria/src/pages/tags/[projects].astro", void 0);
+}, "C:/Users/maria/Documents/GitHub/MyPortfolio/maria/src/pages/tags/[tag].astro", void 0);
 
-const $$file = "C:/Users/maria/Documents/GitHub/MyPortfolio/maria/src/pages/tags/[projects].astro";
-const $$url = "/tags/[projects]";
+const $$file = "C:/Users/maria/Documents/GitHub/MyPortfolio/maria/src/pages/tags/[tag].astro";
+const $$url = "/tags/[tag]";
 
-const _projects_ = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const _tag_ = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
-  default: $$projects,
+  default: $$tag,
   file: $$file,
   getStaticPaths,
   url: $$url
 }, Symbol.toStringTag, { value: 'Module' }));
 
-export { $$BaseLayout as $, _projects_ as _ };
+export { $$BaseLayout as $, _tag_ as _, $$LinkCode as a };

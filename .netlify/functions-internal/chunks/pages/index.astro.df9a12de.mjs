@@ -1,8 +1,8 @@
 /* empty css                        */import { c as createAstro, a as createComponent, r as renderTemplate, m as maybeRenderHead, b as addAttribute, f as renderSlot, d as renderComponent, _ as __astro_tag_component__, F as Fragment$1 } from '../astro.6fa2bed6.mjs';
-import { a as $$LinkCode, $ as $$BaseLayout } from './_tag_.astro.404b13ca.mjs';
+import { a as $$LinkCode, $ as $$BaseLayout } from './_tag_.astro.a8fff8ab.mjs';
 import { jsx, jsxs, Fragment } from 'react/jsx-runtime';
 /* empty css                           */
-const $$Astro$f = createAstro();
+const $$Astro$f = createAstro("https://maria-louisa.com/");
 const $$Title = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$f, $$props, $$slots);
   Astro2.self = $$Title;
@@ -14,7 +14,7 @@ const $$Title = createComponent(async ($$result, $$props, $$slots) => {
 <!-- </div> -->`;
 }, "C:/Users/maria/Documents/GitHub/MyPortfolio/maria/src/components/Typography/Title.astro", void 0);
 
-const $$Astro$e = createAstro();
+const $$Astro$e = createAstro("https://maria-louisa.com/");
 const $$CardLayout = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$e, $$props, $$slots);
   Astro2.self = $$CardLayout;
@@ -26,7 +26,7 @@ const $$CardLayout = createComponent(async ($$result, $$props, $$slots) => {
 </section>`;
 }, "C:/Users/maria/Documents/GitHub/MyPortfolio/maria/src/layouts/CardLayout.astro", void 0);
 
-const $$Astro$d = createAstro();
+const $$Astro$d = createAstro("https://maria-louisa.com/");
 const $$AboutSection = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$d, $$props, $$slots);
   Astro2.self = $$AboutSection;
@@ -64,6 +64,7 @@ const $$AboutSection = createComponent(async ($$result, $$props, $$slots) => {
       </div>
     </div>
     <p class="mt-4 text-sm lg:text-base text-justify">
+
       Greetings Observer👋, I'm Maria. I like developing, <span class=" dark:text-mytextBlue text-myTextBlue-dark">well-structured</span>, <span class=" dark:text-mytextBlue text-myTextBlue-dark">reusable</span>, and <span class=" dark:text-mytextBlue text-myTextBlue-dark">maintainable</span> software solutions. What I enjoy about the software world is the constant
       evolution of technologies and tools, always offering new opportunities to learn
       and create more efficient solutions. My journey in technology is driven by
@@ -74,12 +75,13 @@ const $$AboutSection = createComponent(async ($$result, $$props, $$slots) => {
       crocheting🧶 or hiking🌄. I also love traveling✈️ and trying new food🍜.
       So far, I've been to <span class=" dark:text-mytextBlue text-myTextBlue-dark">15 countries</span> and
       two continents, and I look forward to exploring more places.
+
     </p>
   </div>
 ` })}`;
 }, "C:/Users/maria/Documents/GitHub/MyPortfolio/maria/src/sections/AboutSection.astro", void 0);
 
-const $$Astro$c = createAstro();
+const $$Astro$c = createAstro("https://maria-louisa.com/");
 const $$Subtitle = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$c, $$props, $$slots);
   Astro2.self = $$Subtitle;
@@ -159,7 +161,7 @@ const dataCloudSkills = [
   // Add more database management systems here
 ];
 
-const $$Astro$b = createAstro();
+const $$Astro$b = createAstro("https://maria-louisa.com/");
 const $$DatabaseCloudSkills = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$b, $$props, $$slots);
   Astro2.self = $$DatabaseCloudSkills;
@@ -223,7 +225,7 @@ const programmingLanguages = [
   }
 ];
 
-const $$Astro$a = createAstro();
+const $$Astro$a = createAstro("https://maria-louisa.com/");
 const $$ProgLang = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$a, $$props, $$slots);
   Astro2.self = $$ProgLang;
@@ -296,7 +298,7 @@ const web_MobileSkills = [
   // ... (other backend skills)
 ];
 
-const $$Astro$9 = createAstro();
+const $$Astro$9 = createAstro("https://maria-louisa.com/");
 const $$WebDev = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$9, $$props, $$slots);
   Astro2.self = $$WebDev;
@@ -328,7 +330,7 @@ const sWConcpetSkills = [
   }
 ];
 
-const $$Astro$8 = createAstro();
+const $$Astro$8 = createAstro("https://maria-louisa.com/");
 const $$SWConcepts = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$8, $$props, $$slots);
   Astro2.self = $$SWConcepts;
@@ -341,7 +343,7 @@ const $$SWConcepts = createComponent(async ($$result, $$props, $$slots) => {
 </div>`;
 }, "C:/Users/maria/Documents/GitHub/MyPortfolio/maria/src/components/Skills/SWConcepts.astro", void 0);
 
-const $$Astro$7 = createAstro();
+const $$Astro$7 = createAstro("https://maria-louisa.com/");
 const $$SkillsSection = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$7, $$props, $$slots);
   Astro2.self = $$SkillsSection;
@@ -378,7 +380,7 @@ const Pill = ({
 };
 __astro_tag_component__(Pill, "@astrojs/react");
 
-const $$Astro$6 = createAstro();
+const $$Astro$6 = createAstro("https://maria-louisa.com/");
 const $$Languages = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$6, $$props, $$slots);
   Astro2.self = $$Languages;
@@ -394,7 +396,7 @@ const $$Languages = createComponent(async ($$result, $$props, $$slots) => {
 </div>`;
 }, "C:/Users/maria/Documents/GitHub/MyPortfolio/maria/src/components/Languages/Languages.astro", void 0);
 
-const $$Astro$5 = createAstro();
+const $$Astro$5 = createAstro("https://maria-louisa.com/");
 const $$LanguageSection = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$5, $$props, $$slots);
   Astro2.self = $$LanguageSection;
@@ -467,7 +469,7 @@ const sduCourseList = [
   { courseName: "Systems Modeling and Simulation" }
 ];
 
-const $$Astro$4 = createAstro();
+const $$Astro$4 = createAstro("https://maria-louisa.com/");
 const $$EducationSection = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$4, $$props, $$slots);
   Astro2.self = $$EducationSection;
@@ -565,7 +567,7 @@ const $$EducationSection = createComponent(async ($$result, $$props, $$slots) =>
 ` })}`;
 }, "C:/Users/maria/Documents/GitHub/MyPortfolio/maria/src/sections/EducationSection.astro", void 0);
 
-const $$Astro$3 = createAstro();
+const $$Astro$3 = createAstro("https://maria-louisa.com/");
 const $$ExperienceSection = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$3, $$props, $$slots);
   Astro2.self = $$ExperienceSection;
@@ -732,11 +734,11 @@ const $$ExperienceSection = createComponent(async ($$result, $$props, $$slots) =
 ` })}`;
 }, "C:/Users/maria/Documents/GitHub/MyPortfolio/maria/src/sections/ExperienceSection.astro", void 0);
 
-const $$Astro$2 = createAstro();
+const $$Astro$2 = createAstro("https://maria-louisa.com/");
 const $$ProjectSection = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$2, $$props, $$slots);
   Astro2.self = $$ProjectSection;
-  const allProjects = await Astro2.glob(/* #__PURE__ */ Object.assign({ "../pages/projects/project-1.md": () => import('./project-1.md.9132c257.mjs') }), () => "../pages/projects/*.md");
+  const allProjects = await Astro2.glob(/* #__PURE__ */ Object.assign({ "../pages/projects/project-1.md": () => import('./project-1.md.206ed828.mjs') }), () => "../pages/projects/*.md");
   return renderTemplate`${renderComponent($$result, "CardLayout", $$CardLayout, { "id": "projects", "classStyles": "" }, {
     "default": ($$result2) => renderTemplate`
   ${renderComponent($$result2, "Title", $$Title, { "title": "Projects" })}
@@ -815,7 +817,7 @@ const $$ProjectSection = createComponent(async ($$result, $$props, $$slots) => {
   })}`;
 }, "C:/Users/maria/Documents/GitHub/MyPortfolio/maria/src/sections/ProjectSection.astro", void 0);
 
-const $$Astro$1 = createAstro();
+const $$Astro$1 = createAstro("https://maria-louisa.com/");
 const $$Index$1 = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$Index$1;
@@ -845,11 +847,11 @@ const index$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   url: $$url$1
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$Astro = createAstro();
+const $$Astro = createAstro("https://maria-louisa.com/");
 const $$Index = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$Index;
-  const allProjects = await Astro2.glob(/* #__PURE__ */ Object.assign({ "../projects/project-1.md": () => import('./project-1.md.9132c257.mjs') }), () => "../projects/*.md");
+  const allProjects = await Astro2.glob(/* #__PURE__ */ Object.assign({ "../projects/project-1.md": () => import('./project-1.md.206ed828.mjs') }), () => "../projects/*.md");
   const technologies = [
     ...new Set(allProjects.map((post) => post.frontmatter.technologies).flat())
   ];
