@@ -3,6 +3,7 @@ import Pill from '@components/DomElements/Pill';
 import LinkCode from '@components/Typography/LinkCode.astro';
 import Subtitle from '@components/Typography/Subtitle.astro';
 import Title from '@components/Typography/Title.astro';
+import CardLayout from '@layouts/CardLayout.astro';
 const allProjects = await Astro.glob('../pages/projects/*.md');
 ---
 
@@ -88,7 +89,6 @@ const allProjects = await Astro.glob('../pages/projects/*.md');
         <div class='bg-gray-400 my-4 h-px last:hidden w-full' />
         <Subtitle subTitle='more comming soon after my vacation 😎✈️' />
       </>
-
     ))
   }
 </CardLayout>
