@@ -22,6 +22,17 @@ const {
 
 <!-- Global Metadata -->
 <head>
+  <script async src='https://www.googletagmanager.com/gtag/js?id=G-7WTEYMG4ZZ'
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-7WTEYMG4ZZ');
+  </script>
   <SEO title={seoTitle} description={seoDescription} />
   <meta charset='UTF-8' />
   <meta http-equiv='X-UA-Compatible' content='IE=edge' />
@@ -35,7 +46,6 @@ const {
     rel='stylesheet'
   />
   <!-- Google tag (gtag.js) -->
-  <script async src='https://www.googletagmanager.com/gtag/js?id=G-7WTEYMG4ZZ'
-  ></script>
+
   <script src='/lib/theme-util.js' type='text/javascript' is:inline></script>
 </head>
