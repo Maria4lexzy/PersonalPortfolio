@@ -1,5 +1,7 @@
 ---
+import Pill from '@components/DomElements/Pill';
 import LinkCode from '@components/Typography/LinkCode.astro';
+import Subtitle from '@components/Typography/Subtitle.astro';
 import Title from '@components/Typography/Title.astro';
 import CardLayout from '@layouts/CardLayout.astro';
 ---
@@ -37,62 +39,75 @@ import CardLayout from '@layouts/CardLayout.astro';
       </h3>
       <div class='flex flex-col lg:flex-row nowrap gap-x-4 gap-y-1 md:gap-x-8'>
         <div class='flex flex-row gap-1 justify-center md:justify-normal'>
-          <svg
-            <svg
-            xmlns='http://www.w3.org/2000/svg'
-            width='24'
-            height='24'
-            viewBox='0 0 24 24'
-            ><path
-              fill='currentColor'
-              d='M12 9c-1.6 0-3.15.25-4.6.72v3.1c0 .39-.23.74-.56.9c-.98.49-1.87 1.12-2.66 1.85c-.18.18-.43.28-.7.28c-.28 0-.53-.11-.71-.29L.29 13.08a.956.956 0 0 1-.29-.7c0-.28.11-.53.29-.71C3.34 8.78 7.46 7 12 7s8.66 1.78 11.71 4.67c.18.18.29.43.29.71c0 .28-.11.53-.29.71l-2.48 2.48c-.18.18-.43.29-.71.29c-.27 0-.52-.11-.7-.28a11.27 11.27 0 0 0-2.67-1.85a.996.996 0 0 1-.56-.9v-3.1C15.15 9.25 13.6 9 12 9z'
-            ></path></svg
+          <a
+            href='mailto:mariafailli42@gmail.com'
+            class='text-sm font-normal leading-relaxed sm:text-base'
+            target='_self'
           >
-
-          <LinkCode
-            url='mailto:mariafailli42@gmail.com'
-            classItems='text-sm font-normal leading-relaxed sm:text-base '
-            urlTarget='_self'
-            content='mariafailli42@gmail.com'
-          />
+            <Pill
+              iconSrc='/images/email.svg'
+              description='Send me an email'
+              classListItems='hover:animate-pulse'
+            />
+          </a>
         </div>
         <div class='flex flex-row gap-1 justify-center md:justify-normal'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            width='24'
-            height='24'
-            viewBox='0 0 24 24'
-            ><path
-              fill='currentColor'
-              d='M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-.4 4.25l-7.07 4.42c-.32.2-.74.2-1.06 0L4.4 8.25a.85.85 0 1 1 .9-1.44L12 11l6.7-4.19a.85.85 0 1 1 .9 1.44z'
-            ></path></svg
+          <a
+            href='tel:91 15 47 99'
+            class='text-sm font-normal leading-relaxed sm:text-base'
+            target='_self'
           >
-          <LinkCode
-            url='tel:91 15 47 99'
-            classItems='text-sm font-normal leading-relaxed sm:text-base '
-            urlTarget='_self'
-            content='+45 91 15 47 99'
-          />
+            <Pill
+              iconSrc='/images/phone.svg'
+              classListItems='hover:animate-pulse'
+              description='Give me a call'
+            />
+          </a>
+        </div>
+      </div>
+
+      <p class='mt-4 text-sm lg:text-base text-justify'>
+        Greetings Observer👋, I'm Maria. I like developing, <span
+          class='text-myTextBlue'>well-structured</span
+        >, <span class='text-myTextBlue'>reusable</span>, and <span
+          class='text-myTextBlue'>maintainable</span
+        > software solutions. What I enjoy about the software world is the constant
+        evolution of technologies and tools, always offering new opportunities to
+        learn and create more efficient solutions. My journey in technology is driven
+        by
+        <span class='text-myTextBlue'>curiosity</span> and desire to make a positive
+        impact through
+        <span class='text-myTextBlue'>innovation</span>. In my free time, you'll
+        find me immersed in DIY projects, from tinkering with electronics to
+        crocheting🧶 or hiking🌄. I also love traveling✈️ and trying new food🍜.
+        So far, I've been to <span class='text-myTextBlue'>15 countries</span> and
+        two continents, and I look forward to exploring more places.
+      </p>
+
+      <Subtitle subTitle='Socials' />
+
+      <!-- urls -->
+      <div class='mt-4 md:mt-0 md:gap-y-2'>
+        <div class='flex gap-x-4 gap-y-1 md:gap-x-8 justify-center'>
+          <div class='flex flex-row gap-1 justify-center md:justify-normal'>
+            <a href='https://github.com/Maria4lexzy'>
+              <Pill iconSrc='/images/github.svg' />
+            </a>
+          </div>
+          <div class='flex flex-row gap-1 justify-center md:justify-normal'>
+            <a href='https://www.linkedin.com/in/maria-louisa-failli/'>
+              <Pill iconSrc='/images/linkedin.svg' />
+            </a>
+          </div>
+          <div class='flex flex-row gap-1 justify-center md:justify-normal'>
+            <a
+              href='https://www.linkedin.com/in/https://maria-louisa.com/projects/project-1/'
+            >
+              <Pill iconSrc='/images/portfolio.svg' />
+            </a>
+          </div>
         </div>
       </div>
     </div>
-    <p class='mt-4 text-sm lg:text-base text-justify'>
-
-      Greetings Observer👋, I'm Maria. I like developing, <span
-        class='text-myTextBlue'>well-structured</span
-      >, <span class='text-myTextBlue'>reusable</span>, and <span
-        class='text-myTextBlue'>maintainable</span
-      > software solutions. What I enjoy about the software world is the constant
-      evolution of technologies and tools, always offering new opportunities to learn
-      and create more efficient solutions. My journey in technology is driven by
-      <span class='text-myTextBlue'>curiosity</span> and desire to make a positive
-      impact through
-      <span class='text-myTextBlue'>innovation</span>. In my free time, you'll
-      find me immersed in DIY projects, from tinkering with electronics to
-      crocheting🧶 or hiking🌄. I also love traveling✈️ and trying new food🍜.
-      So far, I've been to <span class='text-myTextBlue'>15 countries</span> and
-      two continents, and I look forward to exploring more places.
-
-    </p>
   </div>
 </CardLayout>

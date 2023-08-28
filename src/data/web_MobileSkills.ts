@@ -25,14 +25,21 @@ const web_MobileSkills: IWebMobileSkills[] = [
     progress: 90,
     icon: '/images/astro.svg',
     url: 'https://astro.build/',
-    backgroundColor: 'bg-orange-700',
+    backgroundColor: 'bg-orange-500',
+  },
+  {
+    name: 'Umbraco',
+    progress: 65,
+    icon: '/images/umbraco.svg',
+    url: 'https://umbraco.com/',
+    backgroundColor: 'bg-indigo-600',
   },
   {
     name: 'TypeScript',
     progress: 65,
     icon: '/images/typescript.svg',
     url: 'https://www.typescriptlang.org/',
-    backgroundColor: 'bg-blue-700',
+    backgroundColor: 'bg-blue-400',
   },
   {
     name: 'Tailwind',
