@@ -7,7 +7,7 @@ const $$Title = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$f, $$props, $$slots);
   Astro2.self = $$Title;
   const { title } = Astro2.props;
-  return renderTemplate`<!-- <div class='flex flex-row items-center'> -->${maybeRenderHead()}<h1 class="capitalize text-sm md:text-xl font-extrabold  dark:text-mytextBlue text-myTextBlue-dark font-sourceCode">
+  return renderTemplate`<!-- <div class='flex flex-row items-center'> -->${maybeRenderHead()}<h1 class="capitalize text-sm md:text-xl font-extrabold  dark:text-primary-text dark:text-secondary-text text-primary-text dark:text-secondary-text-dark font-sourceCode">
   ${`{ ${title} }`}
 </h1>
 <!-- <div class='bg-gray-200 dark:bg-gray-600 h-px w-full'></div> -->
@@ -65,15 +65,15 @@ const $$AboutSection = createComponent(async ($$result, $$props, $$slots) => {
     </div>
     <p class="mt-4 text-sm lg:text-base text-justify">
 
-      Greetings Observer👋, I'm Maria. I like developing, <span class=" dark:text-mytextBlue text-myTextBlue-dark">well-structured</span>, <span class=" dark:text-mytextBlue text-myTextBlue-dark">reusable</span>, and <span class=" dark:text-mytextBlue text-myTextBlue-dark">maintainable</span> software solutions. What I enjoy about the software world is the constant
+      Greetings Observer👋, I'm Maria. I like developing, <span class=" dark:text-primary-text dark:text-secondary-text text-primary-text dark:text-secondary-text-dark">well-structured</span>, <span class=" dark:text-primary-text dark:text-secondary-text text-primary-text dark:text-secondary-text-dark">reusable</span>, and <span class=" dark:text-primary-text dark:text-secondary-text text-primary-text dark:text-secondary-text-dark">maintainable</span> software solutions. What I enjoy about the software world is the constant
       evolution of technologies and tools, always offering new opportunities to learn
       and create more efficient solutions. My journey in technology is driven by
-      <span class=" dark:text-mytextBlue text-myTextBlue-dark">curiosity</span> and desire to make a positive
+      <span class=" dark:text-primary-text dark:text-secondary-text text-primary-text dark:text-secondary-text-dark">curiosity</span> and desire to make a positive
       impact through
-      <span class=" dark:text-mytextBlue text-myTextBlue-dark">innovation</span>. In my free time, you'll
+      <span class=" dark:text-primary-text dark:text-secondary-text text-primary-text dark:text-secondary-text-dark">innovation</span>. In my free time, you'll
       find me immersed in DIY projects, from tinkering with electronics to
       crocheting🧶 or hiking🌄. I also love traveling✈️ and trying new food🍜.
-      So far, I've been to <span class=" dark:text-mytextBlue text-myTextBlue-dark">15 countries</span> and
+      So far, I've been to <span class=" dark:text-primary-text dark:text-secondary-text text-primary-text dark:text-secondary-text-dark">15 countries</span> and
       two continents, and I look forward to exploring more places.
 
     </p>
@@ -799,7 +799,7 @@ const $$ProjectSection = createComponent(async ($$result, $$props, $$slots) => {
         "default": ($$result4) => renderTemplate`
                 <p class="mb-4 italic">
                   ${project.frontmatter.description}${" "}
-                  ${renderComponent($$result4, "LinkCode", $$LinkCode, { "content": "Read More", "url": project.url, "classItems": " dark:text-mytextBlue text-myTextBlue-dark" })}${" "}
+                  ${renderComponent($$result4, "LinkCode", $$LinkCode, { "content": "Read More", "url": project.url, "classItems": " dark:text-primary-text dark:text-secondary-text text-primary-text dark:text-secondary-text-dark" })}${" "}
                 </p>
               ` })}
               <div>

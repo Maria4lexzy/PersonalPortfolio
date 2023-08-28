@@ -59,7 +59,10 @@ const allProjects = await Astro.glob('../pages/projects/*.md');
               <div class='flex gap-3 flex-wrap sm:flex-nowrap'>
                 {project.frontmatter.externals.map((external: any) => (
                   <a href={external.url} class='cursor-pointer' target='_blank'>
-                    <Pill iconSrc={`../images/${external.name}.svg`} />
+                    <Pill
+                      iconSrc={`../images/${external.name}.svg`}
+                      description='demo'
+                    />
                   </a>
                 ))}
               </div>
@@ -69,9 +72,9 @@ const allProjects = await Astro.glob('../pages/projects/*.md');
                 <p class='mb-4 italic'>
                   {project.frontmatter.description}{' '}
                   <LinkCode
-                    content='Read More'
+                    content='Read the full article'
                     url={project.url}
-                    classItems='text-myTextBlue'
+                    classItems='text-primary-text dark:text-secondary-text'
                   />{' '}
                 </p>
               </>
@@ -87,8 +90,9 @@ const allProjects = await Astro.glob('../pages/projects/*.md');
           </div>
         </div>
         <div class='bg-gray-400 my-4 h-px last:hidden w-full' />
-        <Subtitle subTitle='more comming soon after my vacation 😎✈️' />
       </>
     ))
   }
+
+  <Subtitle subTitle='more comming soon after my vacation 😎✈️' />
 </CardLayout>

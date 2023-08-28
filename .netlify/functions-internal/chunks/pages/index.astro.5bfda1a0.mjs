@@ -14,7 +14,7 @@ const $$Title = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$e, $$props, $$slots);
   Astro2.self = $$Title;
   const { title } = Astro2.props;
-  return renderTemplate`<!-- <div class='flex flex-row items-center'> -->${maybeRenderHead()}<h1 class="capitalize text-xl font-extrabold  dark:text-mytextBlue text-myTextBlue-dark font-sourceCode">
+  return renderTemplate`<!-- <div class='flex flex-row items-center'> -->${maybeRenderHead()}<h1 class="capitalize text-xl font-extrabold  dark:text-primary-text dark:text-secondary-text text-primary-text dark:text-secondary-text-dark font-sourceCode">
   ${`{ ${title} }`}
 </h1>
 <!-- <div class='bg-gray-200 dark:bg-gray-600 h-px w-full'></div> -->

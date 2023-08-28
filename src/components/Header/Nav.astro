@@ -48,6 +48,7 @@ const mobilemenu: IMenu[] = [...leftmenu, ...rightmenu];
 ---
 
 <nav
+  role='navigation'
   class='px-5 py-2 shadow-md sticky top-0 z-50 w-full mx-auto rounded-lg navbar transition ease-custom-bezier duration-400 font-extrabold'
 >
   <div class='flex flex-wrap justify-between md:gap-10 md:flex-nowrap'>
@@ -74,7 +75,7 @@ const mobilemenu: IMenu[] = [...leftmenu, ...rightmenu];
       <a id='smallLogo' class='w-32' href='/'>
         <!-- <img src={bigLogo} alt=' Logo' /> -->
         <svg
-          class='h-12 w-12 mx-auto text-myTextBlue fill-current'
+          class='h-12 w-12 mx-auto text-primary-text dark:text-secondary-text fill-current'
           id='Layer_1'
           data-name='Layer 1'
           xmlns='http://www.w3.org/2000/svg'
@@ -86,7 +87,7 @@ const mobilemenu: IMenu[] = [...leftmenu, ...rightmenu];
       </a>
       <a id='bigLogo' class='w-32' href='/'>
         <svg
-          class='h-12 w-12 mx-auto text-myTextBlue fill-current'
+          class='h-12 w-12 mx-auto text-primary-text dark:text-secondary-text fill-current'
           id='Layer_2'
           data-name='Layer 2'
           xmlns='http://www.w3.org/2000/svg'
@@ -104,7 +105,7 @@ const mobilemenu: IMenu[] = [...leftmenu, ...rightmenu];
       <button
         id='menu'
         aria-label='Toggle Menu'
-        class='md:hidden text-myTextBlue rounded-md focus:outline-none'
+        class='md:hidden text-primary-text dark:text-secondary-text rounded-md focus:outline-none'
       >
         <svg
           class='w-8 h-8 fill-current'

@@ -34,8 +34,8 @@ const SkillBar: React.FC<ISkillBarProps> = ({
       className=' gap-2 w-3/12 text-slate-700 dark:text-slate-400 cursor-pointer'
     >
       <div>
-        <div className='flex gap1 md:gap-2 mb-1'>
-          <img src={iconSrc} alt={skillName} />
+        <div className='flex gap1 md:gap-2 mb-1 '>
+          <img src={iconSrc} alt={skillName} className='h-auto w-4' />
           <p className='text-xs md:text-sm truncate overflow-hidden ...'>
             {skillName}
           </p>
@@ -48,7 +48,7 @@ const SkillBar: React.FC<ISkillBarProps> = ({
         )}
       </div>
 
-      <div className='relative w-full h-2 bg-neutral-100 rounded'>
+      <div className='relative w-full h-2 bg-slate-600 rounded'>
         <div
           className={`absolute top-0 left-0 h-full rounded ${
             backgroundColor ? backgroundColor : 'bg-slate-200'
