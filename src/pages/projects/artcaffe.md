@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownProjectLayout.astro
-title: 'Artcaffe Sabinov Web Application'
+title: 'Artcaffe Sabinov - Web Application'
 role: 'frontend developer'
 teamNum: '2'
 organization: 'Mulrem'

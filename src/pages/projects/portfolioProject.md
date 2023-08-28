@@ -36,7 +36,16 @@ images:
       height: 754,
     },
   ]
-technologies: ['javascript', 'typescript', 'astro', 'react']
+technologies:
+  [
+    'recaptcha',
+    'analytics',
+    'netlify',
+    'javascript',
+    'typescript',
+    'astro',
+    'react',
+  ]
 externals: [{ name: 'web', url: 'https://artcaffe.sk/' }]
 ---
 
