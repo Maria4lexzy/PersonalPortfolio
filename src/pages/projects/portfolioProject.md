@@ -12,7 +12,7 @@ images:
       thumbNailUrl: '/images/projects/portfolio/pageInsightThumb.webp',
       alt: 'my portfolio portfolio',
       width: 1000,
-      height: 754,
+      height: 556,
     },
     {
       url: '/images/projects/portfolio/robots.webp',
