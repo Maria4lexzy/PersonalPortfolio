@@ -17,12 +17,21 @@ type FormattedImage = {
 const seoTitle = 'Maria Projects';
 const seoDescription = 'Projects';
 
-const formattedImages = frontmatter.images.map((imageUrl: FormattedImage) => ({
-  largeURL: imageUrl.url,
-  thumbnailURL: imageUrl.thumbNailUrl,
-  width: imageUrl.width, // Set the actual width
-  height: imageUrl.height, // Set the actual height
-}));
+// const formattedImages = frontmatter.images.map((imageUrl: FormattedImage) => ({
+//   largeURL: imageUrl.url,
+//   thumbnailURL: imageUrl.thumbNailUrl,
+//   width: imageUrl.width, // Set the actual width
+//   height: imageUrl.height, // Set the actual height
+// }));
+
+const formattedImages = frontmatter.images
+  ? frontmatter.images.map((imageUrl: FormattedImage) => ({
+      largeURL: imageUrl.url,
+      thumbnailURL: imageUrl.thumbNailUrl,
+      width: imageUrl.width,
+      height: imageUrl.height,
+    }))
+  : [];
 ---
 
 <BaseLayout
@@ -109,13 +118,21 @@ const formattedImages = frontmatter.images.map((imageUrl: FormattedImage) => ({
         </div>
       </div>
     </>
-    <Subtitle subTitle='Project Gallery' />
-
-    <Gallery
-      client:only='react'
-      galleryID='my-test-gallery'
-      images={formattedImages}
-    />
+    {
+      formattedImages.length > 0 ? (
+        <>
+          {' '}
+          <Subtitle subTitle='Project Gallery' />
+          <Gallery
+            client:only='react'
+            galleryID='my-test-gallery'
+            images={formattedImages}
+          />
+        </>
+      ) : (
+        <></>
+      )
+    }
 
     <slot class='' />
   </CardLayout>

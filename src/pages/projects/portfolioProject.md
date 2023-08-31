@@ -36,6 +36,7 @@ images:
       height: 754,
     },
   ]
+featured: false
 technologies:
   [
     'recaptcha',
@@ -45,6 +46,7 @@ technologies:
     'typescript',
     'astro',
     'react',
+    'angular',
   ]
 externals: [{ name: 'web', url: 'https://artcaffe.sk/' }]
 ---

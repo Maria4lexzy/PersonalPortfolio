@@ -1,8 +1,12 @@
 body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
-  min-width: 100%;
   -webkit-tap-highlight-color: transparent;
 }
+
 $transition-cubic: cubic-bezier(0.1, 0.6, 0.2, 0.5);
 
 $transition-cubic-fast: cubic-bezier(0.19, 1, 0.22, 1);

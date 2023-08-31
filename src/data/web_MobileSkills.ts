@@ -28,6 +28,13 @@ const web_MobileSkills: IWebMobileSkills[] = [
     backgroundColor: 'bg-orange-500',
   },
   {
+    name: 'Angular',
+    progress: 20,
+    icon: '/images/angular.svg',
+    url: 'https://en.wikipedia.org/wiki/Angular_(web_framework)',
+    backgroundColor: 'bg-red-600',
+  },
+  {
     name: 'Umbraco',
     progress: 65,
     icon: '/images/umbraco.svg',

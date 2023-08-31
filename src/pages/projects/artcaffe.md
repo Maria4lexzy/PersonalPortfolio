@@ -36,6 +36,7 @@ images:
       height: 2017,
     },
   ]
+featured: true
 technologies: ['javascript', 'firebase', 'astro', 'react']
 externals: [{ name: 'web', url: 'https://artcaffe.sk/' }]
 ---

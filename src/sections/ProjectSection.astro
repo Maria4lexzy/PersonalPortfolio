@@ -1,17 +1,19 @@
 ---
 import Pill from '@components/DomElements/Pill';
 import LinkCode from '@components/Typography/LinkCode.astro';
-import Subtitle from '@components/Typography/Subtitle.astro';
 import Title from '@components/Typography/Title.astro';
 import CardLayout from '@layouts/CardLayout.astro';
 const allProjects = await Astro.glob('../pages/projects/*.md');
+const featuredProjects = allProjects.filter(
+  (project) => project.frontmatter.featured
+);
 ---
 
 <CardLayout id='projects' classStyles=''>
-  <Title title='Projects' />
+  <Title title='Featured Projects' />
 
   {
-    allProjects.map((project) => (
+    featuredProjects.map((project) => (
       <>
         <div class='flex flex-col gap-8'>
           <div class='flex flex-col gap-3 '>
@@ -93,6 +95,9 @@ const allProjects = await Astro.glob('../pages/projects/*.md');
       </>
     ))
   }
-
-  <Subtitle subTitle='more comming soon after my vacation 😎✈️' />
+  <LinkCode
+    content='See all projects'
+    url='/projects'
+    classItems='text-primary-text dark:text-secondary-text'
+  />
 </CardLayout>
