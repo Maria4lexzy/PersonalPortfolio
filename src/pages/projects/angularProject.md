@@ -83,11 +83,11 @@ To ensure smooth integration between Angular and Astro, create a tsconfig.app.js
 
 ## Step 4: Adding Angular Integration to Astro
 
-To enable successful integration between Angular and Astro, you need to set up a `tsconfig.app.json` file at the root of your project. Follow these steps:
+Now we need to add the integration to the `astro.config.mjs`. Follow these steps:
 
-1. Create a file named `tsconfig.app.json` in the root of your project.
+1. Find the `astro.config.mjs` file in the root of your project.
 
-2. Add the following configuration code to the `tsconfig.app.json` file:
+2. Update with the the following imports and configuration:
 
 ```js
 import { defineConfig } from 'astro/config';
