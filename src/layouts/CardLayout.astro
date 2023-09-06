@@ -1,12 +1,17 @@
 ---
-const { classStyle, id } = Astro.props;
+interface Props {
+  id: string;
+  classStyle: String;
+}
+
+const { id, classStyle } = Astro.props;
 ---
 
 <section
   id={id}
-  class={` ${classStyle} flex-1 section my-4 backdrop-filter backdrop-blur-lg
+  class={` ${classStyle} card flex-1 section my-4 backdrop-filter backdrop-blur-lg
    bg-primary-light dark:bg-secondary/95 w-11/12 md:w-3/4  mx-auto p-8 
-   rounded-xl shadow-xl lg:space-y-8`}
+   rounded-xl shadow-xl lg:space-y-8 `}
 >
   <slot />
 </section>

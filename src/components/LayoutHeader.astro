@@ -3,7 +3,7 @@ import { SEO } from 'astro-seo';
 import tabLogo from '/images/profile.webp';
 import '../styles/main.scss';
 
-export interface Props {
+interface Props {
   pageTitle: string;
   // description: string;
   seoTitle: string;
@@ -50,4 +50,5 @@ const {
   <!-- Google tag (gtag.js) -->
 
   <script src='/lib/theme-util.js' type='text/javascript' is:inline></script>
+  <script src='/lib/card-animation.js' type='text/javascript' defer></script>
 </head>

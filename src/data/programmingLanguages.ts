@@ -24,7 +24,7 @@ const programmingLanguages: IProgrammingLanguage[] = [
   {
     name: 'CSS3',
     progress: 75,
-    url: 'https://sk.wikipedia.org/wiki/CSS3',
+    url: 'https://en.wikipedia.org/wiki/CSS',
     icon: '/images/css.svg',
     backgroundColor: 'bg-blue-500',
   },

@@ -39,7 +39,7 @@ const formattedImages = frontmatter.images
   seoTitle={frontmatter.title}
   seoDescription={seoDescription}
 >
-  <CardLayout id={frontmatter.title} classStyles=''>
+  <CardLayout id={frontmatter.title} classStyle=''>
     <>
       <div class='flex flex-col gap-8'>
         <div class='flex flex-col gap-3'>
@@ -148,6 +148,11 @@ const formattedImages = frontmatter.images
   h2 {
     font-size: 1.2rem;
     font-weight: bold;
+    margin-top: 2rem;
+  }
+  h3{
+  font-size: 0.9rem;
+  font-weight: bold;
     margin-top: 2rem;
   }
 </style>
