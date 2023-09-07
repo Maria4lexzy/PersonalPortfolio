@@ -2,6 +2,7 @@
 import LayoutHeader from '@components/LayoutHeader.astro';
 import Nav from '@components/Header/Nav.astro';
 import Footer from '@components/Footer.astro';
+import SplashSection from '@sections/SplashSection.astro';
 
 export interface Props {
   pageTitle: string;
@@ -27,8 +28,11 @@ const {
   <body
     class='overflow-x-hidden bg-primary/80 dark:bg-secondary-dark/90 text-neutral-700 dark:text-neutral-300 font-dosis transition-colors ease-in duration-450'
   >
+    <!-- <SplashSection /> -->
     <Nav class='' />
-    <slot />
+    <div class='pages-container'>
+      <slot />
+    </div>
     <Footer />
   </body>
 </html>

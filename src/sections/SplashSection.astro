@@ -1,0 +1,78 @@
+---
+import '../styles/splash.scss';
+---
+
+<div
+  class='splash p-5 fixed top-0 left-0 w-full h-full flex items-center justify-center'
+>
+  <!-- <h1 class='font-extrabold text-3xl'>$ Good Code is:</h1>
+
+  <div class='grow-0'>
+    <span class='text-secondary-text font-extrabold text-6xl' id='typed'
+      >jdkkkjj</span
+    >
+  </div> -->
+
+  <div class='terminal-container flex flex-col w-1/2 h-1/2'>
+    <div
+      class='terminal-bar flex gap-3 p-3 h-6 items-center font-bold text-neutral-900'
+    >
+      <div
+        class='close cursor-pointer bg-red-700 w-4 h-4 p-2 text-xs rounded-full flex items-center justify-center'
+      >
+        &#10005;
+      </div>
+
+      <div
+        class='minimize cursor-pointer bg-neutral-600 p-2 w-4 h-4 text-xs rounded-full flex items-center justify-center'
+      >
+        &#9472;
+      </div>
+      <div
+        class='maximize cursor-pointer bg-neutral-600 p-2 w-4 h-4 text-xs rounded-full flex items-center justify-center'
+      >
+        &#9723;
+      </div>
+      <div class='user'>maria@ubuntu: ~</div>
+    </div>
+    <div class='terminal-console w-full h-full font-mono'>
+      <div class=''>
+        <h1 class='text-green-700'>maria@ubuntu: ~$ ~/Maria/Portfolio</h1>
+
+        <div class=''>
+          <span class='text-neutral-200' id='typed'></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  import Typed from 'typed.js';
+  var typed = new Typed('#typed', {
+    // strings: ['echo hello.', 'Consistent.', 'Efficient.'],
+    // strings: [
+    //   '<i>First</i> sentence.',
+    //   '<br>amp; a second sentence.',
+    //   '<br> ehlkd',
+    // ],
+    strings: [
+      'npm run preview^500\n `<br>astro v2.10.1 started in 1277ms`^500\n `<br> Network https://maria-louisa.com ...`',
+    ],
+
+    //  strings: [
+    //   'npm install^1000\r `installing components...` ^1000\n `Fetching from source...`',
+    // ],
+    typeSpeed: 40,
+  });
+
+  // const splash = document.querySelector('.splash');
+  // document.addEventListener('DOMContentLoaded', (e) => {
+  //   setTimeout(() => {
+  //     splash?.classList.add('back-out-up');
+
+  //   }, 2000);
+  // });
+
+  // Add the 'back-out-up' class to trigger the animation
+</script>

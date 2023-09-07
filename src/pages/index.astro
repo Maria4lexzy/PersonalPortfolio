@@ -6,6 +6,7 @@ import LanguageSection from '@sections/LanguageSection.astro';
 import EducationSection from '@sections/EducationSection.astro';
 import ExperienceSection from '@sections/ExperienceSection.astro';
 import ProjectSection from '@sections/ProjectSection.astro';
+import SplashSection from '@sections/SplashSection.astro';
 // import TestSkill2 from '@sections/TestSkill2.astro';
 // import ModalIframe from '@components/ModalIframe';
 const pageTitle = "Maria's Portfolio";
@@ -19,12 +20,24 @@ const seoDescription =
   seoTitle={seoTitle}
   seoDescription={seoDescription}
 >
-  <AboutSection />
-  <SkillsSection />
-  <ProjectSection />
-  <LanguageSection />
-  <EducationSection />
-  <ExperienceSection />
+  <SplashSection />
+  <div class='hidden-content'>
+    <AboutSection />
+    <SkillsSection />
+    <ProjectSection />
+    <LanguageSection />
+    <EducationSection />
+    <ExperienceSection />
+  </div>
   <!-- <TestSkill2 /> -->
   <!-- <ModalIframe client:load /> -->
 </BaseLayout>
+<style>
+  .tester {
+    /* background-color: red;
+    height: 90vh;
+    padding: 20rem;
+    width: 100%;
+    border-radius: 10% 0 0 10%; */
+  }
+</style>
