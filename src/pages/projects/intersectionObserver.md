@@ -4,7 +4,7 @@ title: 'JS Intersection Observer API'
 role: 'developer'
 teamNum: '1'
 organization: 'None'
-description: 'Animate on scroll with the Intersection Observer API.'
+description: 'Animate on scroll with the Intersection Observer API. Learn how to create captivating web animations using Intersection Observer.'
 images: []
 featured: false
 technologies: ['html', 'javascript', 'css']

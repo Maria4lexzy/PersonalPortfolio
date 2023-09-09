@@ -17,7 +17,7 @@ const seoDescription =
   seoTitle={seoTitle}
   seoDescription={seoDescription}
 >
-  <CardLayout id='projects'>
+  <CardLayout id='projects' classStyle=''>
     <Title title='Projects' />
 
     {
@@ -98,7 +98,10 @@ const seoDescription =
                   </p>
                   <div class='flex flex-wrap gap-4'>
                     {project.frontmatter.technologies.map((tech: any) => (
-                      <Pill iconSrc={`images/${tech}.svg`} description={tech} />
+                      <Pill
+                        iconSrc={`../images/${tech}.svg`}
+                        description={tech}
+                      />
                     ))}
                   </div>
                 </div>

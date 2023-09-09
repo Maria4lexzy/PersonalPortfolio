@@ -1,7 +1,6 @@
 ---
 import ThemeIcon from './ThemeIcon.astro';
 import LinkCode from '@components/Typography/LinkCode.astro';
-const currentPath = Astro.url.pathname;
 
 interface IMenu {
   label: string;
@@ -150,7 +149,7 @@ const mobilemenu: IMenu[] = [...leftmenu, ...rightmenu];
       class='flex flex-col items-center justify-start order-2 w-full md:hidden'
     >
       {
-        mobilemenu.map((item, index) => (
+        mobilemenu.map((item) => (
           <LinkCode
             url={item.href}
             content={item.label}

@@ -3,7 +3,7 @@ import React, { createElement } from 'react';
 import ReactDOM from 'react-dom/server';
 import { __awaiter } from 'tslib';
 import 'zone.js/bundles/zone-node.umd.js';
-import { i as internalCreateApplication, P as PLATFORM_ID, a as PLATFORM_BROWSER_ID, b as PLATFORM_INITIALIZER, D as DOCUMENT, I as InjectionToken, c as INJECTOR_SCOPE, E as ErrorHandler, N as NgZone, R as RendererFactory2, X as XhrFactory, ɵ as ɵɵdefineInjectable, d as ɵɵinject, A as APP_ID, C as CSP_NONCE, s as setRootDomAdapter, p as parseCookieValue, e as RuntimeError, f as isPlatformServer, V as ViewEncapsulation$1, g as RendererStyleFlags2, h as getDOM, j as DomAdapter, k as setDocument, l as ANIMATION_MODULE_TYPE, m as ApplicationRef, n as IS_HYDRATION_DOM_REUSE_ENABLED, o as annotateForHydration, q as createPlatformFactory, r as makeEnvironmentProviders, S as SSR_CONTENT_INTEGRITY_MARKER, t as ENABLED_SSR_FEATURES, u as Renderer2, T as Testability, v as TESTABILITY, w as ViewportScroller, x as NullViewportScroller, y as platformCore, z as TransferState, B as Injector, F as PLATFORM_SERVER_ID, G as PlatformLocation, O as Optional, H as ALLOW_MULTIPLE_PLATFORMS, J as reflectComponentType } from './chunks/pages/housing.astro.b4225eb9.mjs';
+import { i as internalCreateApplication, P as PLATFORM_ID, a as PLATFORM_BROWSER_ID, b as PLATFORM_INITIALIZER, D as DOCUMENT, I as InjectionToken, c as INJECTOR_SCOPE, E as ErrorHandler, N as NgZone, R as RendererFactory2, X as XhrFactory, ɵ as ɵɵdefineInjectable, d as ɵɵinject, A as APP_ID, C as CSP_NONCE, s as setRootDomAdapter, p as parseCookieValue, e as RuntimeError, f as isPlatformServer, V as ViewEncapsulation$1, g as RendererStyleFlags2, h as getDOM, j as DomAdapter, k as setDocument, l as ANIMATION_MODULE_TYPE, m as ApplicationRef, n as IS_HYDRATION_DOM_REUSE_ENABLED, o as annotateForHydration, q as createPlatformFactory, r as makeEnvironmentProviders, S as SSR_CONTENT_INTEGRITY_MARKER, t as ENABLED_SSR_FEATURES, u as Renderer2, T as Testability, v as TESTABILITY, w as ViewportScroller, x as NullViewportScroller, y as platformCore, z as TransferState, B as Injector, F as PLATFORM_SERVER_ID, G as PlatformLocation, O as Optional, H as ALLOW_MULTIPLE_PLATFORMS, J as reflectComponentType } from './chunks/pages/housing.astro.3e968176.mjs';
 import { Subject } from 'rxjs';
 import * as url from 'url';
 import { first } from 'rxjs/operators';
@@ -14,10 +14,9 @@ import 'path-to-regexp';
 import 'mime';
 import 'string-width';
 import 'html-escaper';
-/* empty css                                   */import './chunks/pages/angularProject.md.a526e818.mjs';
+/* empty css                                   */import './chunks/pages/angularProject.md.53c16156.mjs';
 import 'react/jsx-runtime';
-import './chunks/pages/_technology_.astro.19f40c17.mjs';
-/* empty css                                          */
+/* empty css                                          *//* empty css                                          */
 /**
  * Astro passes `children` as a string of HTML, so we need
  * a wrapper `div` to render that content as VNodes.

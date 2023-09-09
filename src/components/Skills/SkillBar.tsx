@@ -31,7 +31,7 @@ const SkillBar: React.FC<ISkillBarProps> = ({
     <div
       key={id}
       onClick={handleOpenModal}
-      className=' gap-2 w-3/12 text-slate-700 dark:text-slate-400 cursor-pointer'
+      className='interactable gap-2 w-3/12 text-slate-700 dark:text-slate-400 '
     >
       <div>
         <div className='flex gap1 md:gap-2 mb-1 '>

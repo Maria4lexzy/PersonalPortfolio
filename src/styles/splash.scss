@@ -42,6 +42,7 @@
     visibility: visible;
     transform: translatex(0);
     border-radius: 0;
+    opacity: 1;
     // border-top-right-radius: 0%;
     // border-bottom-right-radius: 0%;
   }
@@ -57,5 +58,6 @@
     // border-top-right-radius: 50%;
     // border-bottom-right-radius: 50%;
     border-radius: 5% 0 0 5%;
+    opacity: 0;
   }
 }

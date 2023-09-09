@@ -84,7 +84,7 @@ const featuredProjects = allProjects.filter(
                 <p class='text-sm text-neutral-500 my-2 '>Technologies Used:</p>
                 <div class='flex flex-wrap gap-4'>
                   {project.frontmatter.technologies.map((tech: any) => (
-                    <Pill iconSrc={`images/${tech}.svg`} description={tech} />
+                    <Pill iconSrc={`./images/${tech}.svg`} description={tech} />
                   ))}
                 </div>
               </div>
