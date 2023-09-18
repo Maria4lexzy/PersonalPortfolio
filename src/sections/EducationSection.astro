@@ -5,6 +5,7 @@ import Title from '@components/Typography/Title.astro';
 import CardLayout from '@layouts/CardLayout.astro';
 import viaCourseList from '@data/viaCourseList';
 import sduCourseList from '@data/sduCourseList';
+import buzziCoursList from '@data/buzziCourseList';
 ---
 
 <CardLayout id='education' classStyle=' flex flex-col md:flex-row md:gap-4 '>
@@ -113,6 +114,56 @@ import sduCourseList from '@data/sduCourseList';
           <div class='flex flex-wrap gap-4 justify-stretch'>
             {
               viaCourseList.map((course, index) => (
+                <PlainPill id={index} description={course.courseName} />
+              ))
+            }
+          </div>
+        </details>
+      </div>
+    </div>
+    <div class='bg-gray-200 dark:bg-gray-600/50 h-px w-full my-4'></div>
+
+    <!-- ITS Tullio-->
+    <div class='flex flex-row gap-8'>
+      <div class='hidden md:block'>
+        <img
+          src='/images/companies/itis.png'
+          alt='ITS Tullio Buzzi'
+          decoding='async'
+          loading='lazy'
+          class='rounded-lg w-16 md:w-28 h-auto'
+        />
+      </div>
+      <div class='flex flex-col gap-1'>
+        <h1 class='capitalize text-lg font-semibold'>
+          High School Diploma - Junior Electronics Engineer
+        </h1>
+        <p class='text-md'>ITS Tulli Buzzi</p>
+        <span class='text-xs text-neutral-500'>September 2014 - July 2017</span>
+      </div>
+    </div>
+    <div>
+      <p class='mb-2 text-justify'>
+        My education at ITS - Buzzi has equipped me with a strong foundation in
+        electronics and engineering principles. This program has allowed me to
+        develop technical skills in areas such as electrical circuits, digital
+        systems, and microcontrollers. I've honed my problem-solving abilities
+        and gained hands-on experience through practical projects and lab work.
+        The interdisciplinary nature of the curriculum has broadened my
+        knowledge in mathematics, physics, computer science, and engineering
+      </p>
+
+      <div class='flex flex-col'>
+        <details class='open:transition delay-150' !open>
+          <summary
+            class='my-2 capitalize font-medium text-gray-700 dark:text-gray-300 text-lg cursor-pointer'
+          >
+            Courses
+          </summary>
+
+          <div class='flex flex-wrap gap-4 justify-stretch'>
+            {
+              buzziCoursList.map((course, index) => (
                 <PlainPill id={index} description={course.courseName} />
               ))
             }

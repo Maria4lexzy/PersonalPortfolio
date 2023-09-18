@@ -20,6 +20,10 @@ const sWConcpetSkills: ISWConcpetSkill[] = [
     description: 'CI/CD',
     icon: '/images/cicd.svg',
   },
+  {
+    description: 'UML',
+    icon: '/images/uml.svg',
+  },
 ];
 
 export default sWConcpetSkills;

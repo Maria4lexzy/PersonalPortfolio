@@ -59,7 +59,7 @@ const animateCursor = (event, interacting, interactable) => {
     pointer.style.transform = `translate(${pointerX}, ${pointerY})`;
 
     const dimensions = interacting ? interactable.getBoundingClientRect() : null;
-    const radius = interacting ? '0px' : '50%';
+    const radius = interacting ? '5px' : '50%';
 
     if (interacting) {
         cursorX = (dimensions.x - 2) + 'px';
@@ -68,8 +68,8 @@ const animateCursor = (event, interacting, interactable) => {
 
     const cursor_keyframes = {
         transform: `translate(${cursorX}, ${cursorY})`,
-        width: interacting ? `${dimensions.width}px` : '2rem',
-        height: interacting ? `${dimensions.height}px` : '2rem',
+        width: interacting ? `${dimensions.width + 1}px` : '2rem',
+        height: interacting ? `${dimensions.height + 4}px` : '2rem',
         borderRadius: radius,
     };
 
