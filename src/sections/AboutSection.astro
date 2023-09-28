@@ -1,21 +1,19 @@
 ---
-import LinkCode from '@components/Typography/LinkCode.astro';
+import Pill from '@components/DomElements/Pill';
+import Subtitle from '@components/Typography/Subtitle.astro';
 import Title from '@components/Typography/Title.astro';
 import CardLayout from '@layouts/CardLayout.astro';
 ---
 
 <CardLayout
-  dataAos='fade-up'
   id='about'
-  classStyle='flex flex-col md:flex-row md:gap-4 '
+  classStyle=' flex flex-col md:flex-row md:gap-8 content-center '
 >
   <!-- Left Side -->
 
-  <div
-    class='md:flex md:flex-col md:justify-center md:items-center md:space-y-4'
-  >
+  <div class='mx-auto md:flex md:flex-col md:justify-center md:space-y-4'>
     <img
-      src='/images/profile.jpeg'
+      src='/images/profile.webp'
       alt='Maria Failli'
       decoding='async'
       loading='lazy'
@@ -28,57 +26,90 @@ import CardLayout from '@layouts/CardLayout.astro';
     > -->
   </div>
   <!-- Right Side -->
-  <div class='mx-auto md:flex md:flex-col md:justify-between md:py-2'>
+  <div class='mx-auto md:flex md:flex-col md:py-2 text-center md:text-left'>
     <!-- <div class='bg-green-400 md:flex md:flex-col md:justify-between md:py-2'> -->
-    <div class='md:space-y-2'>
-      <Title title='Maria Failli' />
+    <div class='mt-4 md:mt-0 md:gap-y-2'>
+      <Title title='Maria Louisa Failli' />
 
-      <h3 class='sm:text-base md:text-md font-medium text-neutral-500'>
-        Frontend Developer
-      </h3>
-      <div class='flex flex-col lg:flex-row nowrap gap-4 md:gap-y-2 md:gap-x-8'>
-        <div class='flex flex-row gap-1'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            width='24'
-            height='24'
-            viewBox='0 0 24 24'
-            ><path
-              fill='currentColor'
-              d='m16.556 12.906l-.455.453s-1.083 1.076-4.038-1.862s-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61c.09 1.587.808 5 4.812 8.982c4.247 4.222 8.232 4.39 9.861 4.238c.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.438-1.787-.309-2.417.317Z'
-            ></path></svg
+      <h2
+        class='text-base md:text-md font-medium text-neutral-500 mb-4 md:mb-2'
+      >
+        Fullstack Developer - Frontend Heavy
+      </h2>
+      <div class='flex flex-col lg:flex-row nowrap gap-x-4 gap-y-1 md:gap-x-8'>
+        <div class='flex flex-row gap-1 justify-center md:justify-normal'>
+          <a
+            href='mailto:mariafailli42@gmail.com'
+            class='text-sm font-normal leading-relaxed sm:text-base'
+            target='_self'
           >
-          <LinkCode
-            url='mailto:mariafailli42@gmail.com'
-            classItems='text-sm font-normal leading-relaxed sm:text-base '
-            urlTarget='_self'
-            content='mariafailli42@gmail.com'
-          />
+            <Pill
+              iconSrc='/images/email.svg'
+              description='Send me an email'
+              classListItems='hover:animate-pulse'
+            />
+          </a>
         </div>
-        <div class='flex flex-row gap-1'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            width='24'
-            height='24'
-            viewBox='0 0 24 24'
-            ><path
-              fill='currentColor'
-              d='M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-.4 4.25l-7.07 4.42c-.32.2-.74.2-1.06 0L4.4 8.25a.85.85 0 1 1 .9-1.44L12 11l6.7-4.19a.85.85 0 1 1 .9 1.44z'
-            ></path></svg
+        <div class='flex flex-row gap-1 justify-center md:justify-normal'>
+          <a
+            href='tel:91 15 47 99'
+            class='text-sm font-normal leading-relaxed sm:text-base'
+            target='_self'
           >
-          <LinkCode
-            url='tel:91 15 47 99'
-            classItems='text-sm font-normal leading-relaxed sm:text-base '
-            urlTarget='_self'
-            content='+45 91 15 47 99'
-          />
+            <Pill
+              iconSrc='/images/phone.svg'
+              classListItems='hover:animate-pulse'
+              description='Give me a call'
+            />
+          </a>
+        </div>
+      </div>
+
+      <p class='mt-4 text-sm lg:text-base text-justify'>
+        Greetings Observer👋, I'm Maria. I like developing <span
+          class='text-primary-text dark:text-secondary-text'
+          >well-structured</span
+        >, <span class='text-primary-text dark:text-secondary-text'
+          >reusable</span
+        >, and <span class='text-primary-text dark:text-secondary-text'
+          >maintainable</span
+        > software solutions. In the world of software, learning never stops, I'm
+        constantly exploring new technlogies and trends. I enjoy new challenges and
+        I'm always ready to tackle them headd-on. My journey in technology is driven
+        by
+        <span class='text-primary-text dark:text-secondary-text'>curiosity</span
+        > and desire to make a positive impact through
+        <span class='text-primary-text dark:text-secondary-text'
+          >innovation</span
+        >. In my free time, you'll find me immersed in DIY projects, from
+        tinkering with electronics to crocheting🧶 or hiking🌄. I also love
+        traveling✈️ and trying new food🍜. So far, I've been to <span
+          class='text-primary-text dark:text-secondary-text'>20 countries</span
+        > and two continents, and I look forward to exploring more places.
+      </p>
+
+      <Subtitle subTitle='Socials' />
+
+      <!-- urls -->
+      <div class='mt-4 md:mt-0 md:gap-y-2'>
+        <div class='flex gap-x-4 gap-y-1 md:gap-x-8 justify-center'>
+          <div class='flex flex-row gap-1 justify-center md:justify-normal'>
+            <a href='https://github.com/Maria4lexzy'>
+              <Pill iconSrc='/images/github.svg' />
+            </a>
+          </div>
+          <div class='flex flex-row gap-1 justify-center md:justify-normal'>
+            <a href='https://www.linkedin.com/in/maria-louisa-failli/'>
+              <Pill iconSrc='/images/linkedin.svg' />
+            </a>
+          </div>
+          <div class='flex flex-row gap-1 justify-center md:justify-normal'>
+            <a href='https://maria-louisa.com/projects/portfolioProject/'>
+              <Pill iconSrc='/images/portfolio.svg' />
+            </a>
+          </div>
         </div>
       </div>
     </div>
-    <p class='mt-4'>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec ex sit
-      amet nisl tincidunt posuere. Vivamus vehicula malesuada metus, vel gravida
-      ipsum iaculis at. Sed ut erat felis.
-    </p>
   </div>
 </CardLayout>

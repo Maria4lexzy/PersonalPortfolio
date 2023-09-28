@@ -1,0 +1,23 @@
+---
+import LayoutHeader from '@components/LayoutHeader.astro';
+
+export interface Props {
+  pageTitle: string;
+  seoTitle: string;
+  seoDescription: string;
+  image?: string;
+}
+const { pageTitle, seoTitle, seoDescription } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang='en' class='scroll-smooth'>
+  <LayoutHeader
+    pageTitle={pageTitle}
+    seoTitle={seoTitle}
+    seoDescription={seoDescription}
+  />
+  <body class='overflow-x-hidden bg-primary/70 text-neutral-700 font-dosis'>
+    <slot />
+  </body>
+</html>

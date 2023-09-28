@@ -1,0 +1,124 @@
+---
+import Pill from '@components/DomElements/Pill';
+import LinkCode from '@components/Typography/LinkCode.astro';
+import Subtitle from '@components/Typography/Subtitle.astro';
+import Title from '@components/Typography/Title.astro';
+import CardLayout from '@layouts/CardLayout.astro';
+import BaseLayout from '@layouts/BaseLayout.astro';
+const allProjects = await Astro.glob('../projects/*.md');
+const pageTitle = "Maria's Projects";
+const seoTitle = "Maria's Projects";
+const seoDescription =
+  'Welcome to my projects page showcasing some of my creative projects.';
+---
+
+<BaseLayout
+  pageTitle={pageTitle}
+  seoTitle={seoTitle}
+  seoDescription={seoDescription}
+>
+  <CardLayout id='projects' classStyle=''>
+    <Title title='Projects' />
+
+    {
+      allProjects.map((project) => (
+        <>
+          <div class='flex flex-col gap-8'>
+            <div class='flex flex-col gap-3 '>
+              <div class='flex gap-2 justify-between w-full'>
+                <div class='flex gap-4'>
+                  <div class='flex-col'>
+                    <div>
+                      <a href={project.url}>
+                        <h1 class='tracking-wide capitalize text-xl font-semibold'>
+                          {project.frontmatter.title}
+                        </h1>
+                      </a>
+                    </div>
+                    <div class='flex flex-col gap-3'>
+                      {' '}
+                      <div class='text-sm mb-4'>
+                        <div class='flex flex-row gap-2'>
+                          <span class='text-neutral-950  dark:text-neutral-100'>
+                            My role:
+                          </span>
+                          <p class='text-neutral-500 capitalize'>
+                            {project.frontmatter.role}
+                          </p>
+                        </div>
+                        <div class='flex flex-row gap-2'>
+                          <span class='text-neutral-950  dark:text-neutral-100'>
+                            Team size:
+                          </span>
+                          <p class='text-neutral-500 capitalize'>
+                            {project.frontmatter.teamNum}
+                          </p>
+                        </div>
+                        <div class='flex flex-row gap-2'>
+                          <span class='text-neutral-950  dark:text-neutral-100'>
+                            Company:
+                          </span>
+                          <p class='text-neutral-500 capitalize'>
+                            {project.frontmatter.organization}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='flex gap-3 flex-wrap sm:flex-nowrap'>
+                  {project.frontmatter.externals.map((external: any) => (
+                    <a
+                      href={external.url}
+                      class='cursor-pointer'
+                      target='_blank'
+                    >
+                      <Pill
+                        iconSrc={`../images/${external.name}.svg`}
+                        description='demo'
+                      />
+                    </a>
+                  ))}
+                </div>
+              </div>
+              <div class='flex flex-col gap-3'>
+                <>
+                  <p class='mb-4 italic'>
+                    {project.frontmatter.description}{' '}
+                    <LinkCode
+                      content='Read the full article'
+                      url={project.url}
+                      classItems='text-primary-text dark:text-secondary-text'
+                    />{' '}
+                  </p>
+                </>
+                <div>
+                  <p class='text-sm text-neutral-500 my-2 '>
+                    Technologies Used:
+                  </p>
+                  <div class='flex flex-wrap gap-4'>
+                    {project.frontmatter.technologies.map((tech: any) => (
+                      <Pill
+                        iconSrc={`../images/${tech}.svg`}
+                        description={tech}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='bg-gray-400 my-4 h-px last:hidden w-full' />
+        </>
+      ))
+    }
+    <Subtitle subTitle='more comming soon after my vacation 😎✈️' />
+  </CardLayout>
+</BaseLayout>
+<style is:inline>
+  body {
+    background-color: green;
+    min-height: 100vh;
+    height: 100%;
+  }
+</style>

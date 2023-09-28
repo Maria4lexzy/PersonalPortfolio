@@ -1,19 +1,14 @@
 ---
 import LayoutHeader from '@components/LayoutHeader.astro';
 import Nav from '@components/Header/Nav.astro';
+import Footer from '@components/Footer.astro';
 
 export interface Props {
   pageTitle: string;
   seoTitle: string;
   seoDescription: string;
-  image?: string;
 }
-const {
-  pageTitle,
-  seoTitle,
-  seoDescription,
-  image = '/placeholder-social.jpg',
-} = Astro.props;
+const { pageTitle, seoTitle, seoDescription } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -24,13 +19,23 @@ const {
     seoDescription={seoDescription}
   />
   <body
-    class='overflow-x-hidden bg-primary/80 dark:bg-secondary-dark/90 text-neutral-700 dark:text-neutral-300 font-quicksand transition-colors delay-150 ease-custom-bezier duration-500'
+    class='overflow-x-hidden bg-primary/80 dark:bg-secondary-dark/90 text-neutral-700 dark:text-neutral-300 font-dosis transition-colors ease-in duration-450'
   >
+    <!-- <SplashSection /> -->
+    <div
+      id='cursor'
+      class='border-2 border-primary-text dark:border-secondary-text'
+    >
+    </div>
+    <div
+      id='pointer'
+      class='rounded-full dark:bg-secondary-text bg-primary-text'
+    >
+    </div>
     <Nav class='' />
-    <slot />
-
-    <script type='module'>
-      AOS.init();
-    </script>
+    <div class='pages-container'>
+      <slot />
+    </div>
+    <Footer />
   </body>
 </html>

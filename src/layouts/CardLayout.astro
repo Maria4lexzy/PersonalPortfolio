@@ -1,13 +1,20 @@
 ---
-const { classStyle, id, dataAos } = Astro.props;
+interface Props {
+  id: string;
+  classStyle?: String;
+}
+
+const { id, classStyle } = Astro.props;
+const hasClassStyle = classStyle !== undefined;
 ---
 
 <section
-  data-aos={dataAos}
   id={id}
-  class={` ${classStyle} section my-4 backdrop-filter backdrop-blur-lg
+  class={` ${
+    hasClassStyle ? classStyle : ''
+  } card flex-1 section my-4 backdrop-filter backdrop-blur-lg
    bg-primary-light dark:bg-secondary/95 w-11/12 md:w-3/4  mx-auto p-8 
-   rounded-xl shadow-xl lg:space-y-8`}
+   rounded-xl shadow-xl lg:space-y-8 `}
 >
   <slot />
 </section>

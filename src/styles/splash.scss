@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
+
+.splash {
+  //   background-color: black;
+  //   opacity: 0.5;
+  z-index: 400;
+  visibility: visible;
+  background: linear-gradient(45deg, #57003f 0%, #f57453 100%);
+  font-family: Ubuntu;
+
+  .terminal {
+    &-container {
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+      padding: 0;
+      box-sizing: border-box;
+    }
+    &-bar {
+      box-sizing: border-box;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      background: linear-gradient(#504b45 0%, #3c3b37 100%);
+    }
+    &-console {
+      background: rgba(56, 4, 40, 0.9);
+      font-family: 'Ubuntu Mono';
+    }
+  }
+}
+
+.back-out-up {
+  //   opacity: 0;
+  visibility: hidden;
+  animation: backOutUp 0.6s ease-out;
+  z-index: 300;
+}
+
+@keyframes backOutUp {
+  from {
+    // opacity: 1;
+
+    visibility: visible;
+    transform: translatex(0);
+    border-radius: 0;
+    opacity: 1;
+    // border-top-right-radius: 0%;
+    // border-bottom-right-radius: 0%;
+  }
+  //   30% {
+  //     transform: translateX(-10%);
+  //     // border-top-right-radius: 10%;
+  //     // border-bottom-right-radius: 10%;
+  //   }
+  to {
+    // opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    // border-top-right-radius: 50%;
+    // border-bottom-right-radius: 50%;
+    border-radius: 5% 0 0 5%;
+    opacity: 0;
+  }
+}

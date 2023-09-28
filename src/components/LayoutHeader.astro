@@ -1,9 +1,9 @@
 ---
 import { SEO } from 'astro-seo';
-import tabLogo from '/images/profile.jpeg';
+import tabLogo from '../../public/images/profile.webp';
 import '../styles/main.scss';
 
-export interface Props {
+interface Props {
   pageTitle: string;
   // description: string;
   seoTitle: string;
@@ -16,13 +16,36 @@ const {
   // description,
   seoTitle,
   seoDescription,
-  image = '/placeholder-social.jpg',
+  image = '/images/pageShot.png',
 } = Astro.props;
 ---
 
 <!-- Global Metadata -->
 <head>
-  <SEO title={seoTitle} description={seoDescription} />
+  <script async src='https://www.googletagmanager.com/gtag/js?id=G-7WTEYMG4ZZ'
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-7WTEYMG4ZZ');
+  </script>
+  <SEO
+    title={seoTitle}
+    description={seoDescription}
+    openGraph={{
+      basic: {
+        title: 'todo',
+        type: 'a type',
+        image: image,
+      },
+    }}
+  />
+
+  <link rel='sitemap' href='/sitemap-index.xml' />
   <meta charset='UTF-8' />
   <meta http-equiv='X-UA-Compatible' content='IE=edge' />
   <meta name='viewport' content='width=device-width,initial-scale=1' />
@@ -31,12 +54,10 @@ const {
   <link rel='preconnect' href='https://fonts.googleapis.com' />
   <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
   <link
-    href='https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600&family=Source+Code+Pro:wght@200;400;600&display=swap'
+    href='https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;600&family=Source+Code+Pro:wght@200;400;600&display=swap'
     rel='stylesheet'
   />
 
-  <link rel='stylesheet' href='node_modules/aos/dist/aos.css' />
   <script src='/lib/theme-util.js' type='text/javascript' is:inline></script>
-
-  <script src='node_modules/aos/dist/aos.js' is:inline></script>
+  <script src='/lib/index.js' type='text/javascript' defer></script>
 </head>

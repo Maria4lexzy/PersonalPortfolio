@@ -16,17 +16,20 @@ module.exports = {
 				checkmark: 'url("/images/checkmark.svg")',
 			},
 			colors: {
-				'primary': '#c4b5fd',
-				'primary-light': '#ddd6fe',
+				'primary': '#DAD6D3',
+				'primary-light': '#FAF4F2',
 				'primary-dark': '#a78bfa',
 				'secondary': '#1e293b',
 				'secondary-light': '#334155',
 				'secondary-dark': '#020617',
-				'myTextBlue': '#0087ca'
+				'myTextBlue': '#0087ca',
+				'myTextBlue-light': '#372145',
+				'primary-text': '#83227E',
+				'secondary-text': '#52C5FF'
 			},
 			fontFamily: {
-				quicksand: ['Quicksand'],
-				sourceCode: ['"Source Code Pro"']
+				sourceCode: ['"Source Code Pro"'],
+				doses: ['Dosis']
 			},
 		},
 	},

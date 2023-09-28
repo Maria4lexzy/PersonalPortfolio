@@ -3,19 +3,15 @@ import Title from '@components/Typography/Title.astro';
 import CardLayout from '@layouts/CardLayout.astro';
 ---
 
-<CardLayout
-  dataAos='fade-up'
-  id='exp'
-  classStyle='flex flex-col md:flex-row md:gap-4'
->
+<CardLayout id='exp' classStyle='card flex flex-col md:flex-row md:gap-4'>
   <div class='flex flex-col gap-4'>
     <Title title='Experience' />
 
     <!-- Experience 1 -->
     <div class='flex flex-row gap-8'>
-      <div>
+      <div class='hidden md:block'>
         <img
-          src='/images/companies/startupCentral.png'
+          src='/images/companies/startupCentral.webp'
           alt='Startup Central Logo'
           decoding='async'
           loading='lazy'
@@ -26,33 +22,34 @@ import CardLayout from '@layouts/CardLayout.astro';
         <h1 class='tracking-wide capitalize text-xl font-semibold'>
           Startup Central - Dit iværksætternetværk Denmark
         </h1>
-        <p>Software Developer Intern</p>
-        <span class=''>February 2020 - July 2020</span>
+        <p class='text-md'>Software Developer Intern</p>
+        <span class='text-xs text-neutral-500'>February 2020 - July 2020</span>
       </div>
     </div>
 
     <div>
       <ul class='list-disc ml-6'>
-        <li class='mb-4'>
+        <li class='mb-2'>
           Acquired proficiency in Umbraco and actively contributed to web
           development projects.
         </li>
-        <li class='mb-4'>
+        <li class='mb-2'>
           Worked in an agile team environment, participating in sprint stand-ups
           and collaborating with cross-functional teams.
         </li>
-        <li class='mb-4'>
+        <li class='mb-2'>
           Engaged in technical discussions and contributed innovative ideas to
           enhance technical solutions.
         </li>
       </ul>
     </div>
+    <div class='bg-gray-200 dark:bg-gray-600/50 h-px w-full my-4'></div>
 
     <!-- Experience 2 -->
     <div class='flex flex-row gap-8'>
-      <div>
+      <div class='hidden md:block'>
         <img
-          src='/images/companies/Biamp-Logo.jpg'
+          src='/images/companies/Biamp-Logo.webp'
           alt='Biamp Logo'
           decoding='async'
           loading='lazy'
@@ -63,37 +60,36 @@ import CardLayout from '@layouts/CardLayout.astro';
         <h1 class='tracking-wide capitalize text-xl font-semibold'>
           Biamp Denmark
         </h1>
-        <p>Juinor Hardware Tester</p>
-        <span class=''>February 2017 - August 2018</span>
+        <p class='text-md'>Juinor Hardware Tester</p>
+        <span class='text-xs text-neutral-500'>February 2017 - August 2018</span
+        >
       </div>
     </div>
 
     <div>
       <ul class='list-disc ml-6'>
-        <li class='mb-4'>
+        <li class='mb-2'>
           Tested new releases of the company's software and ensured seamless
           integration with hardware.
         </li>
-        <li class='mb-4'>
+        <li class='mb-2'>
           Assisted in the assembly of electronic devices, contributing to the
           production of high-quality products.
         </li>
-        <li class='mb-4'>
+        <li class='mb-2'>
           Collaborated with cross-functional teams to identify areas of
           improvement and enhance overall product performance.
         </li>
       </ul>
     </div>
 
-    <!-- More experience sections can be added similarly -->
-
     <div class='bg-gray-200 dark:bg-gray-600/50 h-px w-full my-4'></div>
 
     <!-- Experience 3 -->
     <div class='flex flex-row gap-8'>
-      <div>
+      <div class='hidden md:block'>
         <img
-          src='/images/companies/kakring-el-logo.png'
+          src='/images/companies/kakring-el-logo.webp'
           alt='Klakring El Logo'
           decoding='async'
           loading='lazy'
@@ -104,29 +100,30 @@ import CardLayout from '@layouts/CardLayout.astro';
         <h1 class='tracking-wide capitalize text-xl font-semibold'>
           Klakring El Denmark
         </h1>
-        <p>Assitant Electronics Technician</p>
-        <span class=''>July 2017 - January 2018</span>
+        <p class='text-md'>Assitant Electronics Technician</p>
+        <span class='text-xs text-neutral-500'>July 2017 - January 2018</span>
       </div>
     </div>
 
     <div>
       <ul class='list-disc ml-6'>
-        <li class='mb-4'>
+        <li class='mb-2'>
           Conducted soldering of electronic components and effectively mounted
           control panels used in mechanic shops.
         </li>
-        <li class='mb-4'>
+        <li class='mb-2'>
           Ensured the quality and reliability of electronic assemblies by
           adhering to industry standards and specifications.
         </li>
       </ul>
     </div>
+    <div class='bg-gray-200 dark:bg-gray-600/50 h-px w-full my-4'></div>
 
     <!-- Experience 4 -->
     <div class='flex flex-row gap-8'>
-      <div>
+      <div class='hidden md:block'>
         <img
-          src='/images/companies/geltec.png'
+          src='/images/companies/geltec.webp'
           alt='Biamp Logo'
           decoding='async'
           loading='lazy'
@@ -137,33 +134,34 @@ import CardLayout from '@layouts/CardLayout.astro';
         <h1 class='tracking-wide capitalize text-xl font-semibold'>
           Geltec LTD Paignton, UK
         </h1>
-        <p>Electronics Technican Intern</p>
-        <span class=''>May 2016 - July 2016</span>
+        <p class='text-md'>Electronics Technican Intern</p>
+        <span class='text-xs text-neutral-500'>May 2016 - July 2016</span>
       </div>
     </div>
 
     <div>
       <ul class='list-disc ml-6'>
-        <li class='mb-4'>
+        <li class='mb-2'>
           Assisted in the development and documentation of a vibration detection
           sensor circuit for the company.
         </li>
-        <li class='mb-4'>
+        <li class='mb-2'>
           Conducted maintenance tasks for 3D printers, amplifiers, and other
           electronic appliances.
         </li>
-        <li class='mb-4'>
+        <li class='mb-2'>
           Contributed to the development of water detection sensors and
           optimized battery life for improved efficiency.
         </li>
       </ul>
     </div>
+    <div class='bg-gray-200 dark:bg-gray-600/50 h-px w-full my-4'></div>
 
     <!-- Experience 5 -->
     <div class='flex flex-row gap-8'>
-      <div>
+      <div class='hidden md:block'>
         <img
-          src='/images/companies/lens-logo.png'
+          src='/images/companies/lens-logo.webp'
           alt='LENS Logo'
           decoding='async'
           loading='lazy'
@@ -174,21 +172,23 @@ import CardLayout from '@layouts/CardLayout.astro';
         <h1 class='tracking-wide capitalize text-xl font-semibold'>
           European Laboratory for Non-Linear Spectroscopy - ITALY
         </h1>
-        <p>Electronics Technican Intern</p>
-        <span class=''>September 2016 - September 2016</span>
+        <p class='text-md'>Electronics Technican Intern</p>
+        <span class='text-xs text-neutral-500'
+          >September 2016 - September 2016</span
+        >
       </div>
     </div>
 
     <div>
       <ul class='list-disc ml-6'>
-        <li class='mb-4'>
+        <li class='mb-2'>
           One month internship during my highschool education in Italy
         </li>
-        <li class='mb-4'>
+        <li class='mb-2'>
           Assisted in the development of hardware components for power lasers
           within the physics department.
         </li>
-        <li class='mb-4'>
+        <li class='mb-2'>
           Integrated Arduino IDE with Processing IDE and hardware components to
           create seamless connections.
         </li>

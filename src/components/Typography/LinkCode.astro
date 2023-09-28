@@ -1,5 +1,5 @@
 ---
-export interface Props {
+interface Props {
   url: string;
   content: string;
   classItems: string;
@@ -10,7 +10,7 @@ const { url, content, classItems, urlTarget } = Astro.props;
 
 <a
   href={url}
-  class=`${classItems} font-sourceCode hover:text-myTextBlue active:text-myTextBlue`
+  class=`${classItems} font-sourceCode hover:text-primary-text dark:text-secondary-text active:text-primary-text dark:text-secondary-text`
   target={urlTarget ? urlTarget : ''}>{content}</a
 >
 

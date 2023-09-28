@@ -7,7 +7,7 @@ export interface IWebMobileSkills {
 }
 const web_MobileSkills: IWebMobileSkills[] = [
   {
-    name: 'Reactjs',
+    name: 'ReactJs',
     progress: 80,
     icon: '/images/react.svg',
     url: 'https://reactjs.org/',
@@ -17,7 +17,7 @@ const web_MobileSkills: IWebMobileSkills[] = [
     name: 'React Native',
     progress: 75,
     icon: '/images/react-native.svg',
-    url: 'https://reactnative.dev/',
+    url: 'https://en.wikipedia.org/wiki/React_Native',
     backgroundColor: 'bg-blue-600',
   },
   {
@@ -25,14 +25,28 @@ const web_MobileSkills: IWebMobileSkills[] = [
     progress: 90,
     icon: '/images/astro.svg',
     url: 'https://astro.build/',
-    backgroundColor: 'bg-orange-700',
+    backgroundColor: 'bg-orange-500',
+  },
+  {
+    name: 'Angular',
+    progress: 20,
+    icon: '/images/angular.svg',
+    url: 'https://en.wikipedia.org/wiki/Angular_(web_framework)',
+    backgroundColor: 'bg-red-600',
+  },
+  {
+    name: 'Umbraco',
+    progress: 65,
+    icon: '/images/umbraco.svg',
+    url: 'https://umbraco.com/',
+    backgroundColor: 'bg-indigo-600',
   },
   {
     name: 'TypeScript',
     progress: 65,
     icon: '/images/typescript.svg',
     url: 'https://www.typescriptlang.org/',
-    backgroundColor: 'bg-blue-700',
+    backgroundColor: 'bg-blue-400',
   },
   {
     name: 'Tailwind',
@@ -60,7 +74,7 @@ const web_MobileSkills: IWebMobileSkills[] = [
     name: 'Node.js',
     progress: 65,
     icon: '/images/nodejs.svg',
-    url: 'https://nodejs.org/',
+    url: 'https://en.wikipedia.org/wiki/Node.js/',
     backgroundColor: 'bg-green-500',
   },
 

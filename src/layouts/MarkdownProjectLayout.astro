@@ -1,122 +1,147 @@
 ---
-const allProjects = await Astro.glob('../pages/projects/*.md');
 import Pill from '@components/DomElements/Pill';
 import Gallery from '@sections/Gallery';
 import BaseLayout from './BaseLayout.astro';
 import CardLayout from './CardLayout.astro';
-import Title from '@components/Typography/Title.astro';
 import Subtitle from '@components/Typography/Subtitle.astro';
 const { frontmatter } = Astro.props;
 type FormattedImage = {
   url: string;
+  thumbNailUrl: string;
   alt: string;
+  width: number;
+  height: number;
 };
-const seoTitle = 'Maria Projects';
-const seoDescription = 'Projects';
-
-const title = 'My Awesome Software Project';
-const imagess = frontmatter.images;
-const formattedImages = frontmatter.images.map((imageUrl: FormattedImage) => ({
-  largeURL: imageUrl.url,
-  thumbnailURL: imageUrl.url,
-  width: 1500, // Set the actual width
-  height: 'auto', // Set the actual height
-}));
+ 
+const formattedImages = frontmatter.images
+  ? frontmatter.images.map((imageUrl: FormattedImage) => ({
+      largeURL: imageUrl.url,
+      thumbnailURL: imageUrl.thumbNailUrl,
+      width: imageUrl.width,
+      height: imageUrl.height,
+    }))
+  : [];
 ---
 
 <BaseLayout
-  pageTitle={title}
+  pageTitle={frontmatter.description}
   seoTitle={frontmatter.title}
-  seoDescription={seoDescription}
+  seoDescription={frontmatter.description}
 >
-  <CardLayout dataAos='fade-left' id={frontmatter.title} classStyles=''>
-    <div class='container mx-auto py-8'>
-      <div class='flex flex-row gap-4 justify-between'>
-        <div>
-          <Title title={frontmatter.title} />
-
-          <div class='text-sm mb-4'>
-            <div class='flex flex-row gap-2'>
-              <span class='text-neutral-950 dark:text-neutral-100'>
-                My role:
-              </span>
-              <p class='text-neutral-500 capitalize'>
-                {frontmatter.role}
-              </p>
+  <CardLayout id={frontmatter.title} classStyle=''>
+    <>
+      <div class='flex flex-col gap-8'>
+        <div class='flex flex-col gap-3'>
+          <div class='flex gap-2 justify-between w-full'>
+            <div class='flex gap-4'>
+              <div class='flex-col'>
+                <div>
+                  <h1 class='tracking-wide capitalize text-xl font-semibold'>
+                    {frontmatter.title}
+                  </h1>
+                </div>
+                <div class='flex flex-col gap-3'>
+                  {' '}
+                  <div class='text-sm mb-4'>
+                    <div class='flex flex-row gap-2'>
+                      <span class='text-neutral-950 dark:text-neutral-100'>
+                        My role:
+                      </span>
+                      <p class='text-neutral-500 capitalize'>
+                        {frontmatter.role}
+                      </p>
+                    </div>
+                    <div class='flex flex-row gap-2'>
+                      <span class='text-neutral-950 dark:text-neutral-100'>
+                        Team size:
+                      </span>
+                      <p class='text-neutral-500 capitalize'>
+                        {frontmatter.teamNum}
+                      </p>
+                    </div>
+                    <div class='flex flex-row gap-2'>
+                      <span class='text-neutral-950 dark:text-neutral-100'>
+                        Company:
+                      </span>
+                      <p class='text-neutral-500 capitalize'>
+                        {frontmatter.organization}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class='flex flex-row gap-2'>
-              <span class='text-neutral-950 dark:text-neutral-100'>
-                Team size:
-              </span>
-              <p class='text-neutral-500 capitalize'>
-                {frontmatter.teamNum}
-              </p>
+            <div class='flex gap-3 flex-wrap sm:flex-nowrap'>
+              {
+                frontmatter.externals.map((external: any) => (
+                  <a href={external.url} class='cursor-pointer' target='_blank'>
+                    <Pill
+                      iconSrc={`../images/${external.name}.svg`}
+                      description='demo'
+                    />
+                  </a>
+                ))
+              }
             </div>
-            <div class='flex flex-row gap-2'>
-              <span class='text-neutral-950 dark:text-neutral-100'>
-                Company/Organization:
-              </span>
-              <p class='text-neutral-500 capitalize'>
-                {frontmatter.organization}
+          </div>
+          <div class='flex flex-col gap-3'>
+            <>
+              <p class='mb-4 italic'>
+                {frontmatter.description}
               </p>
+            </>
+            <div>
+              <p class='text-sm text-neutral-500'>Technologies Used:</p>
+              <div class='flex flex-wrap gap-4'>
+                {
+                  frontmatter.technologies.map((tech: any) => (
+                    <Pill
+                      iconSrc={`../images/${tech}.svg`}
+                      description={tech}
+                    />
+                  ))
+                }
+              </div>
             </div>
           </div>
         </div>
-
-        <div class='flex gap-2 flex-wrap'>
-          {
-            frontmatter.externals.map((external: any) => (
-              <a href={external.url} class='cursor-pointer' target='_blank'>
-                <Pill iconSrc={`../images/${external.name}.svg`} />
-              </a>
-            ))
-          }
-        </div>
       </div>
+    </>
+    {
+      formattedImages.length > 0 ? (
+        <>
+          {' '}
+          <Subtitle subTitle='Project Gallery' />
+          <Gallery
+            client:only='react'
+            galleryID='my-test-gallery'
+            images={formattedImages}
+          />
+        </>
+      ) : (
+        <></>
+      )
+    }
 
-      <div>
-        <p class='mb-4 italic'>{frontmatter.description}</p>
-        <div>
-          <p class='text-sm text-neutral-500 my-2'>Technologies Used:</p>
-          <div class='flex flex-wrap gap-4'>
-            {
-              frontmatter.technologies.map((tech: any) => (
-                <Pill iconSrc={`../images/${tech}.svg`} description={tech} />
-              ))
-            }
-          </div>
-        </div>
-      </div>
-    </div>
-    <Subtitle subTitle='Project Gallery' />
-    {console.log(formattedImages + 'hdhdh')}
-
-    <Gallery
-      client:only='react'
-      galleryID='my-test-gallery'
-      images={formattedImages}
-    />
-
-    <slot />
+    <slot class='' />
   </CardLayout>
 </BaseLayout>
-<style>
-  a {
-    color: #00539f;
+
+<style is:inline>
+  p {
+    text-align: justify;
+    text-justify: inter-word;
   }
 
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
+  /* Styling for headings */
+  h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 2rem;
   }
-
-  .tag {
-    margin: 0.25em;
-    border: dotted 1px #a1a1a1;
-    border-radius: 0.5em;
-    padding: 0.5em 1em;
-    font-size: 1.15em;
-    background-color: #40a4bd;
+  h3{
+  font-size: 0.9rem;
+  font-weight: bold;
+    margin-top: 2rem;
   }
 </style>

@@ -6,12 +6,13 @@ import LanguageSection from '@sections/LanguageSection.astro';
 import EducationSection from '@sections/EducationSection.astro';
 import ExperienceSection from '@sections/ExperienceSection.astro';
 import ProjectSection from '@sections/ProjectSection.astro';
+import SplashSection from '@sections/SplashSection.astro';
 // import TestSkill2 from '@sections/TestSkill2.astro';
 // import ModalIframe from '@components/ModalIframe';
-const pageTitle = 'Home';
+const pageTitle = "Maria's Portfolio";
 const seoTitle = "Maria's Portfolio";
 const seoDescription =
-  'Discover a world of cutting-edge software solutions and creative craftsmanship at Mulrem. Our team of experts offers full-stack services, from software development and architecture to photography, videography, and design. Explore our portfolio of remarkable projects and immerse yourself in our insightful blogs covering cloud architecture, React Native performance, crochet works, travel adventures, and more. Experience excellence, responsibility, and quality in every aspect of our work. Join us on this exciting journey of innovation and creativity';
+  "Explore my diverse portfolio showcasing innovative software solutions and creative projects. As a skilled software engineer, I specialize in developing well-structured, reusable, and maintainable applications. Discover how my passion for technology drives me to create impactful solutions that make a positive impact. Let's connect and embark on a journey of innovation together";
 ---
 
 <BaseLayout
@@ -19,12 +20,24 @@ const seoDescription =
   seoTitle={seoTitle}
   seoDescription={seoDescription}
 >
+  <!-- <SplashSection /> -->
+  <!-- <div class='hidden-content'> -->
   <AboutSection />
   <SkillsSection />
+  <ProjectSection />
   <LanguageSection />
   <EducationSection />
   <ExperienceSection />
-  <ProjectSection />
+  <!-- </div> -->
   <!-- <TestSkill2 /> -->
   <!-- <ModalIframe client:load /> -->
 </BaseLayout>
+<style>
+  .tester {
+    /* background-color: red;
+    height: 90vh;
+    padding: 20rem;
+    width: 100%;
+    border-radius: 10% 0 0 10%; */
+  }
+</style>

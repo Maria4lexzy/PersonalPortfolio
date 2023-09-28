@@ -13,8 +13,16 @@ const sWConcpetSkills: ISWConcpetSkill[] = [
     icon: '/images/microservices.svg',
   },
   {
+    description: 'OOP',
+    icon: '/images/oop.svg',
+  },
+  {
     description: 'CI/CD',
     icon: '/images/cicd.svg',
+  },
+  {
+    description: 'UML',
+    icon: '/images/uml.svg',
   },
 ];
 

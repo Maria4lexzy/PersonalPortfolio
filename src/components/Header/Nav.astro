@@ -1,7 +1,6 @@
 ---
 import ThemeIcon from './ThemeIcon.astro';
 import LinkCode from '@components/Typography/LinkCode.astro';
-const currentPath = Astro.url.pathname;
 
 interface IMenu {
   label: string;
@@ -35,7 +34,7 @@ const rightmenu: IMenu[] = [
   },
   {
     label: 'Projects',
-    href: '/#projects',
+    href: '/projects',
     // external: true,
     // badge: "new",
   },
@@ -48,7 +47,8 @@ const mobilemenu: IMenu[] = [...leftmenu, ...rightmenu];
 ---
 
 <nav
-  class='px-5 py-2 shadow-md sticky top-0 z-50 w-full mx-auto rounded-lg navbar transition ease-custom-bezier duration-400 font-extrabold'
+  role='navigation'
+  class='px-5 py-2 shadow-md sticky top-0 z-50 w-full mx-auto rounded-lg navbar transition ease-in duration-400 font-extrabold'
 >
   <div class='flex flex-wrap justify-between md:gap-10 md:flex-nowrap'>
     <!-- LEFT MENU -->
@@ -74,7 +74,7 @@ const mobilemenu: IMenu[] = [...leftmenu, ...rightmenu];
       <a id='smallLogo' class='w-32' href='/'>
         <!-- <img src={bigLogo} alt=' Logo' /> -->
         <svg
-          class='h-12 w-12 mx-auto text-myTextBlue fill-current'
+          class='h-12 w-12 mx-auto text-primary-text dark:text-secondary-text fill-current'
           id='Layer_1'
           data-name='Layer 1'
           xmlns='http://www.w3.org/2000/svg'
@@ -86,7 +86,7 @@ const mobilemenu: IMenu[] = [...leftmenu, ...rightmenu];
       </a>
       <a id='bigLogo' class='w-32' href='/'>
         <svg
-          class='h-12 w-12 mx-auto text-myTextBlue fill-current'
+          class='h-12 w-12 mx-auto text-primary-text dark:text-secondary-text fill-current'
           id='Layer_2'
           data-name='Layer 2'
           xmlns='http://www.w3.org/2000/svg'
@@ -104,7 +104,7 @@ const mobilemenu: IMenu[] = [...leftmenu, ...rightmenu];
       <button
         id='menu'
         aria-label='Toggle Menu'
-        class='md:hidden text-myTextBlue rounded-md focus:outline-none'
+        class='md:hidden text-primary-text dark:text-secondary-text rounded-md focus:outline-none'
       >
         <svg
           class='w-8 h-8 fill-current'
@@ -149,7 +149,7 @@ const mobilemenu: IMenu[] = [...leftmenu, ...rightmenu];
       class='flex flex-col items-center justify-start order-2 w-full md:hidden'
     >
       {
-        mobilemenu.map((item, index) => (
+        mobilemenu.map((item) => (
           <LinkCode
             url={item.href}
             content={item.label}
@@ -204,9 +204,3 @@ const mobilemenu: IMenu[] = [...leftmenu, ...rightmenu];
   // Initial call to update the scroll attribute on page load
   updateScrollAttribute();
 </script>
-
-<style>
-  .content {
-    transition: opacity 0.5s ease-in-out;
-  }
-</style>

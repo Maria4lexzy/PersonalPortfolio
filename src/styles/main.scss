@@ -1,17 +1,47 @@
+* {
+  cursor: none;
+}
 body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
-  min-width: 100%;
-  /* font-family: 'Quicksand', sans-serif;
-        font-family: 'Source Code Pro', monospace; */
+  -webkit-tap-highlight-color: transparent;
+  transition: all ease 0.4s;
+  &:hover > #cursor {
+    opacity: 1;
+  }
+  &:hover > #pointer {
+    opacity: 1;
+  }
+  #cursor {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 10000;
+    pointer-events: none;
+    opacity: 0;
+    // border: 2px solid #f5f749;
+    transition: opacity 200ms ease, background-color 200ms ease;
+  }
+  #pointer {
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 50%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 10000;
+    pointer-events: none;
+    opacity: 0;
+    // background-color: green;
+    transition: opacity 200ms ease;
+  }
 }
-
-a.active {
-  color: blueviolet;
-}
-$transition-cubic: cubic-bezier(0.1, 0.6, 0.2, 0.5);
-
-$transition-cubic-fast: cubic-bezier(0.19, 1, 0.22, 1);
-
 ::-webkit-scrollbar {
   width: 6px;
   background: #acb7e1;
@@ -21,114 +51,25 @@ $transition-cubic-fast: cubic-bezier(0.19, 1, 0.22, 1);
   }
 }
 
-.cubic-transition {
-  transition: 0.8s $transition-cubic;
-}
-.glass {
-  /* From https://css.glass */
-  /* From https://css.glass */
-  --header-bg: rgba(2, 14, 39, 0.2);
-  --body-bg: rgba(2, 14, 39, 0.3);
-  --button-bg: rgba(2, 14, 39, 0.2);
-  --button-bg-hover: rgba(255, 255, 255, 0.1);
-  --button-highlight-bg: rgba(2, 14, 39, 0.5);
-
-  border: 1px solid transparent;
-  background-color: var(--button-bg);
-  font-size: 20px;
-  cursor: pointer;
-  color: #fff;
-  border: 1px solid rgb(255 255 255 / 13%);
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-backdrop-filter: blur(6px);
-  backdrop-filter: blur(6px);
-  transition: all 0.8s $transition-cubic-fast;
-  will-change: auto;
-  z-index: 2;
-
-  &:hover {
-    box-shadow: 0px 10px 25px rgba(4, 37, 100, 0.12);
-    border-radius: 4px;
-    background-color: var(--button-bg-hover);
-    border-color: rgba(255, 255, 255, 0.15);
-    z-index: 5;
-    transform: scale(1.1);
-  }
-}
-
-.glass-2 {
-  //   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-
-  box-shadow: 0px 6px 12px -3px rgba(228, 226, 226, 0.1);
-  backdrop-filter: blur(1rem);
-  border: 1px solid rgba(243, 243, 243, 0.12);
-
-  //   border: 1px solid rgba(255, 255, 255, 0.25);
-  //   border-top: 1px solid rgba(255, 255, 255, 0.5);
-  //   border-left: 1px solid rgba(255, 255, 255, 0.5);
-
-  transition: all 0.4s $transition-cubic;
-  &:hover {
-    box-shadow: 0px 12px 24px -3px rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
-    background-color: rgba(192, 181, 181, 0.12);
-    border-color: rgba(255, 255, 255, 0.15);
-    z-index: 5;
-    transform: scale(1.02);
-  }
-}
-
 .myBorder {
   border: 2px solid purple;
 }
 
-// a {
-//   display: inline-block;
-//   position: relative;
-//   color: #0087ca;
-//   text-decoration: none;
-
-//   &::after {
-//     content: '';
-//     position: absolute;
-//     width: 100%;
-//     transform: scaleX(0);
-//     border-radius: 5px;
-//     height: 0.05em;
-//     bottom: 0;
-//     left: 0;
-//     background: currentcolor;
-//     transform-origin: bottom right;
-//     transition: transform 0.25s ease-out;
-//   }
-//   &:hover::after {
-//     transform: scaleX(1);
-//     transform-origin: bottom left;
-//   }
-// }
-section div {
-  border: solid 2px solid green !important;
+.card {
+  opacity: 0;
+  transition: 0.8s ease;
+  transform: translateX(-8rem);
+  &.show {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  @media (prefers-reduced-motion) {
+    .card {
+      transition: none;
+    }
+  }
 }
-
-img {
-  filter: drop-shadow(0px 5px 20px rgba(0, 171, 214, 0.426));
-  // --f: 0.8; /* the parallax factor (the smaller the better) */
-  // --r: 10px; /* radius */
-
-  // --_f: calc(100% * var(--f) / (1 + var(--f)));
-  // --_a: calc(90deg * var(--f));
-  // width: 250px; /* the image size */
-  // aspect-ratio: calc(1 + var(--f));
-  // object-fit: cover;
-  // clip-path: inset(0 var(--_f) 0 0 round var(--r));
-  // transform: perspective(400px) var(--_t, rotateY(var(--_a)));
-  // transition: 0.5s;
-  // cursor: pointer;
-  // &:hover {
-  //   clip-path: inset(0 0 0 var(--_f) round var(--r));
-  //   --_t: translateX(calc(-1 * var(--_f))) rotateY(calc(-1 * var(--_a)));
-  // }
+.hidden-content {
+  display: none;
+  // opacity: 0.5;
 }

@@ -1,0 +1,19 @@
+---
+import Subtitle from '@components/Typography/Subtitle.astro';
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { HelloComponent } from '@components/hello.component';
+
+const pageTitle = 'Housing';
+const seoTitle = "Maria's Angular Project";
+const seoDescription = 'My first Angular project';
+---
+
+<BaseLayout
+  pageTitle={pageTitle}
+  seoTitle={seoTitle}
+  seoDescription={seoDescription}
+>
+  <Subtitle subTitle='coming soon' />
+
+  <HelloComponent client:visible />
+</BaseLayout>
