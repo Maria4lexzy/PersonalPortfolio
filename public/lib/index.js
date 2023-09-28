@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', (e) => {
     intersectionObserverHandler();
-    // splashScreenHandler();
-    // showPageHandler();
+    splashScreenHandler();
+    showPageHandler();
 
 });
 
