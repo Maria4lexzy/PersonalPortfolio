@@ -1,25 +1,28 @@
 {
     "name": "Maria's Portfolio",
-    "short_name": "Portfolio Web App",
+    "short_name": "Maria",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#ffffff",
-    "theme_color": "#2196F3",
+    "theme_color": "#1e293b",
     "icons": [
+        {
+            "src": "/images/mariaIcon.svg",
+            "type": "image/svg+xml",
+            "sizes": "512x512",
+            "purpose": "any"
+        },
         {
             "src": "/images/pageIcon-192x192.png",
             "sizes": "192x192",
             "type": "image/png",
-            "purpose": "any maskable"
+            "purpose": "any"
         },
         {
             "src": "/images/pageIcon-512x512.png",
             "sizes": "512x512",
             "type": "image/png",
-            "purpose": "any maskable"
-        },
-        {
-            "theme_color": "#1e293b"
+            "purpose": "any"
         }
     ]
 }

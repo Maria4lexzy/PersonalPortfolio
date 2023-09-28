@@ -21,7 +21,6 @@ const { pageTitle, seoTitle, seoDescription } = Astro.props;
   <body
     class='overflow-x-hidden bg-primary/80 dark:bg-secondary-dark/90 text-neutral-700 dark:text-neutral-300 font-dosis transition-colors ease-in duration-450'
   >
-    <!-- <SplashSection /> -->
     <div
       id='cursor'
       class='border-2 border-primary-text dark:border-secondary-text'
@@ -44,26 +43,27 @@ const { pageTitle, seoTitle, seoDescription } = Astro.props;
       <slot />
     </div>
     <Footer />
-  </body><style>
-    #tab-preview {
-      position: fixed;
-      bottom: 10px;
-      right: 10px;
-      width: 200px;
-      background-color: #fff;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-      opacity: 0; /* Initially hidden */
-      transition: opacity 0.2s ease-in-out;
-    }
+    <style>
+      #tab-preview {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        width: 200px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        opacity: 0; /* Initially hidden */
+        transition: opacity 0.2s ease-in-out;
+      }
 
-    .tab-preview-content {
-      padding: 10px;
-    }
+      .tab-preview-content {
+        padding: 10px;
+      }
 
-    .tab-preview-title {
-      font-weight: bold;
-    }
-  </style>
+      .tab-preview-title {
+        font-weight: bold;
+      }
+    </style>
+  </body>
 </html>
