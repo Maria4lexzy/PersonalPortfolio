@@ -4,7 +4,7 @@ interface PillProps {
   classListItems?: string;
 }
 
-const Pill: React.FC<PillProps> = ({
+const IconPill: React.FC<PillProps> = ({
   iconSrc,
   description,
   classListItems,
@@ -27,4 +27,4 @@ const Pill: React.FC<PillProps> = ({
   );
 };
 
-export default Pill;
+export default IconPill;

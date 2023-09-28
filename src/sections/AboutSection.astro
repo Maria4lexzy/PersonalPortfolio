@@ -1,5 +1,5 @@
 ---
-import Pill from '@components/DomElements/Pill';
+import IconPill from '@components/IconPill';
 import Subtitle from '@components/Typography/Subtitle.astro';
 import Title from '@components/Typography/Title.astro';
 import CardLayout from '@layouts/CardLayout.astro';
@@ -43,7 +43,7 @@ import CardLayout from '@layouts/CardLayout.astro';
             class='text-sm font-normal leading-relaxed sm:text-base'
             target='_self'
           >
-            <Pill
+            <IconPill
               iconSrc='/images/email.svg'
               description='Send me an email'
               classListItems='hover:animate-pulse'
@@ -56,7 +56,7 @@ import CardLayout from '@layouts/CardLayout.astro';
             class='text-sm font-normal leading-relaxed sm:text-base'
             target='_self'
           >
-            <Pill
+            <IconPill
               iconSrc='/images/phone.svg'
               classListItems='hover:animate-pulse'
               description='Give me a call'
@@ -76,11 +76,10 @@ import CardLayout from '@layouts/CardLayout.astro';
         > software solutions. In the world of software, learning never stops, I'm
         constantly exploring new technlogies and trends. I enjoy new challenges and
         I'm always ready to tackle them headd-on. My journey in technology is driven
-        by
-        <span class='text-primary-text dark:text-secondary-text'>curiosity</span
-        > and desire to make a positive impact through
-        <span class='text-primary-text dark:text-secondary-text'
-          >innovation</span
+        by<span class='text-primary-text dark:text-secondary-text'
+          >curiosity</span
+        > and desire to make a positive impact through<span
+          class='text-primary-text dark:text-secondary-text'>innovation</span
         >. In my free time, you'll find me immersed in DIY projects, from
         tinkering with electronics to crocheting🧶 or hiking🌄. I also love
         traveling✈️ and trying new food🍜. So far, I've been to <span
@@ -95,17 +94,17 @@ import CardLayout from '@layouts/CardLayout.astro';
         <div class='flex gap-x-4 gap-y-1 md:gap-x-8 justify-center'>
           <div class='flex flex-row gap-1 justify-center md:justify-normal'>
             <a href='https://github.com/Maria4lexzy'>
-              <Pill iconSrc='/images/github.svg' />
+              <IconPill iconSrc='/images/github.svg' />
             </a>
           </div>
           <div class='flex flex-row gap-1 justify-center md:justify-normal'>
             <a href='https://www.linkedin.com/in/maria-louisa-failli/'>
-              <Pill iconSrc='/images/linkedin.svg' />
+              <IconPill iconSrc='/images/linkedin.svg' />
             </a>
           </div>
           <div class='flex flex-row gap-1 justify-center md:justify-normal'>
             <a href='https://maria-louisa.com/projects/portfolioProject/'>
-              <Pill iconSrc='/images/portfolio.svg' />
+              <IconPill iconSrc='/images/portfolio.svg' />
             </a>
           </div>
         </div>

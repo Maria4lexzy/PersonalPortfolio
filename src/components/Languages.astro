@@ -1,0 +1,21 @@
+---
+import IconPill from '@components/IconPill';
+import Subtitle from '@components/Typography/Subtitle.astro';
+---
+
+<div class='flex flex-col'>
+  <Subtitle subTitle=' Languages I Speak' />
+
+  <div class='flex flex-wrap gap-8 flex-row justify-center md:justify-evenly'>
+    <IconPill
+      iconSrc='/images/gb-ukm.svg'
+      description='English - Fluent/Native'
+    />
+    <IconPill
+      iconSrc='/images/italianflag.svg'
+      description='Italian - Fluent'
+    />
+    <IconPill iconSrc='/images/danish.svg' description='Danish - A2' />
+    <IconPill iconSrc='/images/czech.svg' description='Czech A1' />
+  </div>
+</div>

@@ -1,6 +1,6 @@
 ---
-import Pill from '@components/DomElements/Pill';
-import Gallery from '@sections/Gallery';
+import IconPill from '@components/IconPill';
+import Gallery from '@components/Gallery';
 import BaseLayout from './BaseLayout.astro';
 import CardLayout from './CardLayout.astro';
 import Subtitle from '@components/Typography/Subtitle.astro';
@@ -75,9 +75,9 @@ const formattedImages = frontmatter.images
               {
                 frontmatter.externals.map((external: any) => (
                   <a href={external.url} class='cursor-pointer' target='_blank'>
-                    <Pill
+                    <IconPill
                       iconSrc={`../images/${external.name}.svg`}
-                      description='demo'
+                      description=''
                     />
                   </a>
                 ))
@@ -95,7 +95,7 @@ const formattedImages = frontmatter.images
               <div class='flex flex-wrap gap-4'>
                 {
                   frontmatter.technologies.map((tech: any) => (
-                    <Pill
+                    <IconPill
                       iconSrc={`../images/${tech}.svg`}
                       description={tech}
                     />
