@@ -1,7 +1,7 @@
 ---
-import LayoutHeader from '@components/LayoutHeader.astro';
 import Nav from '@components/Header/Nav.astro';
 import Footer from '@components/Footer.astro';
+import LayoutTags from './LayoutTags.astro';
 
 export interface Props {
   pageTitle: string;
@@ -13,7 +13,7 @@ const { pageTitle, seoTitle, seoDescription } = Astro.props;
 
 <!DOCTYPE html>
 <html lang='en' class='scroll-smooth'>
-  <LayoutHeader
+  <LayoutTags
     pageTitle={pageTitle}
     seoTitle={seoTitle}
     seoDescription={seoDescription}
@@ -33,9 +33,37 @@ const { pageTitle, seoTitle, seoDescription } = Astro.props;
     >
     </div>
     <Nav class='' />
+    <div id='tab-preview'>
+      <div class='tab-preview-content'>
+        <img src='' alt='Tab Preview Image' />
+        <p class='tab-preview-title'>Tab Title</p>
+      </div>
+    </div>
+
     <div class='pages-container'>
       <slot />
     </div>
     <Footer />
-  </body>
+  </body><style>
+    #tab-preview {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      width: 200px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      opacity: 0; /* Initially hidden */
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    .tab-preview-content {
+      padding: 10px;
+    }
+
+    .tab-preview-title {
+      font-weight: bold;
+    }
+  </style>
 </html>

@@ -1,6 +1,6 @@
 ---
 import { SEO } from 'astro-seo';
-import tabLogo from '../../public/images/profile.webp';
+import tabLogo from '/images/profile.webp';
 import '../styles/main.scss';
 
 interface Props {
@@ -16,7 +16,7 @@ const {
   // description,
   seoTitle,
   seoDescription,
-  image = '/images/pageShot.png',
+  image = '/images/pageIcon.png',
 } = Astro.props;
 ---
 
@@ -38,8 +38,8 @@ const {
     description={seoDescription}
     openGraph={{
       basic: {
-        title: 'todo',
-        type: 'a type',
+        title: "Maria's Portfolio",
+        type: 'website',
         image: image,
       },
     }}
@@ -49,7 +49,11 @@ const {
   <meta charset='UTF-8' />
   <meta http-equiv='X-UA-Compatible' content='IE=edge' />
   <meta name='viewport' content='width=device-width,initial-scale=1' />
+
   <link rel='icon' type='image/svg+xml' href={tabLogo} />
+  <link rel='manifest' href='../../manifest.json' />
+  <link rel='apple-touch-icon' href='/images/pageIcon.png' />
+
   <title>{pageTitle}</title>
   <link rel='preconnect' href='https://fonts.googleapis.com' />
   <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
@@ -60,4 +64,5 @@ const {
 
   <script src='/lib/theme-util.js' type='text/javascript' is:inline></script>
   <script src='/lib/index.js' type='text/javascript' defer></script>
+  <!-- <script src='/lib/serviceWorker.js' type='text/javascript'></script> -->
 </head>

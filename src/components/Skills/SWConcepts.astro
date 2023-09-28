@@ -1,5 +1,5 @@
 ---
-import Pill from '@components/DomElements/Pill';
+import IconPill from '@components/IconPill';
 import Subtitle from '@components/Typography/Subtitle.astro';
 import sWConcpetSkills from '@data/swConceptsSkills';
 ---
@@ -10,7 +10,7 @@ import sWConcpetSkills from '@data/swConceptsSkills';
   <div class='flex flex-wrap gap-8 flex-row justify-evenly'>
     {
       sWConcpetSkills.map((skill) => (
-        <Pill
+        <IconPill
           client:only='react'
           iconSrc={skill.icon}
           description={skill.description}

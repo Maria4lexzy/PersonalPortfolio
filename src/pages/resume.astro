@@ -1,5 +1,5 @@
 ---
-import Pill from '@components/DomElements/Pill';
+import IconPill from '@components/IconPill';
 import ResumeLayout from '@layouts/ResumeLayout.astro';
 const pageTitle = "Maria's Resume";
 const seoTitle = "Maria's Resume";
@@ -25,31 +25,34 @@ const seoDescription =
           class='cursor-pointer'
           target='_blank'
         >
-          <Pill iconSrc='/images/linkedin.svg' />
+          <IconPill iconSrc='/images/linkedin.svg' />
         </a>
         <a
           href='https://github.com/Maria4lexzy'
           class='cursor-pointer'
           target='_blank'
         >
-          <Pill iconSrc='/images/github.svg' />
+          <IconPill iconSrc='/images/github.svg' />
         </a>
         <a
           href='https://maria-louisa.com/'
           class='cursor-pointer'
           target='_blank'
         >
-          <Pill iconSrc='/images/portfolio.svg' />
+          <IconPill iconSrc='/images/portfolio.svg' />
         </a>
         <a href='tel:91 15 47 99' target='_self' class='cursor-pointer'>
-          <Pill iconSrc='/images/phone.svg' description='Give me a call' />
+          <IconPill iconSrc='/images/phone.svg' description='Give me a call' />
         </a>
         <a
           href='mailto:mariafailli42@gmail.com'
           target='_self'
           class='cursor-pointer'
         >
-          <Pill iconSrc='/images/email.svg' description='Send me an email' />
+          <IconPill
+            iconSrc='/images/email.svg'
+            description='Send me an email'
+          />
         </a>
       </div>
       <!-- socials & contact -->
