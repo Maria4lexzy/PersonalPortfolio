@@ -1,6 +1,6 @@
 interface PlainPillProps {
   description: string;
-  id: any;
+  id: string;
 }
 
 const PlainPill: React.FC<PlainPillProps> = ({ id, description }) => {
