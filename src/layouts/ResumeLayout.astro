@@ -1,5 +1,5 @@
 ---
-import LayoutHeader from '@components/LayoutHeader.astro';
+import LayoutTags from './LayoutTags.astro';
 
 export interface Props {
   pageTitle: string;
@@ -12,7 +12,7 @@ const { pageTitle, seoTitle, seoDescription } = Astro.props;
 
 <!DOCTYPE html>
 <html lang='en' class='scroll-smooth'>
-  <LayoutHeader
+  <LayoutTags
     pageTitle={pageTitle}
     seoTitle={seoTitle}
     seoDescription={seoDescription}

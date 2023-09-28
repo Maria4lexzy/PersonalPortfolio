@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', (e) => {
     intersectionObserverHandler();
-    // splashScreenHangler();
+    // splashScreenHandler();
     // showPageHandler();
 
 });
@@ -31,7 +31,7 @@ const intersectionObserverHandler = () => {
     });
 
 }
-const splashScreenHangler = () => {
+const splashScreenHandler = () => {
     const splash = document.querySelector('.splash');
     setTimeout(() => {
         splash?.classList.add('back-out-up');

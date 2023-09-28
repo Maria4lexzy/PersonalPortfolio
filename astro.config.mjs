@@ -7,11 +7,12 @@ import sitemap from "@astrojs/sitemap";
 import angular from '@analogjs/astro-angular';
 
 
+
 import analogjsangular from "@analogjs/astro-angular";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://maria-louisa.com/',
+  site: 'https://maria-louisa.com',
   integrations: [tailwind(), react(), angular({
     vite: {
       inlineStylesExtension: 'scss|sass|less',
@@ -21,7 +22,7 @@ export default defineConfig({
       },
     },
   }), compress(), sitemap({
-    filter: page => page !== 'https://maria-louisa.com/'
+    filter: page => page !== 'https://maria-louisa.com'
   }), analogjsangular()],
   output: "server",
   adapter: netlify()
