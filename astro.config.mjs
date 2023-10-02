@@ -8,16 +8,12 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://maria-louisa.com',
+  name: 'manifest', 'astro:build:ssr': async ({ manifest }) => {
+    console.log(manifest);
+  },
   integrations: [tailwind(), react(), compress(), sitemap({
     filter: page => page !== 'https://maria-louisa.com'
   }),],
   output: "server",
   adapter: netlify(),
-  copyCodeSnippet: {
-    enable: true,
-    buttonText: 'Copy',
-    tooltipText: 'Copy the code snippet',
-    toasterText: 'Copied',
-    toasterDuration: 1500,
-  }
 });
