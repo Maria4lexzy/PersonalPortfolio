@@ -1,69 +1,212 @@
 ---
-import IconPill from '@components/IconPill';
-import ResumeLayout from '@layouts/ResumeLayout.astro';
+import IconPill from "@components/IconPill";
+import ResumeLayout from "@layouts/ResumeLayout.astro";
+import { educationData } from "@data/educationData";
+import { experienceData } from "@data/experienceData";
+import SkillBarNoModal from "@components/Skills/SkillBarNoModal.astro";
+import web_MobileSkills from "@data/web_MobileSkills";
+import sWConcpetSkills from "@data/swConceptsSkills";
+import dataCloudSkills from "@data/dataCloudSkills";
+import programmingLanguages from "@data/programmingLanguages";
 const pageTitle = "Maria's Resume";
 const seoTitle = "Maria's Resume";
 const seoDescription =
-  'Check out my experience, skills, education and my favorite things to do in my free tiem';
+  "Check out my experience, skills, education and my favorite things to do in my free tiem";
+
+const mergedSkills = [
+  ...programmingLanguages,
+  ...dataCloudSkills,
+
+  ...web_MobileSkills,
+];
 ---
 
 <ResumeLayout
   pageTitle={pageTitle}
   seoTitle={seoTitle}
-  seoDescription={seoDescription}
->
-  <div class='container px-20 py-10'>
-    <div class='header flex p-5 my-4 bg-green-600 justify-between w-full'>
+  seoDescription={seoDescription}>
+  <div class="px-10 py-10 mx-auto w-full">
+    <div class="header flex p-5 my-4 justify-between">
       <!-- Name and occupation title -->
-      <div class='flex flex-col bg-green-400 p-2'>
-        <h1 class='text-4xl font-extrabold'>Maria Failli</h1>
-        <p class='text-base text-neutral-500'>Full stack developer</p>
+      <div class="flex flex-col p-2">
+        <h1 class="text-4xl font-extrabold">Maria Failli</h1>
+        <p class="text-base text-neutral-500">Full stack developer</p>
       </div>
-      <div class='flex gap-x-4 items-center p-2 bg-green-300'>
+      <div class="flex gap-x-4 items-center p-2">
         <a
-          href='https://www.linkedin.com/in/maria-louisa-failli/'
-          class='cursor-pointer'
-          target='_blank'
-        >
-          <IconPill iconSrc='/images/linkedin.svg' />
+          href="https://www.linkedin.com/in/maria-louisa-failli/"
+          class="cursor-pointer"
+          target="_blank">
+          <IconPill iconSrc="/images/linkedin.svg" />
         </a>
         <a
-          href='https://github.com/Maria4lexzy'
-          class='cursor-pointer'
-          target='_blank'
-        >
-          <IconPill iconSrc='/images/github.svg' />
+          href="https://github.com/Maria4lexzy"
+          class="cursor-pointer"
+          target="_blank">
+          <IconPill iconSrc="/images/github.svg" />
         </a>
         <a
-          href='https://maria-louisa.com/'
-          class='cursor-pointer'
-          target='_blank'
-        >
-          <IconPill iconSrc='/images/portfolio.svg' />
+          href="https://maria-louisa.com/"
+          class="cursor-pointer"
+          target="_blank">
+          <IconPill iconSrc="/images/portfolio.svg" />
         </a>
-        <a href='tel:91 15 47 99' target='_self' class='cursor-pointer'>
-          <IconPill iconSrc='/images/phone.svg' description='Give me a call' />
-        </a>
+
         <a
-          href='mailto:mariafailli42@gmail.com'
-          target='_self'
-          class='cursor-pointer'
-        >
-          <IconPill
-            iconSrc='/images/email.svg'
-            description='Send me an email'
-          />
+          href="mailto:mariafailli42@gmail.com"
+          target="_self"
+          class="cursor-pointer">
+          <IconPill iconSrc="/images/email.svg" description="get in touch" />
         </a>
       </div>
       <!-- socials & contact -->
     </div>
-    <div class='experience flex p-5 my-4 bg-green-600'>
-      <!-- left side -->
+    <!-- About -->
+    <!-- About Me Section -->
+    <div class="about-me flex flex-col p-5 my-4 mx-auto w-full">
+      <!-- Title bar -->
+      <div class="flex items-center w-full">
+        <h1 class="mr-4 tracking-wide capitalize text-xl font-semibold">
+          About Me
+        </h1>
+        <div class="mt-1 w-2 h-2 rounded-full bg-gray-600"></div>
+        <div class="mt-1 bg-gray-600 dark:bg-gray-600/50 h-px flex-grow"></div>
+      </div>
 
-      <!-- right side -->
+      <!-- Content -->
+      <div class="flex mt-5 gap-4">
+        <p class="mt-4 text-sm lg:text-base text-justify">
+          Hey there! I'm Maria, a <span
+            class="text-primary-text dark:text-secondary-text"
+            >full stack developer</span
+          > with a passion for building <span
+            class="text-primary-text dark:text-secondary-text"
+            >well-structured</span
+          >, <span class="text-primary-text dark:text-secondary-text"
+            >reusable</span
+          >, and <span class="text-primary-text dark:text-secondary-text"
+            >maintainable</span
+          > software solutions. I'm constantly <span
+            class="text-primary-text dark:text-secondary-text">learning</span
+          > and exploring new <span
+            class="text-primary-text dark:text-secondary-text"
+            >technologies</span
+          > and <span class="text-primary-text dark:text-secondary-text"
+            >trends</span
+          >, and I enjoy taking on new <span
+            class="text-primary-text dark:text-secondary-text">challenges</span
+          >. My journey in technology is driven by <span
+            class="text-primary-text dark:text-secondary-text">curiosity</span
+          > and a desire to make a <span
+            class="text-primary-text dark:text-secondary-text"
+            >positive impact</span
+          > through <span class="text-primary-text dark:text-secondary-text"
+            >innovation</span
+          >. <br />
+          <br />In my <span class="text-primary-text dark:text-secondary-text"
+            >free time</span
+          >, I enjoy <span class="text-primary-text dark:text-secondary-text"
+            >DIY projects</span
+          >, <span class="text-primary-text dark:text-secondary-text"
+            >traveling</span
+          >, and trying new <span
+            class="text-primary-text dark:text-secondary-text">food</span
+          >. I've been to <span
+            class="text-primary-text dark:text-secondary-text"
+            >20 countries</span
+          > and two continents so far, and I look forward to exploring more <span
+            class="text-primary-text dark:text-secondary-text">places</span
+          >.
+        </p>
+      </div>
     </div>
 
-    <div class='education p-5 my-4 bg-green-600'></div>
-    <div class='skills p-5 my-4 bg-green-600'></div>
+    <!-- Skills -->
+    <div class="skills flex flex-col p-5 my-4 mx-auto w-full">
+      <!-- Title bar -->
+      <div class="flex items-center w-full">
+        <h1 class="mr-4 tracking-wide capitalize text-xl font-semibold">
+          Software Development Skills
+        </h1>
+        <div class="mt-1 w-2 h-2 rounded-full bg-gray-600"></div>
+        <div class="mt-1 bg-gray-600 dark:bg-gray-600/50 h-px flex-grow"></div>
+      </div>
+      <div
+        class="flex flex-wrap gap-y-4 gap-x-6 mt-5 flex-row justify-items-start">
+        {
+          mergedSkills.map((sys, index) => (
+            <SkillBarNoModal
+              skillName={sys.name}
+              progress={sys.progress}
+              iconSrc={sys.icon}
+              backgroundColor={sys.backgroundColor}
+            />
+          ))
+        }
+      </div>
+    </div>
+    <!-- Education Section -->
+    <div class="education flex flex-col p-5 my-4 mx-auto w-full">
+      <!-- Title bar -->
+      <div class="flex items-center w-full">
+        <h1 class="mr-4 tracking-wide capitalize text-xl font-semibold">
+          Education
+        </h1>
+        <div class="mt-1 w-2 h-2 rounded-full bg-gray-600"></div>
+        <div class="mt-1 bg-gray-600 dark:bg-gray-600/50 h-px flex-grow"></div>
+      </div>
+      {
+        educationData.map((edu, index) => (
+          <div class="flex mt-5  gap-4">
+            <div class="flex-auto w-1/4">
+              <h1 class="capitalize text-base font-semibold">{edu.title}</h1>
+              <p class="text-md">{edu.degree}</p>
+              <span class="text-xs text-neutral-500">{edu.date} </span>
+            </div>
+            <div class="flex-auto w-3/4 ">
+              <p class="my-2 text-justify">{edu.description}</p>
+              <div>
+                <ul class="list-disc ml-8 text-justify leading-tight">
+                  {edu.skills.map((skill, index) => (
+                    <li class="mb-2">{skill}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+    <!-- Experience Section -->
+    <div class="experience flex flex-col p-5 my-4 mx-auto w-full">
+      <!-- Title bar -->
+      <div class="flex items-center w-full">
+        <h1 class="mr-4 tracking-wide capitalize text-xl font-semibold">
+          Experience
+        </h1>
+        <div class="mt-1 w-2 h-2 rounded-full bg-gray-600"></div>
+        <div class="mt-1 bg-gray-600 dark:bg-gray-600/50 h-px flex-grow"></div>
+      </div>
+      {
+        experienceData.map((job, index) => (
+          <div class="flex mt-5 gap-4">
+            <div class="flex-auto w-1/4">
+              <h1 class="tracking-wide capitalize text-xl font-semibold">
+                {job.company}
+              </h1>
+              <p class="text-md">{job.role}</p>
+              <span class="text-xs text-neutral-500">{job.date} </span>
+            </div>
+            <div class="flex-auto w-3/4 ">
+              <ul class="list-disc ml-8 text-justify leading-tight ">
+                {job.responsibilities.map((responsibility, index) => (
+                  <li class="mb-1">{responsibility}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))
+      }
+    </div>
   </div>
 </ResumeLayout>

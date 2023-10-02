@@ -1,62 +1,59 @@
 ---
-import PlainPill from '@components/PlainPill';
-import Title from '@components/Typography/Title.astro';
-import CardLayout from '@layouts/CardLayout.astro';
-import { educationData } from '@data/educationData';
+import PlainPill from "@components/PlainPill";
+import Title from "@components/Typography/Title.astro";
+import CardLayout from "@layouts/CardLayout.astro";
+import { educationData } from "@data/educationData";
 ---
 
-<CardLayout id='education' classStyle=' flex flex-col md:flex-row md:gap-4 '>
-  <div class='flex flex-col gap-4'>
-    <Title title='education' />
+<CardLayout id="education" classStyle=" flex flex-col md:flex-row md:gap-4 ">
+  <div class="flex flex-col gap-4">
+    <Title title="education" />
     {
       educationData.map((education, index) => (
-        <div class='w-full'>
-          <div class='flex flex-row gap-8'>
-            <div class='hidden md:block w-20 h-auto shadow-md text-primary dark:text-secondary'>
+        <div class="w-full">
+          <div class="flex flex-row gap-8">
+            <div class="hidden md:block w-20 h-auto shadow-md text-primary dark:text-secondary">
               <img
                 src={education.image}
                 alt={education.title}
-                decoding='async'
-                loading='lazy'
-                class='rounded-lg w-16 md:w-28 h-auto '
+                decoding="async"
+                loading="lazy"
+                class="rounded-lg w-16 md:w-28 h-auto "
               />
             </div>
-            <div class='flex flex-col gap-1'>
-              <h1 class='capitalize text-lg font-semibold'>
+            <div class="flex flex-col gap-1">
+              <h1 class="capitalize text-lg font-semibold">
                 {education.title}
               </h1>
-              <p class='text-md'>{education.degree}</p>
-              <span class='text-xs text-neutral-400'>{education.date}</span>
+              <p class="text-md">{education.degree}</p>
+              <span class="text-xs text-neutral-400">{education.date}</span>
             </div>
           </div>
           <div>
-            <p class='my-2 text-justify'>
-              My education at SDU has provided me with a comprehensive
-              understanding of software engineering, allowing me to
-              independently take responsibility for the entire software
-              development lifecycle, from identifying needs and analyzing
-              requirements to software design, programming, testing, and project
-              management.
-            </p>
-            <div class='flex flex-col'>
-              <details class='open:transition delay-150' open={false}>
-                <summary class='my-2 capitalize font-medium text-gray-700 dark:text-gray-300 text-lg'>
+            <p class="my-2 text-justify">{education.description}</p>
+            <div>
+              <ul class="list-disc ml-4">
+                {education.skills.map((skill, index) => (
+                  <li class="mb-2">{skill}</li>
+                ))}
+              </ul>
+            </div>
+            <div class="flex flex-col">
+              <details class="open:transition delay-150" open={false}>
+                <summary class="my-2 capitalize font-medium text-gray-700 dark:text-gray-300 text-lg">
                   Courses
                 </summary>
-                <div class='flex flex-wrap gap-4 justify-stretch'>
+                <div class="flex flex-wrap gap-4 justify-stretch">
                   {education.courses.map((course, index) => (
-                    <PlainPill
-                      id={course.courseName + '' + index}
-                      description={course.courseName}
-                    />
+                    <PlainPill id={course + "" + index} description={course} />
                   ))}
                 </div>
               </details>
             </div>
           </div>
           {index !== educationData.length - 1 && (
-            <div class='bg-gray-200 dark:bg-gray-600/50 h-px w-full my-4' />
-          )}{' '}
+            <div class="bg-gray-200 dark:bg-gray-600/50 h-px w-full my-4" />
+          )}{" "}
         </div>
       ))
     }

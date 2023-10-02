@@ -1,105 +1,106 @@
-interface Course {
-  courseName: string;
-}
-
 interface EducationEntry {
   title: string;
   degree: string;
   date: string;
   description: string;
+  skills: string[];
   image: string;
-  courses: Course[];
+  courses: string[];
 }
 export const educationData: EducationEntry[] = [
   {
-    title: 'University of Southern Denmark',
-    degree: 'MSc Software Engineering',
-    date: 'February 2018 - July 2021',
+    title: "University of Southern Denmark",
+    degree: "MSc Software Engineering",
+    date: "September 2021 - July 2023",
     description:
-      'My education at SDU has provided me with a comprehensive understanding ' +
-      'of software engineering, allowing me to independently take ' +
-      'responsibility for the entire software development lifecycle, from ' +
-      'identifying needs and analyzing requirements to software design, ' +
-      'programming, testing, and project management.',
-    image: '/images/companies/sdu.svg',
+      "My master's program at SDU University was a transformative experience where I strengthed my engineering and deepened my knowledge in:",
+    skills: [
+      "Big Data: Proficiency in handling and analyzing large datasets using tools like Apache Spark, Hadoop, and Hive",
+      "Coding Practices: Elevated coding practices with a focus on structured, maintainable, and efficient code. ",
+      "Cloud Technologies: In-depth exploration of cloud platforms, encompassing concepts like IaaS, PaaS, and SaaS.",
+      "Web3 and Cryptocurrencies: Immersion in the world of decentralized innovations, including Web3 and cryptocurrencies",
+      "Software Development Lifecycle Management: Managing the software development lifecycle from inception to deployment, following principles and tools like Agile and Scrum.",
+    ],
+    image: "/images/companies/sdu.svg",
     courses: [
-      { courseName: 'Big Data and Data Science Technologies' },
-      { courseName: 'Blockchain Theory and Usage' },
-      { courseName: 'Cloud Computing and Edge-Cloud Adaptive Architectures' },
-      { courseName: 'Data Security' },
-      { courseName: 'Innovative SW Solutions' },
-      { courseName: 'Linux for Embedded Objects' },
-      { courseName: 'Model-Driven SW Development' },
-      { courseName: 'Scientific Methods' },
-      { courseName: 'Security in Computer Systems' },
-      { courseName: 'SW Engineering of Mobile and Ubiquitous Systems' },
-      { courseName: 'SW System Analysis and Verification' },
-      { courseName: 'SW Technology for IoT' },
-      { courseName: 'SW Architecture' },
-      { courseName: 'Statistics and Machine Learning' },
-      { courseName: 'Systems Modeling and Simulation' },
+      "Big Data and Data Science Technologies",
+      "Blockchain Theory and Usage",
+      "Cloud Computing and Edge-Cloud Adaptive Architectures",
+      "Data Security",
+      "Innovative SW Solutions",
+      "Linux for Embedded Objects",
+      "Model-Driven SW Development",
+      "Scientific Methods",
+      "Security in Computer Systems",
+      "SW Engineering of Mobile and Ubiquitous Systems",
+      "SW System Analysis and Verification",
+      "SW Technology for IoT",
+      "SW Architecture",
+      "Statistics and Machine Learning",
+      "Systems Modeling and Simulation",
     ],
   },
 
   {
-    title: 'VIA University College',
-    degree: 'BEng Software Technology Engineering',
-    date: 'September 2021 - July 2023',
+    title: "VIA University College",
+    degree: "BEng Software Technology Engineering",
+
+    date: "February 2018 - July 2021",
     description:
-      'My education at VIA has equipped me with a strong foundation in software ' +
-      'engineering and a broad understanding of industry dynamics. ' +
-      'Additionally, it has nurtured my passion for technology and prepared me ' +
-      'to thrive in the fast-paced and ever-evolving software industry, and ' +
-      'allowed me to gain a solid foundation in software engineering principles ' +
-      'and practices.',
-    image: '/images/companies/via.svg',
+      "During my studies at VIA, I acquired technical and soft skills that allow me to: ",
+    skills: [
+      "Design and develop software systems, architectures, and diagrams",
+      "Implement software systems using a variety of programming languages and technologies",
+      "Assess and employ appropriate software technologies to address different challenges",
+      "Collaborate with others to solve problems and achieve goals",
+      "Demonstrate strong problem-solving skills",
+    ],
+    image: "/images/companies/via.svg",
     courses: [
-      { courseName: 'Semester Project: Single User System' },
-      { courseName: 'Discrete Mathematics and Algorithms' },
-      { courseName: 'SW Development with UML and Java' },
-      { courseName: 'Web Development' },
-      { courseName: 'Database Systems' },
-      { courseName: 'SW Engineering' },
-      { courseName: 'Semester Project: Client/Server System' },
-      { courseName: 'Database Systems' },
-      { courseName: 'Network and Security' },
-      { courseName: 'Computer Architecture and Organization' },
-      { courseName: 'Semester project: Heterogeneous Systems' },
-      { courseName: '.NET Programming' },
-      { courseName: 'Algorithms and Data Structures' },
-      { courseName: 'DevOps & Cloud' },
-      { courseName: 'Embedded SW' },
-      { courseName: 'Semester Project: Internet of Things' },
-      { courseName: 'Engineering Internship' },
-      { courseName: 'Applied Linear Algebra' },
-      { courseName: 'No-SQL versus relational databases' },
-      { courseName: 'IT Security and Cryptography in Practice' },
-      { courseName: 'Programming Concepts and Languages' },
-      { courseName: 'Digital Multi Media' },
-      { courseName: 'Digital Signal Processing' },
+      "Semester Project: Single User System",
+      "Discrete Mathematics and Algorithms",
+      "SW Development with UML and Java",
+      "Web Development",
+      "Database Systems",
+      "SW Engineering",
+      "Semester Project: Client/Server System",
+      "Database Systems",
+      "Network and Security",
+      "Computer Architecture and Organization",
+      "Semester project: Heterogeneous Systems",
+      ".NET Programming",
+      "Algorithms and Data Structures",
+      "DevOps & Cloud",
+      "Embedded SW",
+      "Semester Project: Internet of Things",
+      "Engineering Internship",
+      "Applied Linear Algebra",
+      "No-SQL versus relational databases",
+      "IT Security and Cryptography in Practice",
+      "Programming Concepts and Languages",
+      "Digital Multi-Media",
     ],
   },
   {
-    title: 'ITS Tulli Buzzi',
-    degree: 'High School Diploma - Junior Electronics Engineer',
-    date: 'September 2014 - July 2017',
-    description:
-      'My education at ITS - Buzzi has equipped me with a strong foundation in ' +
-      'electronics and engineering principles. This program has allowed me to ' +
-      'develop technical skills in areas such as electrical circuits, digital ' +
-      "systems, and microcontrollers. I've honed my problem-solving abilities " +
-      'and gained hands-on experience through practical projects and lab work. ' +
-      'The interdisciplinary nature of the curriculum has broadened my ' +
-      'knowledge in mathematics, physics, computer science, and engineering.',
-    image: '/images/companies/tullio.svg',
+    title: "ITS Tulli Buzzi",
+    degree: "High School Diploma - Junior Electronics Engineer",
+    date: "September 2014 - July 2017",
+    description: "My education at ITS - Buzzi has equipped me with: ",
+    skills: [
+      "Practical experience in electrical circuitry and components",
+      "Knowledge in Digital systems and microcontrollers.",
+      "Strong problem-solving abilities honed through practical projects and lab work.",
+      "Interdisciplinary knowledge in mathematics, physics, computer science, and engineering.",
+    ],
+    image: "/images/companies/tullio.svg",
     courses: [
-      { courseName: 'Mathematics' },
-      { courseName: 'Physics' },
-      { courseName: 'Electronics' },
-      { courseName: 'Electrotechnics' },
-      { courseName: 'Informatics' },
-      { courseName: 'Automated Systems' },
-      { courseName: 'Electrical Design' },
+      "Mathematics",
+      "Physics",
+      "Electronics",
+      "Electrotechnics",
+      "Informatics",
+      "Automated Systems",
+      "Electrical Design",
     ],
   },
 ];

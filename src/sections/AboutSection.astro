@@ -1,23 +1,22 @@
 ---
-import IconPill from '@components/IconPill';
-import Subtitle from '@components/Typography/Subtitle.astro';
-import Title from '@components/Typography/Title.astro';
-import CardLayout from '@layouts/CardLayout.astro';
+import IconPill from "@components/IconPill";
+import Subtitle from "@components/Typography/Subtitle.astro";
+import Title from "@components/Typography/Title.astro";
+import CardLayout from "@layouts/CardLayout.astro";
 ---
 
 <CardLayout
-  id='about'
-  classStyle=' flex flex-col md:flex-row md:gap-8 content-center '
->
+  id="about"
+  classStyle=" flex flex-col md:flex-row md:gap-8 content-center ">
   <!-- Left Side -->
 
-  <div class='mx-auto md:flex md:flex-col md:justify-center md:space-y-4'>
+  <div class="mx-auto md:flex md:flex-col md:justify-center md:space-y-4">
     <img
-      src='/images/profile.webp'
-      alt='Maria Failli'
-      decoding='async'
-      loading='lazy'
-      class='rounded-lg h-24 max-w-none md:h-52 md:w-52 sm:h-36 sm:w-36 w-24'
+      src="/images/profile.webp"
+      alt="Maria Failli"
+      decoding="async"
+      loading="lazy"
+      class="rounded-lg h-24 max-w-none md:h-52 md:w-52 sm:h-36 sm:w-36 w-24"
     />
     <!-- <a
       href='/cv.pdf'
@@ -26,85 +25,82 @@ import CardLayout from '@layouts/CardLayout.astro';
     > -->
   </div>
   <!-- Right Side -->
-  <div class='mx-auto md:flex md:flex-col md:py-2 text-center md:text-left'>
+  <div class="mx-auto md:flex md:flex-col md:py-2 text-center md:text-left">
     <!-- <div class='bg-green-400 md:flex md:flex-col md:justify-between md:py-2'> -->
-    <div class='mt-4 md:mt-0 md:gap-y-2'>
-      <Title title='Maria Louisa Failli' />
+    <div class="mt-4 md:mt-0 md:gap-y-2">
+      <Title title="Maria Louisa Failli" />
 
       <h2
-        class='text-base md:text-md font-medium text-neutral-500 mb-4 md:mb-2'
-      >
+        class="text-base md:text-md font-medium text-neutral-500 mb-4 md:mb-2">
         Fullstack Developer - Frontend Heavy
       </h2>
-      <div class='flex flex-col lg:flex-row nowrap gap-x-4 gap-y-1 md:gap-x-8'>
-        <div class='flex flex-row gap-1 justify-center md:justify-normal'>
+      <div class="flex flex-col lg:flex-row nowrap gap-x-4 gap-y-1 md:gap-x-8">
+        <div class="flex flex-row gap-1 justify-center md:justify-normal">
           <a
-            href='mailto:mariafailli42@gmail.com'
-            class='text-sm font-normal leading-relaxed sm:text-base'
-            target='_self'
-          >
+            href="mailto:mariafailli42@gmail.com"
+            class="text-sm font-normal leading-relaxed sm:text-base"
+            target="_self">
             <IconPill
-              iconSrc='/images/email.svg'
-              description='Send me an email'
-              classListItems='hover:animate-pulse'
+              iconSrc="/images/email.svg"
+              description="Send me an email"
+              classListItems="hover:animate-pulse"
             />
           </a>
         </div>
-        <div class='flex flex-row gap-1 justify-center md:justify-normal'>
+        <div class="flex flex-row gap-1 justify-center md:justify-normal">
           <a
-            href='tel:91 15 47 99'
-            class='text-sm font-normal leading-relaxed sm:text-base'
-            target='_self'
-          >
+            href="tel:91 15 47 99"
+            class="text-sm font-normal leading-relaxed sm:text-base"
+            target="_self">
             <IconPill
-              iconSrc='/images/phone.svg'
-              classListItems='hover:animate-pulse'
-              description='Give me a call'
+              iconSrc="/images/phone.svg"
+              classListItems="hover:animate-pulse"
+              description="Give me a call"
             />
           </a>
         </div>
       </div>
 
-      <p class='mt-4 text-sm lg:text-base text-justify'>
-        Greetings Observer👋, I'm Maria. I like developing <span
-          class='text-primary-text dark:text-secondary-text'
+      <p class="mt-4 text-sm lg:text-base text-justify">
+        Hey there👋, I'm Maria. I like developing <span
+          class="text-primary-text dark:text-secondary-text"
           >well-structured</span
-        >, <span class='text-primary-text dark:text-secondary-text'
+        >, <span class="text-primary-text dark:text-secondary-text"
           >reusable</span
-        >, and <span class='text-primary-text dark:text-secondary-text'
+        >, and <span class="text-primary-text dark:text-secondary-text"
           >maintainable</span
         > software solutions. In the world of software, learning never stops, I'm
         constantly exploring new technlogies and trends. I enjoy new challenges and
         I'm always ready to tackle them headd-on. My journey in technology is driven
-        by<span class='text-primary-text dark:text-secondary-text'
+        by<span class="text-primary-text dark:text-secondary-text"
           >curiosity</span
         > and desire to make a positive impact through<span
-          class='text-primary-text dark:text-secondary-text'>innovation</span
+          class="text-primary-text dark:text-secondary-text">innovation</span
         >. In my free time, you'll find me immersed in DIY projects, from
         tinkering with electronics to crocheting🧶 or hiking🌄. I also love
         traveling✈️ and trying new food🍜. So far, I've been to <span
-          class='text-primary-text dark:text-secondary-text'>20 countries</span
+          class="text-primary-text dark:text-secondary-text">20 countries</span
         > and two continents, and I look forward to exploring more places.
       </p>
 
-      <Subtitle subTitle='Socials' />
+      <Subtitle subTitle="Socials" />
 
       <!-- urls -->
-      <div class='mt-4 md:mt-0 md:gap-y-2'>
-        <div class='flex gap-x-4 gap-y-1 md:gap-x-8 justify-center'>
-          <div class='flex flex-row gap-1 justify-center md:justify-normal'>
-            <a href='https://github.com/Maria4lexzy'>
-              <IconPill iconSrc='/images/github.svg' />
+      <div class="mt-4 md:mt-0 md:gap-y-2">
+        <div class="flex gap-x-4 gap-y-1 md:gap-x-8 justify-center">
+          <div class="flex flex-row gap-1 justify-center md:justify-normal">
+            <a href="https://github.com/Maria4lexzy">
+              <IconPill iconSrc="/images/github.svg" />
             </a>
           </div>
-          <div class='flex flex-row gap-1 justify-center md:justify-normal'>
-            <a href='https://www.linkedin.com/in/maria-louisa-failli/'>
-              <IconPill iconSrc='/images/linkedin.svg' />
+          <div class="flex flex-row gap-1 justify-center md:justify-normal">
+            <a href="https://www.linkedin.com/in/maria-louisa-failli/">
+              <IconPill iconSrc="/images/linkedin.svg" />
             </a>
           </div>
-          <div class='flex flex-row gap-1 justify-center md:justify-normal'>
-            <a href='https://maria-louisa.com/projects/portfolioProject/'>
-              <IconPill iconSrc='/images/portfolio.svg' />
+          <div class="flex flex-row gap-1 justify-center md:justify-normal">
+            <a href="https://maria-louisa.com/projects/portfolioProject/">
+              <IconPill iconSrc="/images/portfolio.svg" />
             </a>
           </div>
         </div>

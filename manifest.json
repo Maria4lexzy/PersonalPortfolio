@@ -7,12 +7,6 @@
     "theme_color": "#1e293b",
     "icons": [
         {
-            "src": "/images/mariaIcon.svg",
-            "type": "image/svg+xml",
-            "sizes": "512x512",
-            "purpose": "any"
-        },
-        {
             "src": "/images/pageIcon-192x192.png",
             "sizes": "192x192",
             "type": "image/png",

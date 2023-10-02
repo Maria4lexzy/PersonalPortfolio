@@ -5,11 +5,19 @@ interface Props {
 const { subTitle } = Astro.props;
 ---
 
-<div class='flex flex-row gap-2 items-center'>
+<div class="flex flex-row items-center mb-2">
   <p
-    class='my-2 capitalize font-medium text-gray-700 dark:text-gray-300 text-lg'
-  >
+    class="my-2 mr-2 capitalize font-medium text-gray-600 dark:text-gray-300 text-lg">
     {subTitle}
   </p>
-  <div class='bg-gray-200 dark:bg-gray-600/50 h-px grow'></div>
+  <div class="mt-1 bg-gray-400 dark:bg-gray-600/50 h-px grow"></div>
 </div>
+<!-- <div class="flex items-center"> 
+  <p
+    class="mr-4 capitalize font-medium text-gray-700 dark:text-gray-300 text-lg">
+    {subTitle}
+  </p>
+ 
+  <div class="-mb-1 w-2 h-2 rounded-full bg-gray-400"></div>
+  <div class="-mb-1 flex-grow border-t bg-gray-400 dark:bg-gray-600/50"></div>
+</div> -->

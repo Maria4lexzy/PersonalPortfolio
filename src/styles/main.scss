@@ -1,6 +1,6 @@
-* {
-  cursor: none;
-}
+// * {
+//   cursor: none;
+// }
 body {
   margin: 0;
   padding: 0;
@@ -9,38 +9,38 @@ body {
   min-height: 100vh;
   -webkit-tap-highlight-color: transparent;
   transition: all ease 0.4s;
-  &:hover > #cursor {
-    opacity: 1;
-  }
-  &:hover > #pointer {
-    opacity: 1;
-  }
-  #cursor {
-    height: 2rem;
-    width: 2rem;
-    border-radius: 50%;
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    z-index: 10000;
-    pointer-events: none;
-    opacity: 0;
-    // border: 2px solid #f5f749;
-    transition: opacity 200ms ease, background-color 200ms ease;
-  }
-  #pointer {
-    height: 0.5rem;
-    width: 0.5rem;
-    border-radius: 50%;
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    z-index: 10000;
-    pointer-events: none;
-    opacity: 0;
-    // background-color: green;
-    transition: opacity 200ms ease;
-  }
+  // &:hover > #cursor {
+  //   opacity: 1;
+  // }
+  // &:hover > #pointer {
+  //   opacity: 1;
+  // }
+  // #cursor {
+  //   height: 2rem;
+  //   width: 2rem;
+  //   border-radius: 50%;
+  //   position: fixed;
+  //   left: 0px;
+  //   top: 0px;
+  //   z-index: 10000;
+  //   pointer-events: none;
+  //   opacity: 0;
+  //   // border: 2px solid #f5f749;
+  //   transition: opacity 200ms ease, background-color 200ms ease;
+  // }
+  // #pointer {
+  //   height: 0.5rem;
+  //   width: 0.5rem;
+  //   border-radius: 50%;
+  //   position: fixed;
+  //   left: 0px;
+  //   top: 0px;
+  //   z-index: 10000;
+  //   pointer-events: none;
+  //   opacity: 0;
+  //   // background-color: green;
+  //   transition: opacity 200ms ease;
+  // }
 }
 ::-webkit-scrollbar {
   width: 6px;
