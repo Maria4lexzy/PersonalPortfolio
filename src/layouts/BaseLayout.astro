@@ -1,7 +1,7 @@
 ---
-import Nav from '@components/Header/Nav.astro';
-import Footer from '@components/Footer.astro';
-import LayoutTags from './LayoutTags.astro';
+import Nav from "@components/Header/Nav.astro";
+import Footer from "@components/Footer.astro";
+import LayoutTags from "./LayoutTags.astro";
 
 export interface Props {
   pageTitle: string;
@@ -12,16 +12,15 @@ const { pageTitle, seoTitle, seoDescription } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang='en' class='scroll-smooth'>
+<html lang="en" class="scroll-smooth">
   <LayoutTags
     pageTitle={pageTitle}
     seoTitle={seoTitle}
     seoDescription={seoDescription}
   />
   <body
-    class='overflow-x-hidden bg-primary/80 dark:bg-secondary-dark/90 text-neutral-700 dark:text-neutral-300 font-dosis transition-colors ease-in duration-450'
-  >
-    <div
+    class="overflow-x-hidden bg-primary/80 dark:bg-secondary-dark/90 text-neutral-700 dark:text-neutral-300 font-dosis transition-colors ease-in duration-450">
+    <!-- <div
       id='cursor'
       class='border-2 border-primary-text dark:border-secondary-text'
     >
@@ -30,16 +29,16 @@ const { pageTitle, seoTitle, seoDescription } = Astro.props;
       id='pointer'
       class='rounded-full dark:bg-secondary-text bg-primary-text'
     >
-    </div>
-    <Nav class='' />
-    <div id='tab-preview'>
-      <div class='tab-preview-content'>
-        <img src='' alt='Tab Preview Image' />
-        <p class='tab-preview-title'>Tab Title</p>
+    </div> -->
+    <Nav class="" />
+    <div id="tab-preview">
+      <div class="tab-preview-content">
+        <img src="" alt="Tab Preview Image" />
+        <p class="tab-preview-title">Tab Title</p>
       </div>
     </div>
 
-    <div class='pages-container'>
+    <div class="pages-container">
       <slot />
     </div>
     <Footer />

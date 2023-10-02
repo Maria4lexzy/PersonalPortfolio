@@ -62,7 +62,9 @@ const {
     content="bg-secondary-dark/90"
   />
   <link rel="icon" type="image/svg+xml" href={tabLogo} />
-  <link rel="manifest" href="../../manifest.json" />
+  <!-- <link rel="manifest" href="../../manifest.json" /> -->
+  <link rel="manifest" href="../../manifest.webmanifest" />
+
   <link rel="apple-touch-icon" href="/images/pageIcon.png" />
 
   <title>{pageTitle}</title>
@@ -75,5 +77,5 @@ const {
 
   <script src="/lib/theme-util.js" type="text/javascript" is:inline></script>
   <script src="/lib/index.js" type="text/javascript" defer></script>
-  <!-- <script src='/lib/serviceWorker.js' type='text/javascript'></script> -->
+  <script src="/lib/generate-sw.js" type="text/javascript"></script>
 </head>
