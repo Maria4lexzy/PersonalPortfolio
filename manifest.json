@@ -1,7 +1,7 @@
 {
     "name": "Maria's Portfolio",
     "short_name": "Maria",
-    "start_url": "/",
+    "start_url": "https://maria-louisa.com",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#1e293b",

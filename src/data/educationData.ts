@@ -13,13 +13,13 @@ export const educationData: EducationEntry[] = [
     degree: "MSc Software Engineering",
     date: "September 2021 - July 2023",
     description:
-      "My master's program at SDU University was a transformative experience where I strengthed my engineering and deepened my knowledge in:",
+      "My master's program at SDU University was a transformative experience where I strengthed my engineering skills and deepened my knowledge in:",
     skills: [
       "Big Data: Proficiency in handling and analyzing large datasets using tools like Apache Spark, Hadoop, and Hive",
       "Coding Practices: Elevated coding practices with a focus on structured, maintainable, and efficient code. ",
       "Cloud Technologies: In-depth exploration of cloud platforms, encompassing concepts like IaaS, PaaS, and SaaS.",
-      "Web3 and Cryptocurrencies: Immersion in the world of decentralized innovations, including Web3 and cryptocurrencies",
-      "Software Development Lifecycle Management: Managing the software development lifecycle from inception to deployment, following principles and tools like Agile and Scrum.",
+      "Web3 and Cryptocurrencies: Hands-on experience with decentralized technologies, such as blockchain, P2P, DeFi",
+      "Software Development Lifecycle Management: Managing software development lifecycle from inception to deployment, following principles and tools like Agile and Scrum.",
     ],
     image: "/images/companies/sdu.svg",
     courses: [
@@ -88,8 +88,8 @@ export const educationData: EducationEntry[] = [
     description: "My education at ITS - Buzzi has equipped me with: ",
     skills: [
       "Practical experience in electrical circuitry and components",
-      "Knowledge in Digital systems and microcontrollers.",
-      "Strong problem-solving abilities honed through practical projects and lab work.",
+      "Knowledge in digital systems and microcontrollers.",
+      "Strong problem-solving abilities gained through practical projects and lab work.",
       "Interdisciplinary knowledge in mathematics, physics, computer science, and engineering.",
     ],
     image: "/images/companies/tullio.svg",

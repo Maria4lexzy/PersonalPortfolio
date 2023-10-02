@@ -9,7 +9,7 @@ interface Props {
 const { skillName, progress, iconSrc, backgroundColor } = Astro.props;
 ---
 
-<div class="interactable gap-3 w-28 text-slate-700 dark:text-slate-400">
+<div class="interactable gap-3 w-20 md:w-28 text-slate-700 dark:text-slate-400">
   <div>
     <div class="flex gap-2 mb-1">
       <img src={iconSrc} alt={skillName} class="h-auto w-4" />

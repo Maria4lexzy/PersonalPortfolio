@@ -4,6 +4,16 @@
             "language": "typescript",
             "scheme": "file",
             "pattern": "src/data/educationData.ts"
+        },
+        {
+            "language": "astro",
+            "scheme": "file",
+            "pattern": "src/pages/resume.astro"
+        },
+        {
+            "language": "astro",
+            "scheme": "file",
+            "pattern": "src/sections/AboutSection.astro"
         }
     ]
 }

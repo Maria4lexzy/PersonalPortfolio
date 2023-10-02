@@ -11,7 +11,7 @@ import programmingLanguages from "@data/programmingLanguages";
 const pageTitle = "Maria's Resume";
 const seoTitle = "Maria's Resume";
 const seoDescription =
-  "Check out my experience, skills, education and my favorite things to do in my free tiem";
+  "Check out my experience, skills, education and my favorite things to do in my free time";
 
 const mergedSkills = [
   ...programmingLanguages,
@@ -25,31 +25,32 @@ const mergedSkills = [
   pageTitle={pageTitle}
   seoTitle={seoTitle}
   seoDescription={seoDescription}>
-  <div class="px-10 py-10 mx-auto w-full">
-    <div class="header flex p-5 my-4 justify-between">
+  <div class="px-5 md:px-10 py-10 mx-auto w-full">
+    <div
+      class="header flex flex-col md:flex-row p-5 my-4 justify-center md:text-left text-center md:justify-between">
       <!-- Name and occupation title -->
-      <div class="flex flex-col p-2">
-        <h1 class="text-4xl font-extrabold">Maria Failli</h1>
+      <div class="flex p-2 justify-center flex-col">
+        <h1 class="text-xl md:text-4xl font-extrabold">Maria Failli</h1>
         <p class="text-base text-neutral-500">Full stack developer</p>
       </div>
-      <div class="flex gap-x-4 items-center p-2">
+      <div class="flex gap-x-4 md:items-center justify-center p-2">
         <a
           href="https://www.linkedin.com/in/maria-louisa-failli/"
           class="cursor-pointer"
           target="_blank">
-          <IconPill iconSrc="/images/linkedin.svg" />
+          <IconPill iconSrc="/images/linkedin.svg" description="LinkedIn" />
         </a>
         <a
           href="https://github.com/Maria4lexzy"
           class="cursor-pointer"
           target="_blank">
-          <IconPill iconSrc="/images/github.svg" />
+          <IconPill iconSrc="/images/github.svg" description="GitHub" />
         </a>
         <a
           href="https://maria-louisa.com/"
           class="cursor-pointer"
           target="_blank">
-          <IconPill iconSrc="/images/portfolio.svg" />
+          <IconPill iconSrc="/images/portfolio.svg" description="Portfolio" />
         </a>
 
         <a
@@ -62,21 +63,22 @@ const mergedSkills = [
       <!-- socials & contact -->
     </div>
     <!-- About -->
-    <!-- About Me Section -->
-    <div class="about-me flex flex-col p-5 my-4 mx-auto w-full">
+
+    <div class="about-me flex flex-col p-2 md:p-5 my-4 mx-auto w-full">
       <!-- Title bar -->
       <div class="flex items-center w-full">
-        <h1 class="mr-4 tracking-wide capitalize text-xl font-semibold">
-          About Me
-        </h1>
         <div class="mt-1 w-2 h-2 rounded-full bg-gray-600"></div>
         <div class="mt-1 bg-gray-600 dark:bg-gray-600/50 h-px flex-grow"></div>
+
+        <h1 class="mx-4 capitalize text-xl font-semibold">About Me</h1>
+        <div class="mt-1 bg-gray-600 dark:bg-gray-600/50 h-px flex-grow"></div>
+        <div class="mt-1 w-2 h-2 rounded-full bg-gray-600"></div>
       </div>
 
       <!-- Content -->
-      <div class="flex mt-5 gap-4">
+      <div class="flex mt-2 md:mt-5 gap-4">
         <p class="mt-4 text-sm lg:text-base text-justify">
-          Hey there! I'm Maria, a <span
+          Hello👋 I'm Maria, a <span
             class="text-primary-text dark:text-secondary-text"
             >full stack developer</span
           > with a passion for building <span
@@ -102,37 +104,28 @@ const mergedSkills = [
             >positive impact</span
           > through <span class="text-primary-text dark:text-secondary-text"
             >innovation</span
-          >. <br />
-          <br />In my <span class="text-primary-text dark:text-secondary-text"
-            >free time</span
-          >, I enjoy <span class="text-primary-text dark:text-secondary-text"
-            >DIY projects</span
-          >, <span class="text-primary-text dark:text-secondary-text"
-            >traveling</span
-          >, and trying new <span
-            class="text-primary-text dark:text-secondary-text">food</span
-          >. I've been to <span
-            class="text-primary-text dark:text-secondary-text"
-            >20 countries</span
-          > and two continents so far, and I look forward to exploring more <span
-            class="text-primary-text dark:text-secondary-text">places</span
           >.
+
+          <br />
+          <br />In my free time, I enjoy DIY projects , traveling✈️ , sports🏓,
+          and trying new foods🍜. I've been to 20 countries and two continents
+          so far, and I look forward to exploring more.
         </p>
       </div>
     </div>
 
     <!-- Skills -->
-    <div class="skills flex flex-col p-5 my-4 mx-auto w-full">
+    <div class="skills flex flex-col p-2 md:p-5 my-4 mx-auto w-full">
       <!-- Title bar -->
       <div class="flex items-center w-full">
-        <h1 class="mr-4 tracking-wide capitalize text-xl font-semibold">
-          Software Development Skills
-        </h1>
         <div class="mt-1 w-2 h-2 rounded-full bg-gray-600"></div>
         <div class="mt-1 bg-gray-600 dark:bg-gray-600/50 h-px flex-grow"></div>
+        <h1 class="mx-4 capitalize text-xl font-semibold">Tech Skills</h1>
+        <div class="mt-1 bg-gray-600 dark:bg-gray-600/50 h-px flex-grow"></div>
+        <div class="mt-1 w-2 h-2 rounded-full bg-gray-600"></div>
       </div>
       <div
-        class="flex flex-wrap gap-y-4 gap-x-6 mt-5 flex-row justify-items-start">
+        class="flex flex-wrap gap-y-4 gap-x-6 mt-5 flex-row justify-center md:justify-items-start">
         {
           mergedSkills.map((sys, index) => (
             <SkillBarNoModal
@@ -146,27 +139,27 @@ const mergedSkills = [
       </div>
     </div>
     <!-- Education Section -->
-    <div class="education flex flex-col p-5 my-4 mx-auto w-full">
+    <div class="education flex flex-col p-2 md:p-5 my-4 mx-auto w-full">
       <!-- Title bar -->
       <div class="flex items-center w-full">
-        <h1 class="mr-4 tracking-wide capitalize text-xl font-semibold">
-          Education
-        </h1>
         <div class="mt-1 w-2 h-2 rounded-full bg-gray-600"></div>
         <div class="mt-1 bg-gray-600 dark:bg-gray-600/50 h-px flex-grow"></div>
+        <h1 class="mx-4 capitalize text-xl font-semibold">Education</h1>
+        <div class="mt-1 bg-gray-600 dark:bg-gray-600/50 h-px flex-grow"></div>
+        <div class="mt-1 w-2 h-2 rounded-full bg-gray-600"></div>
       </div>
       {
         educationData.map((edu, index) => (
-          <div class="flex mt-5  gap-4">
-            <div class="flex-auto w-1/4">
+          <div class="flex flex-col md:flex-row mt-5 text-center  md:text-left gap-4">
+            <div class="w-full  md:w-1/4  mx-auto ">
               <h1 class="capitalize text-base font-semibold">{edu.title}</h1>
               <p class="text-md">{edu.degree}</p>
               <span class="text-xs text-neutral-500">{edu.date} </span>
             </div>
-            <div class="flex-auto w-3/4 ">
-              <p class="my-2 text-justify">{edu.description}</p>
+            <div class=" w-full md:w-3/4 ">
+              <p class="my-2  text-justify">{edu.description}</p>
               <div>
-                <ul class="list-disc ml-8 text-justify leading-tight">
+                <ul class="list-disc ml-2 md:ml-8 text-left leading-tight">
                   {edu.skills.map((skill, index) => (
                     <li class="mb-2">{skill}</li>
                   ))}
@@ -178,29 +171,27 @@ const mergedSkills = [
       }
     </div>
     <!-- Experience Section -->
-    <div class="experience flex flex-col p-5 my-4 mx-auto w-full">
+    <div class="experience flex flex-col p-2 md:p-5 my-4 mx-auto w-full">
       <!-- Title bar -->
       <div class="flex items-center w-full">
-        <h1 class="mr-4 tracking-wide capitalize text-xl font-semibold">
-          Experience
-        </h1>
         <div class="mt-1 w-2 h-2 rounded-full bg-gray-600"></div>
         <div class="mt-1 bg-gray-600 dark:bg-gray-600/50 h-px flex-grow"></div>
+        <h1 class="mx-4 capitalize text-xl font-semibold">Experience</h1>
+        <div class="mt-1 bg-gray-600 dark:bg-gray-600/50 h-px flex-grow"></div>
+        <div class="mt-1 w-2 h-2 rounded-full bg-gray-600"></div>
       </div>
       {
         experienceData.map((job, index) => (
-          <div class="flex mt-5 gap-4">
-            <div class="flex-auto w-1/4">
-              <h1 class="tracking-wide capitalize text-xl font-semibold">
-                {job.company}
-              </h1>
+          <div class="flex flex-col md:flex-row mt-5  text-center  md:text-left gap-4">
+            <div class="w-full  md:w-1/4  mx-auto ">
+              <h1 class="text-base font-semibold">{job.company}</h1>
               <p class="text-md">{job.role}</p>
               <span class="text-xs text-neutral-500">{job.date} </span>
             </div>
-            <div class="flex-auto w-3/4 ">
-              <ul class="list-disc ml-8 text-justify leading-tight ">
+            <div class=" w-full md:w-3/4 ">
+              <ul class="list-disc ml-2 md:ml-8  text-left leading-tight ">
                 {job.responsibilities.map((responsibility, index) => (
-                  <li class="mb-1">{responsibility}</li>
+                  <li class="mb-2">{responsibility}</li>
                 ))}
               </ul>
             </div>
