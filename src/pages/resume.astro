@@ -25,9 +25,9 @@ const mergedSkills = [
   pageTitle={pageTitle}
   seoTitle={seoTitle}
   seoDescription={seoDescription}>
-  <div class="px-5 md:px-10 py-10 mx-auto w-full">
+  <div class="px-5 md:px-10 py-5 mx-auto w-full">
     <div
-      class="header flex flex-col md:flex-row p-5 my-4 justify-center md:text-left text-center md:justify-between">
+      class="header flex flex-col md:flex-row justify-center md:text-left text-center md:justify-between">
       <!-- Name and occupation title -->
       <div class="flex p-2 justify-center flex-col">
         <h1 class="text-xl md:text-4xl font-extrabold">Maria Failli</h1>
@@ -64,7 +64,7 @@ const mergedSkills = [
     </div>
     <!-- About -->
 
-    <div class="about-me flex flex-col p-2 md:p-5 my-4 mx-auto w-full">
+    <div class="about-me flex flex-col p-2 md:p-3 my-3 mx-auto w-full">
       <!-- Title bar -->
       <div class="flex items-center w-full">
         <div class="mt-1 w-2 h-2 rounded-full bg-gray-600"></div>
@@ -138,6 +138,38 @@ const mergedSkills = [
         }
       </div>
     </div>
+    <!-- Experience Section -->
+    <div class="experience flex flex-col p-2 md:p-5 my-4 mx-auto w-full">
+      <!-- Title bar -->
+      <div class="flex items-center w-full">
+        <div class="mt-1 w-2 h-2 rounded-full bg-gray-600"></div>
+        <div class="mt-1 bg-gray-600 dark:bg-gray-600/50 h-px flex-grow"></div>
+        <h1 class="mx-4 capitalize text-xl font-semibold">Experience</h1>
+        <div class="mt-1 bg-gray-600 dark:bg-gray-600/50 h-px flex-grow"></div>
+        <div class="mt-1 w-2 h-2 rounded-full bg-gray-600"></div>
+      </div>
+      {
+        experienceData.map((job, index) => (
+          <div class="flex flex-col md:flex-row mt-5  text-center  md:text-left gap-4">
+            <div class="w-full  md:w-1/4  mx-auto ">
+              <h1 class="text-base font-semibold">{job.company}</h1>
+              <p class="text-md">{job.role}</p>
+              <span class="text-xs text-neutral-500">{job.date} </span>
+            </div>
+            <div class=" w-full md:w-3/4 ">
+              <p class="capitalize text-base font-semibold tracking-wide">
+                Responsibilities
+              </p>
+              <ul class="list-disc ml-2 md:ml-8  text-left leading-tight ">
+                {job.responsibilities.map((responsibility, index) => (
+                  <li class="mb-2">{responsibility}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))
+      }
+    </div>
     <!-- Education Section -->
     <div class="education flex flex-col p-2 md:p-5 my-4 mx-auto w-full">
       <!-- Title bar -->
@@ -165,35 +197,6 @@ const mergedSkills = [
                   ))}
                 </ul>
               </div>
-            </div>
-          </div>
-        ))
-      }
-    </div>
-    <!-- Experience Section -->
-    <div class="experience flex flex-col p-2 md:p-5 my-4 mx-auto w-full">
-      <!-- Title bar -->
-      <div class="flex items-center w-full">
-        <div class="mt-1 w-2 h-2 rounded-full bg-gray-600"></div>
-        <div class="mt-1 bg-gray-600 dark:bg-gray-600/50 h-px flex-grow"></div>
-        <h1 class="mx-4 capitalize text-xl font-semibold">Experience</h1>
-        <div class="mt-1 bg-gray-600 dark:bg-gray-600/50 h-px flex-grow"></div>
-        <div class="mt-1 w-2 h-2 rounded-full bg-gray-600"></div>
-      </div>
-      {
-        experienceData.map((job, index) => (
-          <div class="flex flex-col md:flex-row mt-5  text-center  md:text-left gap-4">
-            <div class="w-full  md:w-1/4  mx-auto ">
-              <h1 class="text-base font-semibold">{job.company}</h1>
-              <p class="text-md">{job.role}</p>
-              <span class="text-xs text-neutral-500">{job.date} </span>
-            </div>
-            <div class=" w-full md:w-3/4 ">
-              <ul class="list-disc ml-2 md:ml-8  text-left leading-tight ">
-                {job.responsibilities.map((responsibility, index) => (
-                  <li class="mb-2">{responsibility}</li>
-                ))}
-              </ul>
             </div>
           </div>
         ))

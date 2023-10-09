@@ -1,12 +1,12 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
-import AboutSection from '@sections/AboutSection.astro';
-import SkillsSection from '@sections/SkillsSection.astro';
-import LanguageSection from '@sections/LanguageSection.astro';
-import EducationSection from '@sections/EducationSection.astro';
-import ExperienceSection from '@sections/ExperienceSection.astro';
-import ProjectSection from '@sections/ProjectSection.astro';
-import SplashSection from '@sections/SplashSection.astro';
+import BaseLayout from "@layouts/BaseLayout.astro";
+import AboutSection from "@sections/AboutSection.astro";
+import SkillsSection from "@sections/SkillsSection.astro";
+import LanguageSection from "@sections/LanguageSection.astro";
+import EducationSection from "@sections/EducationSection.astro";
+import ExperienceSection from "@sections/ExperienceSection.astro";
+import ProjectSection from "@sections/ProjectSection.astro";
+import SplashSection from "@sections/SplashSection.astro";
 // import TestSkill2 from '@sections/TestSkill2.astro';
 // import ModalIframe from '@components/ModalIframe';
 const pageTitle = "Maria's Portfolio";
@@ -18,16 +18,15 @@ const seoDescription =
 <BaseLayout
   pageTitle={pageTitle}
   seoTitle={seoTitle}
-  seoDescription={seoDescription}
->
+  seoDescription={seoDescription}>
   <!-- <SplashSection /> -->
   <!-- <div class='hidden-content'> -->
   <AboutSection />
   <SkillsSection />
+  <ExperienceSection />
+  <EducationSection />
   <ProjectSection />
   <LanguageSection />
-  <EducationSection />
-  <ExperienceSection />
   <!-- </div> -->
   <!-- <TestSkill2 /> -->
   <!-- <ModalIframe client:load /> -->
