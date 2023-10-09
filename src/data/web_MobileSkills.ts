@@ -50,7 +50,7 @@ const web_MobileSkills: IWebMobileSkills[] = [
   },
   {
     name: "Tailwind",
-    progress: 70,
+    progress: 85,
     url: "https://tailwindcss.com/",
     icon: "/images/tailwind.svg",
     backgroundColor: "bg-sky-400",
@@ -65,14 +65,14 @@ const web_MobileSkills: IWebMobileSkills[] = [
 
   {
     name: ".NET ",
-    progress: 65,
+    progress: 75,
     icon: "/images/asp.svg",
     url: "https://dotnet.microsoft.com/en-us/apps/aspnet",
     backgroundColor: "bg-purple-500",
   },
   {
     name: "Node.js",
-    progress: 65,
+    progress: 70,
     icon: "/images/nodejs.svg",
     url: "https://en.wikipedia.org/wiki/Node.js/",
     backgroundColor: "bg-green-500",
