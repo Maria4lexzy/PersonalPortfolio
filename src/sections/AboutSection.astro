@@ -12,11 +12,11 @@ import CardLayout from "@layouts/CardLayout.astro";
 
   <div class="mx-auto mt-4 md:flex md:flex-col md:justify-center md:space-y-4">
     <img
-      src="/images/profile.webp"
+      src="/images/profile.jpg"
       alt="Maria Failli"
       decoding="async"
       loading="lazy"
-      class="rounded-lg h-24 max-w-none md:h-52 md:w-52 sm:h-36 sm:w-36 w-24"
+      class="rounded-lg h-auto w-48 max-w-none"
     />
     <!-- <a
       href='/cv.pdf'
@@ -25,17 +25,20 @@ import CardLayout from "@layouts/CardLayout.astro";
     > -->
   </div>
   <!-- Right Side -->
-  <div class="mx-auto md:flex md:flex-col md:py-2 text-center md:text-left">
+  <div class="mx-auto md:flex md:flex-col md:py-2">
     <!-- <div class='bg-green-400 md:flex md:flex-col md:justify-between md:py-2'> -->
     <div class="mt-4 md:mt-0 md:gap-y-2">
-      <Title title="Maria Louisa Failli" />
+      <div class="text-center">
+        <Title title="Maria Louisa Failli" />
 
-      <h2
-        class="text-base md:text-md font-medium text-neutral-500 mb-4 md:mb-2">
-        Fullstack Developer - Frontend Heavy
-      </h2>
-      <div class="flex flex-col lg:flex-row nowrap gap-x-4 gap-y-1 md:gap-x-8">
-        <div class="flex flex-row gap-1 justify-center md:justify-normal">
+        <h2
+          class="text-base md:text-md font-medium text-neutral-500 mb-4 md:mb-2">
+          Frontend | Cloud | DevOps Engineer
+        </h2>
+      </div>
+      <div
+        class="flex flex-col lg:flex-row nowrap gap-x-4 gap-y-1 md:gap-x-8 justify-center">
+        <div class="flex flex-row gap-1 justify-center">
           <a
             href="mailto:mariafailli42@gmail.com"
             class="text-sm font-normal leading-relaxed sm:text-base"
@@ -54,50 +57,26 @@ import CardLayout from "@layouts/CardLayout.astro";
             target="_self">
             <IconPill
               iconSrc="/images/phone.svg"
-              classListItems="hover:animate-pulse"
+              classListItems="hover:animate-pulse "
               description="Give me a call"
             />
           </a>
         </div>
       </div>
+
       <p class="mt-4 text-sm lg:text-base text-justify">
-        Hello 👋, I am a software developer with a passion for building
-        <span class="text-primary-text dark:text-secondary-text"
-          >user-friendly and efficient software systems</span
-        >. I enjoy working on the frontend, where I can use my creativity and
-        technical skills to design and implement
-        <span class="text-primary-text dark:text-secondary-text"
-          >visually appealing and responsive user interfaces</span
-        >. However, my curiosity extends to full-stack development and cloud
-        technologies as I enjoy working within all aspects of the software
-        development lifecycle to design and build
-        <span class="text-primary-text dark:text-secondary-text"
-          >scalable systems</span
-        >. Always eager to take on
-        <span class="text-primary-text dark:text-secondary-text"
-          >new challenges</span
-        > and
-        <span class="text-primary-text dark:text-secondary-text"
-          >learn from others</span
-        >, and I share my knowledge as well.
+        <div class="animate-waves wave">👋</div>
+
+        Hey there, I'm Maria 😊. I recently graduated as a software Developer,
+        I'm currently looking for career opportunities. In the meantime, I'm
+        keeping myself and my mind busy with: <br />
+        <br /> 🔭 Exploring new technolgies.
+        <br /> 🌱 contributing to the open source community.
+        <br /> 🤌 Hobbies, fooding, annoying my favorite humans.
         <br />
-        <br /> In my free time, I enjoy
-        <span class="text-primary-text dark:text-secondary-text"
-          >DIY projects</span
-        >,
-        <span class="text-primary-text dark:text-secondary-text"
-          >traveling✈️</span
-        >,
-        <span class="text-primary-text dark:text-secondary-text">sports🏓</span
-        >, and trying
-        <span class="text-primary-text dark:text-secondary-text"
-          >new foods 🍜</span
-        >. I am always up for an
-        <span class="text-primary-text dark:text-secondary-text">adventure</span
-        >, and I love learning about
-        <span class="text-primary-text dark:text-secondary-text"
-          >new cultures and perspectives</span
-        >.
+        <br /> 🥔Boring fact: I'm a couch potato but you can easily convice me to
+        go hike on the mountains. The highest peak I've climbed is 2864m in Slovenia
+        (Triglav).
       </p>
     </div>
     <Subtitle subTitle="Socials" />
@@ -124,3 +103,70 @@ import CardLayout from "@layouts/CardLayout.astro";
     </div>
   </div>
 </CardLayout>
+<style>
+  @keyframes wave {
+    0% {
+      transform: rotate(0deg);
+    }
+    10% {
+      transform: rotate(14deg);
+    } /* The following five values can be played with to make the waving more or less extreme */
+    20% {
+      transform: rotate(-8deg);
+    }
+    30% {
+      transform: rotate(14deg);
+    }
+    40% {
+      transform: rotate(-4deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    60% {
+      transform: rotate(0deg);
+    } /* Reset for the last half to pause */
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  .animate-wave {
+    animation: wave 4s infinite;
+    /* transform: rotate(20deg); */
+  }
+
+  .wave {
+    animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s; /* Change to speed up or slow down */
+    animation-iteration-count: infinite; /* Never stop waving :) */
+    transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+    display: inline-block;
+  }
+
+  @keyframes wave-animation {
+    0% {
+      transform: rotate(0deg);
+    }
+    10% {
+      transform: rotate(14deg);
+    } /* The following five values can be played with to make the waving more or less extreme */
+    20% {
+      transform: rotate(-8deg);
+    }
+    30% {
+      transform: rotate(14deg);
+    }
+    40% {
+      transform: rotate(-4deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    60% {
+      transform: rotate(0deg);
+    } /* Reset for the last half to pause */
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+</style>

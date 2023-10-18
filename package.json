@@ -9,6 +9,16 @@
     "preview": "astro preview",
     "astro": "astro"
   },
+  "keywords": [
+    "Maria Failli",
+    "Maria's Portfolio",
+    "software engineer",
+    "front-end developer",
+    "backend developer",
+    "cloud computing",
+    "Blockchain Usage",
+    "Personal portfolio"
+  ],
   "dependencies": {
     "@astrojs/netlify": "^2.6.0",
     "@astrojs/react": "^2.2.1",

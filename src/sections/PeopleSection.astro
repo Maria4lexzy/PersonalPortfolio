@@ -1,0 +1,82 @@
+---
+import DatabaseManagement from "@components/Skills/Database_CloudSkills.astro";
+import ProgLang from "@components/Skills/ProgLang.astro";
+import WebDev from "@components/Skills/WebDev.astro";
+import SWConcepts from "@components/Skills/SWConcepts.astro";
+import Title from "@components/Typography/Title.astro";
+import CardLayout from "@layouts/CardLayout.astro";
+---
+
+<CardLayout id="skills" classStyle=" ">
+  <Title title="People I admire" />
+  <div class="flex flex-col gap-8 bg-green-200">
+    <div class="grid grid-cols-4 bg-green-200">
+      <div class="col-span-1">
+        <!-- image -->
+        <p>imagwe</p>
+      </div>
+      <div class="col-span-3">
+        <div class="flex flex-row gap-2">
+          <span class="text-neutral-950 dark:text-neutral-100"> Title:</span>
+          <p class="text-neutral-500 capitalize">title</p>
+        </div>
+        <div class="flex flex-row gap-2">
+          <span class="text-neutral-950 dark:text-neutral-100"> Title:</span>
+          <p class="text-neutral-500 capitalize">title</p>
+        </div>
+        <div class="flex flex-row gap-2">
+          <span class="text-neutral-950 dark:text-neutral-100"> Title:</span>
+          <p class="text-neutral-500 capitalize">title</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-green-300">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+      obcaecati numquam velit incidunt molestiae vero dolore tenetur itaque
+      quibusdam nihil sit cum, inventore dolores fugiat! Consectetur inventore
+      officiis dignissimos quae.
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto">
+    <!-- Project 1 -->
+    <div class="bg-white rounded-lg shadow-lg p-4 mb-4">
+      <h2 class="text-2xl font-semibold mb-2">Project 1</h2>
+      <p class="text-gray-700 mb-2">This is the description for Project 1.</p>
+      <div class="mb-4">
+        <div class="relative" style="padding-bottom: 56.25%">
+          <iframe
+            class="absolute inset-0 w-full h-full"
+            src="https://www.youtube.com/embed/VIDEO_ID_1"
+            title="Project 1 Video"></iframe>
+        </div>
+      </div>
+      <a
+        href="https://github.com/USERNAME/PROJECT1"
+        class="text-blue-600 hover:underline"
+        target="_blank">GitHub</a
+      >
+    </div>
+
+    <!-- Project 2 -->
+    <div class="bg-white rounded-lg shadow-lg p-4">
+      <h2 class="text-2xl font-semibold mb-2">Project 2</h2>
+      <p class="text-gray-700 mb-2">This is the description for Project 2.</p>
+      <div class="mb-4">
+        <div class="relative" style="padding-bottom: 56.25%">
+          <iframe
+            class="absolute inset-0 w-full h-full"
+            src="https://www.youtube.com/embed/VIDEO_ID_2"
+            title="Project 2 Video"></iframe>
+        </div>
+      </div>
+      <a
+        href="https://github.com/USERNAME/PROJECT2"
+        class="text-blue-600 hover:underline"
+        target="_blank">GitHub</a
+      >
+    </div>
+  </div>
+</CardLayout>
+<div class="text-sm mb-4"></div>
