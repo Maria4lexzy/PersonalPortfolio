@@ -5,43 +5,31 @@ import Title from "@components/Typography/Title.astro";
 import CardLayout from "@layouts/CardLayout.astro";
 ---
 
-<CardLayout
-  id="about"
-  classStyle=" flex flex-col md:flex-row md:gap-8 content-center ">
-  <!-- Left Side -->
-
-  <div class="mx-auto mt-4 md:flex md:flex-col md:justify-center md:space-y-4">
-    <img
-      src="/images/profile.jpg"
-      alt="Maria Failli"
-      decoding="async"
-      loading="lazy"
-      class="rounded-lg h-auto w-48 max-w-none"
-    />
-    <!-- <a
-      href='/cv.pdf'
-      class='font-medium items-center active:translate-y-px cursor-pointer h-10 inline-flex px-4 rounded-md select-none text-base'
-      >Download CV</a
-    > -->
-  </div>
-  <!-- Right Side -->
-  <div class="mx-auto md:flex md:flex-col md:py-2">
-    <!-- <div class='bg-green-400 md:flex md:flex-col md:justify-between md:py-2'> -->
-    <div class="mt-4 md:mt-0 md:gap-y-2">
+<CardLayout id="about">
+  <div class="grid md:grid-cols-4 grid-cols-1 gap-2">
+    <div class="col-span-1 mx-auto">
+      <img
+        src="/images/profile.jpg"
+        alt="Maria Failli"
+        decoding="async"
+        loading="lazy"
+        class="rounded-lg h-auto w-20 md:w-24 max-w-none"
+      />
+    </div>
+    <div class="md:col-span-3 col-span-1 flex flex-col justify-between">
       <div class="text-center">
         <Title title="Maria Louisa Failli" />
 
         <h2
-          class="text-base md:text-md font-medium text-neutral-500 mb-4 md:mb-2">
+          class="text-base md:text-md font-medium text-neutral-500 mb-4 md:mb-2 mt-2">
           Frontend | Cloud | DevOps Engineer
         </h2>
       </div>
-      <div
-        class="flex flex-col lg:flex-row nowrap gap-x-4 gap-y-1 md:gap-x-8 justify-center">
+      <div class="flex nowrap gap-x-4 gap-y-1 justify-center">
         <div class="flex flex-row gap-1 justify-center">
           <a
             href="mailto:mariafailli42@gmail.com"
-            class="text-sm font-normal leading-relaxed sm:text-base"
+            class="text-sm font-normal leading-tight sm:text-base"
             target="_self">
             <IconPill
               iconSrc="/images/email.svg"
@@ -53,7 +41,7 @@ import CardLayout from "@layouts/CardLayout.astro";
         <div class="flex flex-row gap-1 justify-center md:justify-normal">
           <a
             href="tel:91 15 47 99"
-            class="text-sm font-normal leading-relaxed sm:text-base"
+            class="text-sm font-normal leading-tight sm:text-base"
             target="_self">
             <IconPill
               iconSrc="/images/phone.svg"
@@ -63,46 +51,46 @@ import CardLayout from "@layouts/CardLayout.astro";
           </a>
         </div>
       </div>
-
-      <p class="mt-4 text-sm lg:text-base text-justify">
-        <div class="animate-waves wave">👋</div>
-
-        Hey there, I'm Maria 😊. I recently graduated as a software Developer,
-        I'm currently looking for career opportunities. In the meantime, I'm
-        keeping myself and my mind busy with: <br />
-        <br /> 🔭 Exploring new technolgies.
-        <br /> 🌱 contributing to the open source community.
-        <br /> 🤌 Hobbies, fooding, annoying my favorite humans.
-        <br />
-        <br /> 🥔Boring fact: I'm a couch potato but you can easily convice me to
-        go hike on the mountains. The highest peak I've climbed is 2864m in Slovenia
-        (Triglav).
-      </p>
     </div>
-    <Subtitle subTitle="Socials" />
+  </div>
+  <p class="mt-4 text-sm lg:text-base text-justify">
+    <div class="animate-waves wave">👋</div>
 
-    <!-- urls -->
-    <div class="mt-4 md:mt-0 md:gap-y-2">
-      <div class="flex gap-x-4 gap-y-1 md:gap-x-8 justify-center">
-        <div class="flex flex-row gap-1 justify-center md:justify-normal">
-          <a href="https://github.com/Maria4lexzy">
-            <IconPill iconSrc="/images/github.svg" />
-          </a>
-        </div>
-        <div class="flex flex-row gap-1 justify-center md:justify-normal">
-          <a href="https://www.linkedin.com/in/maria-louisa-failli/">
-            <IconPill iconSrc="/images/linkedin.svg" />
-          </a>
-        </div>
-        <div class="flex flex-row gap-1 justify-center md:justify-normal">
-          <a href="https://maria-louisa.com/projects/portfolioProject/">
-            <IconPill iconSrc="/images/portfolio.svg" />
-          </a>
-        </div>
+    Hey there, I'm Maria 😊. I recently graduated as a Software Developer, I'm
+    currently looking for career opportunities. In the meantime, I'm keeping
+    myself and my mind busy with: <br />
+    <br /> 🔭 Exploring new technolgies.
+    <br /> 🌱 contributing to the open source community.
+    <br /> 🤌 Hobbies, fooding, annoying my favorite humans.
+    <br />
+    <br /> 🥔Boring fact: I'm a couch potato but you can easily convince me to go
+    hiking in the mountains. The highest peak I've climbed is 2864m in Slovenia (Triglav).
+  </p>
+
+  <Subtitle subTitle="Socials" />
+
+  <!-- urls -->
+  <div class="mt-4 md:mt-0 md:gap-y-2">
+    <div class="flex gap-x-4 gap-y-1 md:gap-x-8 justify-center">
+      <div class="flex flex-row gap-1 justify-center md:justify-normal">
+        <a href="https://github.com/Maria4lexzy">
+          <IconPill iconSrc="/images/github.svg" />
+        </a>
+      </div>
+      <div class="flex flex-row gap-1 justify-center md:justify-normal">
+        <a href="https://www.linkedin.com/in/maria-louisa-failli/">
+          <IconPill iconSrc="/images/linkedin.svg" />
+        </a>
+      </div>
+      <div class="flex flex-row gap-1 justify-center md:justify-normal">
+        <a href="https://maria-louisa.com/projects/portfolioProject/">
+          <IconPill iconSrc="/images/portfolio.svg" />
+        </a>
       </div>
     </div>
   </div>
 </CardLayout>
+
 <style>
   @keyframes wave {
     0% {
