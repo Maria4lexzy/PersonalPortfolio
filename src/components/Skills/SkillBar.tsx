@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import ModalIframe from '@components/Skills/ModalIframe';
+import React, { useState } from "react";
+import ModalIframe from "@components/Skills/ModalIframe";
 interface ISkillBarProps {
   id: string;
   iconSrc: string;
@@ -31,12 +31,11 @@ const SkillBar: React.FC<ISkillBarProps> = ({
     <div
       key={id}
       onClick={handleOpenModal}
-      className='interactable gap-2 w-3/12 text-slate-700 dark:text-slate-400 '
-    >
+      className="interactable gap-2 w-1/4 md:w-1/6 text-slate-700 dark:text-slate-400 ">
       <div>
-        <div className='flex gap1 md:gap-2 mb-1 '>
-          <img src={iconSrc} alt={skillName} className='h-auto w-4' />
-          <p className='text-xs md:text-sm truncate overflow-hidden ...'>
+        <div className="flex gap-1 md:gap-2 mb-1 ">
+          <img src={iconSrc} alt={skillName} className="h-auto w-4" />
+          <p className="text-xs md:text-sm truncate overflow-hidden ...">
             {skillName}
           </p>
         </div>
@@ -48,13 +47,12 @@ const SkillBar: React.FC<ISkillBarProps> = ({
         )}
       </div>
 
-      <div className='relative w-full h-2 bg-slate-600 rounded'>
+      <div className="relative w-full h-2 bg-slate-600 rounded">
         <div
           className={`absolute top-0 left-0 h-full rounded ${
-            backgroundColor ? backgroundColor : 'bg-slate-200'
+            backgroundColor ? backgroundColor : "bg-slate-200"
           }`}
-          style={{ width: `${progress}%` }}
-        ></div>
+          style={{ width: `${progress}%` }}></div>
       </div>
     </div>
   );

@@ -1,18 +1,18 @@
 ---
-import SkillBar from './SkillBar';
-import Subtitle from '../Typography/Subtitle.astro';
-import web_MobileSkills from '@data/web_MobileSkills';
+import SkillBar from "./SkillBar";
+import Subtitle from "../Typography/Subtitle.astro";
+import web_MobileSkills from "@data/web_MobileSkills";
 ---
 
-<div class='flex flex-col'>
-  <Subtitle subTitle='Web & Mobile development' />
+<div class="flex flex-col">
+  <Subtitle subTitle="Web & Mobile development" />
 
-  <div class='flex flex-wrap gap-8 flex-row justify-between'>
+  <div class="flex flex-wrap gap-4 flex-row justify-center">
     {
       web_MobileSkills.map((sys, index) => (
         <SkillBar
-          client:only='react'
-          id={sys + '' + index}
+          client:only="react"
+          id={sys + "" + index}
           skillName={sys.name}
           progress={sys.progress}
           skillUrl={sys.url}

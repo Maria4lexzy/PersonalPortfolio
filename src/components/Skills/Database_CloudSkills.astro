@@ -1,17 +1,17 @@
 ---
-import SkillBar from './SkillBar';
-import Subtitle from '../Typography/Subtitle.astro';
-import dataCloudSkills from '@data/dataCloudSkills';
+import SkillBar from "./SkillBar";
+import Subtitle from "../Typography/Subtitle.astro";
+import dataCloudSkills from "@data/dataCloudSkills";
 ---
 
-<div class='flex flex-col'>
-  <Subtitle subTitle='Database & Cloud' />
-  <div class='flex flex-wrap gap-8 flex-row justify-between'>
+<div class="flex flex-col">
+  <Subtitle subTitle="Database & Cloud" />
+  <div class="flex flex-wrap gap-4 flex-row justify-center">
     {
       dataCloudSkills.map((sys, index) => (
         <SkillBar
-          client:only='react'
-          id={sys + '' + index}
+          client:only="react"
+          id={sys + "" + index}
           skillName={sys.name}
           progress={sys.progress}
           skillUrl={sys.url}
