@@ -6,14 +6,18 @@ import CardLayout from "@layouts/CardLayout.astro";
 ---
 
 <CardLayout id="about">
-  <div class="flex">
+  <div class="flex flex-col md:flex-row">
     <!-- Image on the left -->
-    <div class="w-1/3 p-4">
-      <img src="/images/profile.jpg" alt="Image" class="rounded-lg" />
+    <div class="w-full md:w-1/3 p-4 mx-auto">
+      <img
+        src="/images/profile.jpg"
+        alt="Image"
+        class="rounded-xl w-1/2 md:w-full mx-auto"
+      />
     </div>
 
     <!-- Content on the right -->
-    <div class="w-2/3 p-4">
+    <div class="w-full md:w-2/3 p-4 mx-auto">
       <div class="text-center">
         <Title title="Maria Louisa Failli" />
 
@@ -24,7 +28,7 @@ import CardLayout from "@layouts/CardLayout.astro";
       </div>
 
       <!-- Buttons -->
-      <div class="mt-4 space-x-4">
+      <div class="mt-4 space-x-2 md:space-x-4">
         <div class="flex nowrap gap-x-4 gap-y-1 justify-center">
           <div class="flex flex-row gap-1 justify-center">
             <a
@@ -52,16 +56,15 @@ import CardLayout from "@layouts/CardLayout.astro";
           </div>
         </div>
       </div>
-      <p class="mt-4 text-sm lg:text-base text-justify">
-        <div class="animate-waves wave">👋</div>
 
-        Hey there, I'm Maria 😊. I'm a recent Software Engineer graduate
-        currently looking for career opportunities. In the meantime, I'm keeping
-        myself and my mind busy with: <br />
+      <p class="mt-4 text-xs md:text-sm lg:text-base text-justify">
+        Hey there <span class="animate-waves wave">👋</span>, I'm Maria. I'm a
+        recent Software Engineer graduate currently looking for career
+        opportunities. In the meantime, I'm keeping myself and my mind busy
+        with: <br />
         <br /> 🔭 Exploring new technolgies.
         <br /> 🌱 contributing to the open source community.
         <br /> 🤌 Hobbies, fooding, annoying my favorite humans.
-        <br />
         <br /> 🥔Boring fact: I'm a couch potato but you can easily convince me to
         go hiking in the mountains. The highest peak I've climbed is 2864m in Slovenia
         (Triglav).
