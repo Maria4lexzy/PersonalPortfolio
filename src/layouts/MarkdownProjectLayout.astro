@@ -96,7 +96,7 @@ const formattedImages = frontmatter.images
                 {
                   frontmatter.technologies.map((tech: any) => (
                     <IconPill
-                      iconSrc={`../images/${tech}.svg`}
+                      iconSrc={`../images/${tech.replace(/[\s./]/g, '').toLowerCase()}.svg`}
                       description={tech}
                     />
                   ))

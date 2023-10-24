@@ -1,37 +1,38 @@
 ---
 layout: ../../layouts/MarkdownProjectLayout.astro
-title: 'Personal Portfolio - Web Application'
-role: 'frontend developer'
-teamNum: '1'
-organization: 'None'
-description: 'Welcome to my portfolio, hosted at maria-louisa.com, a testament to my technical prowess and dedication to delivering top-tier web development. Leveraging the power of React, Astro, Tailwind, and TypeScript,'
+title: "Personal Portfolio - Web Application"
+role: "frontend developer"
+teamNum: "1"
+organization: "None"
+description: "Personal portfolio web application"
+prevImg: "/images/projects/portfolio/pageInsightThumb.webp"
 images:
   [
     {
-      url: '/images/projects/portfolio/pageInsight.webp',
-      thumbNailUrl: '/images/projects/portfolio/pageInsightThumb.webp',
-      alt: 'my portfolio portfolio',
+      url: "/images/projects/portfolio/pageInsight.webp",
+      thumbNailUrl: "/images/projects/portfolio/pageInsightThumb.webp",
+      alt: "my portfolio portfolio",
       width: 1000,
       height: 556,
     },
     {
-      url: '/images/projects/portfolio/robots.webp',
-      thumbNailUrl: '/images/projects/portfolio/robotsThumb.webp',
-      alt: 'my portfolio portfolio',
+      url: "/images/projects/portfolio/robots.webp",
+      thumbNailUrl: "/images/projects/portfolio/robotsThumb.webp",
+      alt: "my portfolio portfolio",
       width: 1000,
       height: 493,
     },
     {
-      url: '/images/projects/portfolio/theme-dark.webp',
-      thumbNailUrl: '/images/projects/portfolio/theme-darkThumb.webp',
-      alt: 'my portfolio portfolio',
+      url: "/images/projects/portfolio/theme-dark.webp",
+      thumbNailUrl: "/images/projects/portfolio/theme-darkThumb.webp",
+      alt: "my portfolio portfolio",
       width: 1000,
       height: 754,
     },
     {
-      url: '/images/projects/portfolio/theme-light.webp',
-      thumbNailUrl: '/images/projects/portfolio/theme-lightThumb.webp',
-      alt: 'my portfolio portfolio',
+      url: "/images/projects/portfolio/theme-light.webp",
+      thumbNailUrl: "/images/projects/portfolio/theme-lightThumb.webp",
+      alt: "my portfolio portfolio",
       width: 1000,
       height: 754,
     },
@@ -39,16 +40,16 @@ images:
 featured: false
 technologies:
   [
-    'recaptcha',
-    'analytics',
-    'netlify',
-    'javascript',
-    'typescript',
-    'astro',
-    'react',
-    'angular',
+    "recaptcha",
+    "analytics",
+    "netlify",
+    "javascript",
+    "typescript",
+    "astro",
+    "react",
+    "angular",
   ]
-externals: [{ name: 'web', url: 'https://artcaffe.sk/' }]
+externals: [{ name: "web", url: "https://maria-louisa.com/" }]
 ---
 
 ## Technical Architecture

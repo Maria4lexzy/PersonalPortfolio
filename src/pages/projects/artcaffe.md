@@ -1,44 +1,45 @@
 ---
 layout: ../../layouts/MarkdownProjectLayout.astro
-title: 'Artcaffe Sabinov - Web Application'
-role: 'frontend developer'
-teamNum: '2'
-organization: 'Mulrem'
-description: 'The Artcaffe Sabinov website is a project that aimed to create a friendly website for Artcaffe, a cafe located in Sabinov, Slovakia.'
+title: "Artcaffe Sabinov - Web Application"
+role: "frontend developer"
+teamNum: "2"
+organization: "Mulrem"
+description: "The Artcaffe Sabinov website is a project that aimed to create a friendly website for Artcaffe, a cafe located in Sabinov, Slovakia."
+prevImg: "/images/projects/artcaffe/aboutThumb.webp"
 images:
   [
     {
-      url: '/images/projects/artcaffe/home.webp',
-      thumbNailUrl: '/images/projects/artcaffe/homeThumb.webp',
-      alt: 'Art caffe home',
+      url: "/images/projects/artcaffe/home.webp",
+      thumbNailUrl: "/images/projects/artcaffe/homeThumb.webp",
+      alt: "Art caffe home",
       width: 1295,
       height: 2000,
     },
     {
-      url: '/images/projects/artcaffe/menu.webp',
-      thumbNailUrl: '/images/projects/artcaffe/menuThumb.webp',
-      alt: 'Art caffe project - menu',
+      url: "/images/projects/artcaffe/menu.webp",
+      thumbNailUrl: "/images/projects/artcaffe/menuThumb.webp",
+      alt: "Art caffe project - menu",
       width: 2392,
       height: 2990,
     },
     {
-      url: '/images/projects/artcaffe/about.webp',
-      thumbNailUrl: '/images/projects/artcaffe/aboutThumb.webp',
-      alt: 'Art caffe project - about',
+      url: "/images/projects/artcaffe/about.webp",
+      thumbNailUrl: "/images/projects/artcaffe/aboutThumb.webp",
+      alt: "Art caffe project - about",
       width: 2392,
       height: 1446,
     },
     {
-      url: '/images/projects/artcaffe/reservation.webp',
-      thumbNailUrl: '/images/projects/artcaffe/reservationThumb.webp',
-      alt: 'Art caffe project - reservation',
+      url: "/images/projects/artcaffe/reservation.webp",
+      thumbNailUrl: "/images/projects/artcaffe/reservationThumb.webp",
+      alt: "Art caffe project - reservation",
       width: 2392,
       height: 2017,
     },
   ]
 featured: true
-technologies: ['javascript', 'firebase', 'astro', 'react']
-externals: [{ name: 'web', url: 'https://artcaffe.sk/' }]
+technologies: ["javaScript", "firebase", "astro", "react"]
+externals: [{ name: "web", url: "https://artcaffe.sk/" }]
 ---
 
 ## Description

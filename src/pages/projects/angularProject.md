@@ -1,19 +1,20 @@
 ---
 layout: ../../layouts/MarkdownProjectLayout.astro
-title: 'Angular & Astro - Web Application'
-role: 'developer'
-teamNum: '1'
-organization: 'None'
-description: 'A project demonstrating the use of Angular within Astro project.'
+title: "Angular & Astro"
+role: "developer"
+teamNum: "1"
+organization: "None"
+description: "A short guide demonstrating how to integrate Angular.io within an Astro project."
+prevImg: "/images/projects/anglarAstro/angulaArt.png"
 images: []
-featured: true
-technologies: ['angular', 'astro']
-externals: [{ name: 'web', url: 'https://maria-louisa.com/' }]
+featured: false
+technologies: ["angular", "astro"]
+externals: [{ name: "web", url: "https://maria-louisa.com/" }]
 ---
 
 ## Description
 
-This guide aims to walk you through the process of seamlessly integrating Angular, a popular JavaScript framework, with Astro, a modern static site generator. By combining the capabilities of Angular's dynamic components with Astro's performance benefits, you can create dynamic and performant web applications that provide the best of both worlds
+This guide aims to walk you through the process of seamlessly integrating Angular and Astro. By combining the capabilities of Angular's dynamic components with Astro's performance benefits, you can create dynamic and performant web applications that provide the best of both worlds
 
 ## Step 1: Create an Astro Project
 
@@ -90,25 +91,25 @@ Now we need to add the integration to the `astro.config.mjs`. Follow these steps
 2. Update with the the following imports and configuration:
 
 ```js
-import { defineConfig } from 'astro/config';
-import angular from '@analogjs/astro-angular';
-import analogjsangular from '@analogjs/astro-angular';
+import { defineConfig } from "astro/config";
+import angular from "@analogjs/astro-angular";
+import analogjsangular from "@analogjs/astro-angular";
 
 export default defineConfig({
-  site: 'https://yoursite.com/',
+  site: "https://yoursite.com/",
   integrations: [
     angular({
       vite: {
-        inlineStylesExtension: 'scss|sass|less',
+        inlineStylesExtension: "scss|sass|less",
         ssr: {
           // transform these packages during SSR. Globs supported
-          noExternal: ['@rx-angular/**'],
+          noExternal: ["@rx-angular/**"],
         },
       },
     }),
     analogjsangular(),
   ],
-  output: 'server',
+  output: "server",
 });
 ```
 
@@ -119,11 +120,11 @@ export default defineConfig({
 2. Define your component. Bear in mind that Astro Angular integration exclusively supports rendering standalone components:
 
 ```ts
-import { NgIf } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { NgIf } from "@angular/common";
+import { Component, Input } from "@angular/core";
 
 @Component({
-  selector: 'app-hello',
+  selector: "app-hello",
   standalone: true,
   imports: [NgIf],
   template: `
@@ -135,7 +136,7 @@ import { Component, Input } from '@angular/core';
   `,
 })
 export class HelloComponent {
-  @Input() helpText = 'help';
+  @Input() helpText = "help";
 
   show = false;
 

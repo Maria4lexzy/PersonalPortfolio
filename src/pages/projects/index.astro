@@ -1,64 +1,191 @@
 ---
-import IconPill from '@components/IconPill';
-import LinkCode from '@components/Typography/LinkCode.astro';
-import Subtitle from '@components/Typography/Subtitle.astro';
-import Title from '@components/Typography/Title.astro';
-import CardLayout from '@layouts/CardLayout.astro';
-import BaseLayout from '@layouts/BaseLayout.astro';
-const allProjects = await Astro.glob('../projects/*.md');
+import IconPill from "@components/IconPill";
+import LinkCode from "@components/Typography/LinkCode.astro";
+import Subtitle from "@components/Typography/Subtitle.astro";
+import Title from "@components/Typography/Title.astro";
+import CardLayout from "@layouts/CardLayout.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+const allProjects = await Astro.glob("../projects/*.md");
+const halfProjects = allProjects.slice(0, Math.ceil(allProjects.length / 2));
 const pageTitle = "Maria's Projects";
 const seoTitle = "Maria's Projects";
+
 const seoDescription =
-  'Welcome to my projects page showcasing some of my creative projects.';
+  "Welcome to my projects page showcasing some of my creative projects.";
 ---
 
 <BaseLayout
   pageTitle={pageTitle}
   seoTitle={seoTitle}
-  seoDescription={seoDescription}
->
-  <CardLayout id='projects' classStyle=''>
-    <Title title='Projects' />
+  seoDescription={seoDescription}>
+  <!-- <div class="container mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="col-span-1 flex flex-col bg-white border-2 p-4">
+      <div class="relative" style="padding-bottom: 56.25%">
+        <iframe
+          class="absolute inset-0 w-full h-full"
+          src="https://www.youtube.com/embed/VIDEO_ID_2"
+          title="Project 2 Video"></iframe>
+      </div>
+      <h2 class="mb-2 font-bold text-2xl">Card Name</h2>
+      <div class="mb-4 flex flex-wrap">
+        <span class="mr-2">Link 1</span>
+        <span class="mr-2">Link 2</span>
+      </div>
+      <p class="text-md text-justify">Some Description</p>
+      <div class="flex flex-wrap mt-auto pt-3 text-xs">
+        <p class="mr-2 mb-2">Tag #1</p>
+        <p class="mr-2 mb-2">Tag #2</p>
+      </div>
+    </div>
 
-    {
-      allProjects.map((project) => (
+    <div class="col-span-1 flex flex-col bg-white border-2 p-4">
+      <div class="relative" style="padding-bottom: 56.25%">
+        <iframe
+          class="absolute inset-0 w-full h-full"
+          src="https://www.youtube.com/embed/VIDEO_ID_2"
+          title="Project 2 Video"></iframe>
+      </div>
+      <h2 class="mb-2 font-bold text-2xl">Card Name</h2>
+      <div class="mb-4 flex flex-wrap">
+        <span class="mr-2">Link 1</span>
+        <span class="mr-2">Link 2</span>
+      </div>
+      <p class="text-md text-justify">
+        Some Description Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Maecenas vel enim lectus.
+      </p>
+      <div class="flex flex-wrap mt-auto pt-3 text-xs">
+        <p class="mr-2 mb-2">Tag #1</p>
+        <p class="mr-2 mb-2">Tag #2</p>
+      </div>
+    </div>
+  </div> -->
+  <!-- Start -->
+
+  <CardLayout id="projectss" classStyle="">
+    <Title title="Projects" />
+    <p>Here are some projects that I have worked on.</p>
+
+    <div
+      class="mx-auto grid grid-cols-1 md:grid-cols-2 min-h-full gap-8 w-full">
+      {
+        allProjects.map((project) => {
+          return (
+            <div class="col-span-1 flex flex-col  min-h-full  border rounded-xl border-neutral-400/30 ">
+              {project.frontmatter.hasOwnProperty("video") ? (
+                <div
+                  class="relative shadow-xl"
+                  style="padding-bottom: 56.25%; ">
+                  <iframe
+                    class="absolute inset-0 w-full h-full rounded-t-xl"
+                    src={project.frontmatter.video}
+                    title={project.frontmatter.title}
+                  />
+                </div>
+              ) : (
+                <div class="min-h-[30%]">
+                  {project.frontmatter.hasOwnProperty("prevImg") ? (
+                    <img
+                      src={project.frontmatter.prevImg}
+                      alt="project video"
+                      class="w-full h-auto rounded-t-xl "
+                    />
+                  ) : (
+                    <p class="mx-auto bg-primary-dark/10 dark:bg-secondary-light px-4 py-8 rounded-t-xl min-h-[100%]">
+                      Ooops🤭 Working on finding a decent photo for this project
+                    </p>
+                  )}
+                </div>
+              )}
+
+              <h1 class="p-4 my-1 tracking-tighter capitalize text-xl font-semibold font-sourceCode">
+                {project.frontmatter.title}
+              </h1>
+              <div class="flex flex-wrap gap-x-2 p-4 ">
+                {project.frontmatter.externals.map((external: any) => (
+                  <a href={external.url} class="cursor-pointer" target="_blank">
+                    <IconPill
+                      iconSrc={`../images/${external.name}.svg`}
+                      description={external.name}
+                    />
+                  </a>
+                ))}
+              </div>
+
+              <p class="px-4 text-base text-left tracking-tighter mb-2 ">
+                {project.frontmatter.description}
+                <LinkCode
+                  content="Read the full article"
+                  url={project.url}
+                  classItems="text-primary-text dark:text-secondary-text"
+                />
+              </p>
+              <div class="flex flex-wrap mt-auto  text-xs p-4  overflow-y-scroll  ">
+                <div class="mb-2 ">
+                  <p class="text-sm  ">Technologies Used:</p>
+                  <div class="flex flex-wrap gap-2  ">
+                    {project.frontmatter.technologies.map((tech: any) => (
+                      <IconPill
+                        iconSrc={`../images/${tech
+                          .replace(/[\s./]/g, "")
+                          .toLowerCase()}.svg`}
+                        description={tech}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+  </CardLayout>
+
+  <!-- end -->
+
+  <!-- <CardLayout id="projects" classStyle=""> -->
+  <!-- <Title title="Projects" /> -->
+
+  <!-- {
+      halfProjects.map((project) => (
         <>
-          <div class='flex flex-col gap-8'>
-            <div class='flex flex-col gap-3 '>
-              <div class='flex gap-2 justify-between w-full'>
-                <div class='flex gap-4'>
-                  <div class='flex-col'>
+          <div class="flex flex-col gap-8">
+            <div class="flex flex-col gap-3 ">
+              <div class="flex gap-2 justify-between w-full">
+                <div class="flex gap-4">
+                  <div class="flex-col">
                     <div>
                       <a href={project.url}>
-                        <h1 class='tracking-wide capitalize text-xl font-semibold'>
+                        <h1 class="tracking-wide capitalize text-xl font-semibold">
                           {project.frontmatter.title}
                         </h1>
                       </a>
                     </div>
-                    <div class='flex flex-col gap-3'>
-                      {' '}
-                      <div class='text-sm mb-4'>
-                        <div class='flex flex-row gap-2'>
-                          <span class='text-neutral-950  dark:text-neutral-100'>
+                    <div class="flex flex-col gap-3">
+                      {" "}
+                      <div class="text-sm mb-4">
+                        <div class="flex flex-row gap-2">
+                          <span class="text-neutral-950  dark:text-neutral-100">
                             My role:
                           </span>
-                          <p class='text-neutral-500 capitalize'>
+                          <p class="text-neutral-500 capitalize">
                             {project.frontmatter.role}
                           </p>
                         </div>
-                        <div class='flex flex-row gap-2'>
-                          <span class='text-neutral-950  dark:text-neutral-100'>
+                        <div class="flex flex-row gap-2">
+                          <span class="text-neutral-950  dark:text-neutral-100">
                             Team size:
                           </span>
-                          <p class='text-neutral-500 capitalize'>
+                          <p class="text-neutral-500 capitalize">
                             {project.frontmatter.teamNum}
                           </p>
                         </div>
-                        <div class='flex flex-row gap-2'>
-                          <span class='text-neutral-950  dark:text-neutral-100'>
+                        <div class="flex flex-row gap-2">
+                          <span class="text-neutral-950  dark:text-neutral-100">
                             Company:
                           </span>
-                          <p class='text-neutral-500 capitalize'>
+                          <p class="text-neutral-500 capitalize">
                             {project.frontmatter.organization}
                           </p>
                         </div>
@@ -66,37 +193,36 @@ const seoDescription =
                     </div>
                   </div>
                 </div>
-                <div class='flex gap-3 flex-wrap sm:flex-nowrap'>
+                <div class="flex gap-3 flex-wrap sm:flex-nowrap">
                   {project.frontmatter.externals.map((external: any) => (
                     <a
                       href={external.url}
-                      class='cursor-pointer'
-                      target='_blank'
-                    >
+                      class="cursor-pointer"
+                      target="_blank">
                       <IconPill
                         iconSrc={`../images/${external.name}.svg`}
-                        description=''
+                        description=""
                       />
                     </a>
                   ))}
                 </div>
               </div>
-              <div class='flex flex-col gap-3'>
+              <div class="flex flex-col gap-3">
                 <>
-                  <p class='mb-4 italic'>
-                    {project.frontmatter.description}{' '}
+                  <p class="mb-4 italic">
+                    {project.frontmatter.description}{" "}
                     <LinkCode
-                      content='Read the full article'
+                      content="Read the full article"
                       url={project.url}
-                      classItems='text-primary-text dark:text-secondary-text'
-                    />{' '}
+                      classItems="text-primary-text dark:text-secondary-text"
+                    />{" "}
                   </p>
                 </>
                 <div>
-                  <p class='text-sm text-neutral-500 my-2 '>
+                  <p class="text-sm text-neutral-500 my-2 ">
                     Technologies Used:
                   </p>
-                  <div class='flex flex-wrap gap-4'>
+                  <div class="flex flex-wrap gap-4">
                     {project.frontmatter.technologies.map((tech: any) => (
                       <IconPill
                         iconSrc={`../images/${tech}.svg`}
@@ -108,17 +234,16 @@ const seoDescription =
               </div>
             </div>
           </div>
-          <div class='bg-gray-400 my-4 h-px last:hidden w-full' />
+          <div class="bg-gray-400 my-4 h-px last:hidden w-full" />
         </>
       ))
+    } -->
+  <!-- </CardLayout> -->
+
+  <style is:inline>
+    body {
+      min-height: 100vh;
+      height: 100%;
     }
-    <Subtitle subTitle='more comming soon after my vacation 😎✈️' />
-  </CardLayout>
+  </style>
 </BaseLayout>
-<style is:inline>
-  body {
-    background-color: green;
-    min-height: 100vh;
-    height: 100%;
-  }
-</style>

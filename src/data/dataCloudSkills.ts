@@ -38,7 +38,7 @@ const dataCloudSkills: IDdataCloudSkill[] = [
   {
     name: "Google Cloud",
     progress: 70,
-    icon: "/images/gcp-light.svg",
+    icon: "/images/gcp.svg",
     url: "https://cloud.google.com/",
     backgroundColor: "bg-yellow-300",
   },

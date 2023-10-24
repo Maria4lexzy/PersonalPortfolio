@@ -3,6 +3,31 @@ document.addEventListener('DOMContentLoaded', (e) => {
     // splashScreenHandler();
     // showPageHandler();
 
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    const popup = document.getElementById('funny-element');
+    const closeButton = document.getElementById('close-popup');
+
+    const minDelay = 5000; // Minimum delay in milliseconds
+    const maxDelay = 15000; // Maximum delay in milliseconds
+
+    function showFunnyPopup() {
+        setTimeout(() => {
+            popup.style.display = 'block';
+        }, getRandomInt(minDelay, maxDelay));
+    }
+
+    closeButton.addEventListener('click', () => {
+        popup.style.display = 'none';
+        showFunnyPopup(); // Re-trigger after closing
+    });
+
+    // Initial trigger
+    showFunnyPopup();
+
+
 });
 
 const intersectionObserverHandler = () => {

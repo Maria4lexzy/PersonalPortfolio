@@ -30,7 +30,7 @@ const programmingLanguages: IProgrammingLanguage[] = [
   },
   {
     name: "Java",
-    progress: 80,
+    progress: 70,
     url: "https://en.wikipedia.org/wiki/Java_(programming_language)",
     icon: "/images/java.svg",
     backgroundColor: "bg-blue-700",

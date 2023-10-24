@@ -1,18 +1,18 @@
 ---
 layout: ../../layouts/MarkdownProjectLayout.astro
-title: 'Airline System with Azure'
-role: 'developer'
-teamNum: '2'
-organization: 'VIA University'
-description: 'A cloud-based system for United Airlines managers to access flight-related data through a web application. The system utilizes cloud computing services, DevOps practices, and Microsoft Azure. It includes microservices for retrieving data, an Azure SQL Database, and a React.js web application for data visualization'
+title: "Airline System with Azure"
+role: "developer"
+teamNum: "2"
+organization: "VIA University"
+description: "A cloud-based system for United Airlines managers to access flight-related data through a web application. The system utilizes cloud computing services, DevOps practices, and Microsoft Azure. It includes microservices for retrieving data, an Azure SQL Database, and a React.js web application for data visualization"
 images: []
 featured: true
 technologies:
-  ['react', 'azure', 'api', 'postman', 'html', 'javascript', 'css', 'cicd']
+  ["react", "azure", "api", "postman", "html", "javaScript", "CSS", "CI/CD"]
 externals:
   [
-    { name: 'github', url: 'https://github.com/314ga/SEP6-WebApp3' },
-    { name: 'github', url: 'https://github.com/314ga/SEP6-UnitedAirlanes/' },
+    { name: "github", url: "https://github.com/314ga/SEP6-WebApp3" },
+    { name: "github", url: "https://github.com/314ga/SEP6-UnitedAirlanes/" },
   ]
 ---
 

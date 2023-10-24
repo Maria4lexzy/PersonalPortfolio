@@ -1,14 +1,14 @@
 ---
 layout: ../../layouts/MarkdownProjectLayout.astro
-title: 'JS Intersection Observer API'
-role: 'developer'
-teamNum: '1'
-organization: 'None'
-description: 'Animate on scroll with the Intersection Observer API. Learn how to create captivating web animations using Intersection Observer.'
+title: "JS Intersection Observer API"
+role: "developer"
+teamNum: "1"
+organization: "None"
+description: "Animate on scroll with the Intersection Observer API. Learn how to create captivating web animations using Intersection Observer."
 images: []
 featured: false
-technologies: ['html', 'javascript', 'css']
-externals: [{ name: 'web', url: 'https://maria-louisa.com/' }]
+technologies: ["html", "javaScript", "CSS"]
+externals: [{ name: "web", url: "https://maria-louisa.com/" }]
 ---
 
 ## Description
@@ -109,7 +109,7 @@ function handleIntersection(entries, observer) {
 const observer = new IntersectionObserver(handleIntersection);
 
 // Step 3: Start observing a target element
-const target = document.querySelector('.target-element');
+const target = document.querySelector(".target-element");
 observer.observe(target);
 ```
 
@@ -125,8 +125,8 @@ The `IntersectionObserver` constructor can take an optional second parameter, wh
 
 ```js
 const options = {
-  root: document.querySelector('.scroll-container'), // Ancestor element to use as the viewport
-  rootMargin: '0px', // Margin around the root
+  root: document.querySelector(".scroll-container"), // Ancestor element to use as the viewport
+  rootMargin: "0px", // Margin around the root
   threshold: 0.5, // 50% of the target element must be visible to trigger the callback
 };
 
@@ -165,15 +165,15 @@ To trigger animations when the cards come into view, we to change something in t
 **_Add the following code snippet to your `index.js`:_**
 
 ```js
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
   // your instersectionobserver code here
-  const cards = document.querySelectorAll('.card');
+  const cards = document.querySelectorAll(".card");
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-        } else entry.target.classList.remove('show');
+          entry.target.classList.add("show");
+        } else entry.target.classList.remove("show");
       });
     },
     {

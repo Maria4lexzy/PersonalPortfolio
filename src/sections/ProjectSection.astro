@@ -16,7 +16,7 @@ const featuredProjects = allProjects.filter(
     featuredProjects.map((project) => (
       <>
         <div class="flex flex-col gap-8">
-          <div class="flex flex-col gap-3 ">
+          <div class="flex flex-col gap-3">
             <div class="flex gap-2 justify-between w-full">
               <div class="flex gap-4">
                 <div class="flex-col">
@@ -28,7 +28,6 @@ const featuredProjects = allProjects.filter(
                     </a>
                   </div>
                   <div class="flex flex-col gap-3">
-                    {" "}
                     <div class="text-sm mb-4">
                       <div class="flex flex-row gap-2">
                         <span class="text-neutral-950  dark:text-neutral-100">
@@ -81,16 +80,19 @@ const featuredProjects = allProjects.filter(
                 </p>
               </>
               <div>
-                <p class="text-sm text-neutral-500 my-2 ">Technologies Used:</p>
+                <p class="text-sm text-neutral-500 my-2">Technologies Used:</p>
                 <div class="flex flex-wrap gap-4">
-                  {project.frontmatter.technologies.map((tech: any) => (
+                  {project.frontmatter.technologies.map((tech: string) => (
                     <IconPill
-                      iconSrc={`./images/${tech}.svg`}
+                      iconSrc={`./images/${tech
+                        .replace(/[\s./]/g, "")
+                        .toLowerCase()}.svg`}
                       description={tech}
                     />
                   ))}
                 </div>
               </div>
+              {/* Conditional rendering based on project type */}
             </div>
           </div>
         </div>
@@ -98,6 +100,7 @@ const featuredProjects = allProjects.filter(
       </>
     ))
   }
+
   <LinkCode
     content="See all projects"
     url="/projects"
