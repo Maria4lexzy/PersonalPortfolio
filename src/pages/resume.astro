@@ -30,8 +30,8 @@ const mergedSkills = [
       class="header flex flex-col md:flex-row justify-center md:text-left text-center md:justify-between">
       <!-- Name and occupation title -->
       <div class="flex p-2 justify-center flex-col">
-        <h1 class="text-xl md:text-4xl font-extrabold">Maria Failli</h1>
-        <p class="text-base text-neutral-500">Full stack developer</p>
+        <h1 class="text-xl md:text-2xl font-extrabold">Maria Failli</h1>
+        <p class="text-base text-neutral-500">Software Engineer</p>
       </div>
       <div class="flex gap-x-4 md:items-center justify-center p-2">
         <a
@@ -59,6 +59,9 @@ const mergedSkills = [
           class="cursor-pointer">
           <IconPill iconSrc="/images/email.svg" description="get in touch" />
         </a>
+        <a href="tel:91 15 47 99" target="_self" class="cursor-pointer">
+          <IconPill iconSrc="/images/phone.svg" description="Give me a call" />
+        </a>
       </div>
       <!-- socials & contact -->
     </div>
@@ -70,81 +73,25 @@ const mergedSkills = [
         <div class="mt-1 w-2 h-2 rounded-full bg-gray-600"></div>
         <div class="mt-1 bg-gray-600 dark:bg-gray-600/50 h-px flex-grow"></div>
 
-        <h1 class="mx-4 capitalize text-xl font-semibold">About Me</h1>
+        <h1 class="mx-4 capitalize text-xl font-semibold">Summary</h1>
         <div class="mt-1 bg-gray-600 dark:bg-gray-600/50 h-px flex-grow"></div>
         <div class="mt-1 w-2 h-2 rounded-full bg-gray-600"></div>
       </div>
 
       <!-- Content -->
-      <div class="flex mt-2 md:mt-5 gap-4">
-        <p class="mt-4 text-sm lg:text-base text-justify">
-          Hello 👋, I am a software developer with a passion for building
-          <span class="text-primary-text dark:text-secondary-text"
-            >user-friendly and efficient software systems</span
-          >. I enjoy working on the frontend, where I can use my creativity and
-          technical skills to design and implement
-          <span class="text-primary-text dark:text-secondary-text"
-            >visually appealing and responsive user interfaces</span
-          >. However, my curiosity extends to full-stack development and cloud
-          technologies as I enjoy working within all aspects of the software
-          development lifecycle to design and build
-          <span class="text-primary-text dark:text-secondary-text"
-            >scalable systems</span
-          >. Always eager to take on
-          <span class="text-primary-text dark:text-secondary-text"
-            >new challenges</span
-          > and
-          <span class="text-primary-text dark:text-secondary-text"
-            >learn from others</span
-          >, and sharing my knowledge as well.
-          <br />
-          <br /> In my free time, I enjoy
-          <span class="text-primary-text dark:text-secondary-text"
-            >DIY projects</span
-          >,
-          <span class="text-primary-text dark:text-secondary-text"
-            >traveling✈️</span
-          >,
-          <span class="text-primary-text dark:text-secondary-text"
-            >sports🏓</span
-          >, and trying
-          <span class="text-primary-text dark:text-secondary-text"
-            >new foods 🍜</span
-          >. I am always up for an
-          <span class="text-primary-text dark:text-secondary-text"
-            >adventure</span
-          >, and I love learning about
-          <span class="text-primary-text dark:text-secondary-text"
-            >new cultures and perspectives</span
-          >.
-        </p>
-      </div>
+      With 2,5 years of hands-on experience in developing full-stack web applications,
+      1 year specializing in backend application development, and creating mobile
+      apps, I bring a diverse skill set to the table. I excel in designing and implementing
+      scalable solutions, from server-side functionality to intuitive user interfaces.
+      I think outside the box, but not to the extent of reinventing a perfectly good
+      wheel. I'm highly motivated, a fast learner, and thrive on taking chances to
+      make a difference. As a team-oriented individual with the ability to work independently,
+      I actively embrace new challenges, learn from my peers, and share my knowledge.
+      My experience spans various programming languages, database management, UI/UX
+      design and proficiency in cloud technologies, making me a versatile and resourceful
+      software engineer ready to contribute to innovative projects
     </div>
 
-    <!-- Skills -->
-    <div class="skills flex flex-col p-2 md:p-5 my-4 mx-auto w-full">
-      <!-- Title bar -->
-      <div class="flex items-center w-full">
-        <div class="mt-1 w-2 h-2 rounded-full bg-gray-600"></div>
-        <div class="mt-1 bg-gray-600 dark:bg-gray-600/50 h-px flex-grow"></div>
-        <h1 class="mx-4 capitalize text-xl font-semibold">Tech Skills</h1>
-        <div class="mt-1 bg-gray-600 dark:bg-gray-600/50 h-px flex-grow"></div>
-        <div class="mt-1 w-2 h-2 rounded-full bg-gray-600"></div>
-      </div>
-      <div
-        class="flex flex-wrap gap-y-4 gap-x-6 mt-5 flex-row justify-center md:justify-items-start">
-        {
-          mergedSkills.map((sys, index) => (
-            <SkillBarNoModal
-              skillName={sys.name}
-              progress={sys.progress}
-              iconSrc={sys.icon}
-              backgroundColor={sys.backgroundColor}
-            />
-          ))
-        }
-      </div>
-    </div>
     <!-- Experience Section -->
     <div class="experience flex flex-col p-2 md:p-5 my-4 mx-auto w-full">
       <!-- Title bar -->
@@ -157,7 +104,12 @@ const mergedSkills = [
       </div>
       {
         experienceData.map((job, index) => (
-          <div class="flex flex-col md:flex-row mt-5  text-center  md:text-left gap-4">
+          <div
+            class={`flex flex-col md:flex-row mt-5  text-center  md:text-left gap-4  rounded-xl px-3 py-1 ${
+              index % 2 === 0
+                ? "bg-primary/30 dark:bg-secondary-dark/20"
+                : "bg-primary/0 dark:bg-secondary"
+            }`}>
             <div class="w-full  md:w-1/4  mx-auto ">
               <h1 class="text-base font-semibold">{job.company}</h1>
               <p class="text-md">{job.role}</p>
@@ -189,7 +141,12 @@ const mergedSkills = [
       </div>
       {
         educationData.map((edu, index) => (
-          <div class="flex flex-col md:flex-row mt-5 text-center  md:text-left gap-4">
+          <div
+            class={`flex flex-col md:flex-row mt-5 text-center  md:text-left gap-4 rounded-xl px-3 py-1 ${
+              index % 2 === 0
+                ? "bg-primary/30 dark:bg-secondary-dark/20"
+                : "bg-primary/0 dark:bg-secondary"
+            }`}>
             <div class="w-full  md:w-1/4  mx-auto ">
               <h1 class="capitalize text-base font-semibold">{edu.title}</h1>
               <p class="text-md">{edu.degree}</p>
@@ -208,6 +165,76 @@ const mergedSkills = [
           </div>
         ))
       }
+    </div>
+
+    <!-- Skills -->
+    <div class="skills flex flex-col p-2 md:p-5 my-4 mx-auto w-full">
+      <!-- Title bar -->
+      <div class="flex items-center w-full">
+        <div class="mt-1 w-2 h-2 rounded-full bg-gray-600"></div>
+        <div class="mt-1 bg-gray-600 dark:bg-gray-600/50 h-px flex-grow"></div>
+        <h1 class="mx-4 capitalize text-xl font-semibold">Tech Skills</h1>
+        <div class="mt-1 bg-gray-600 dark:bg-gray-600/50 h-px flex-grow"></div>
+        <div class="mt-1 w-2 h-2 rounded-full bg-gray-600"></div>
+      </div>
+      <div
+        class="flex flex-wrap gap-y-4 gap-x-6 mt-5 flex-row justify-center md:justify-items-start">
+        {
+          mergedSkills.map((sys, index) => (
+            <SkillBarNoModal
+              skillName={sys.name}
+              progress={sys.progress}
+              iconSrc={sys.icon}
+              backgroundColor={sys.backgroundColor}
+            />
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- Spare time -->
+
+    <div class="about-me flex flex-col p-2 md:p-3 my-3 mx-auto w-full">
+      <!-- Title bar -->
+      <div class="flex items-center w-full">
+        <div class="mt-1 w-2 h-2 rounded-full bg-gray-600"></div>
+        <div class="mt-1 bg-gray-600 dark:bg-gray-600/50 h-px flex-grow"></div>
+
+        <h1 class="mx-4 capitalize text-xl font-semibold">My Sparetime</h1>
+        <div class="mt-1 bg-gray-600 dark:bg-gray-600/50 h-px flex-grow"></div>
+        <div class="mt-1 w-2 h-2 rounded-full bg-gray-600"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="flex mt-2 md:mt-5 gap-4">
+        <p class="mt-4 text-sm lg:text-base text-justify">
+          Besides improving my tech skills, I enjoy <span
+            class="text-primary-text dark:text-secondary-text"
+            >crocheting🧶</span
+          >, creating <span class="text-primary-text dark:text-secondary-text"
+            >IoT projects🤖</span
+          >. I've used my DIY skills to automate a few things in my home and
+          create various gadgets. I also like traveling🌍 and have traveled to <span
+            class="text-primary-text dark:text-secondary-text"
+            >26 countries</span
+          > on 2 continents, immersing myself in diverse cultures and trying out
+          new cuisines. Speaking of food 🍲, despite my <span
+            class="text-primary-text dark:text-secondary-text"
+            >Nigerian and Italian heritage</span
+          >, there's something about <span
+            class="text-primary-text dark:text-secondary-text"
+            >Nigerian cuisine</span
+          > that remains my all-time favorite. I'm an active person who enjoys playing
+          <span class="text-primary-text dark:text-secondary-text"
+            >frisbee🥏, badminton🏸, and dancing💃</span
+          >, I'm not great at them but I'm getting better and better. I'm
+          interested in learning <span
+            class="text-primary-text dark:text-secondary-text"
+            >disc golf and paddle</span
+          >. My hobbies and interests demonstrate my creativity, problem-solving
+          skills, adaptability, cultural awareness, and communication skills.
+        </p>
+      </div>
     </div>
   </div>
 </ResumeLayout>

@@ -1,34 +1,7 @@
-document.addEventListener('DOMContentLoaded', (e) => {
+$(document).ready(function () {
     intersectionObserverHandler();
-    // splashScreenHandler();
-    // showPageHandler();
-
-    function getRandomInt(min, max) {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
-
-    const popup = document.getElementById('funny-element');
-    const closeButton = document.getElementById('close-popup');
-
-    const minDelay = 5000; // Minimum delay in milliseconds
-    const maxDelay = 15000; // Maximum delay in milliseconds
-
-    function showFunnyPopup() {
-        setTimeout(() => {
-            popup.style.display = 'block';
-        }, getRandomInt(minDelay, maxDelay));
-    }
-
-    closeButton.addEventListener('click', () => {
-        popup.style.display = 'none';
-        showFunnyPopup(); // Re-trigger after closing
-    });
-
-    // Initial trigger
-    showFunnyPopup();
-
-
 });
+
 
 const intersectionObserverHandler = () => {
     const cards = document.querySelectorAll('.card');
@@ -71,42 +44,4 @@ const showPageHandler = () => {
 
 }
 
-// const custom_cursor = document.getElementById('cursor');
-// const pointer = document.getElementById('pointer');
 
-// const animateCursor = (event, interacting, interactable) => {
-//     let cursorX = `calc(${event.clientX}px - 1.125rem)`,
-//         cursorY = `calc(${event.clientY}px - 1.125rem)`;
-
-//     let pointerX = `calc(${event.clientX}px - 0.25rem)`,
-//         pointerY = `calc(${event.clientY}px - 0.25rem)`;
-
-//     pointer.style.transform = `translate(${pointerX}, ${pointerY})`;
-
-//     const dimensions = interacting ? interactable.getBoundingClientRect() : null;
-//     const radius = interacting ? '5px' : '50%';
-
-//     if (interacting) {
-//         cursorX = (dimensions.x - 2) + 'px';
-//         cursorY = (dimensions.y - 2) + 'px';
-//     };
-
-//     const cursor_keyframes = {
-//         transform: `translate(${cursorX}, ${cursorY})`,
-//         width: interacting ? `${dimensions.width + 1}px` : '2rem',
-//         height: interacting ? `${dimensions.height + 4}px` : '2rem',
-//         borderRadius: radius,
-//     };
-
-//     custom_cursor.animate(cursor_keyframes, {
-//         duration: 400,
-//         fill: 'forwards'
-//     });
-// };
-
-// window.onmousemove = (event) => {
-//     const interactable = event.target.closest('.interactable'),
-//         interacting = (interactable !== null);
-
-//     animateCursor(event, interacting, interactable);
-// };
