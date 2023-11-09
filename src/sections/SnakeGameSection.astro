@@ -1,0 +1,31 @@
+---
+import CardLayout from "@layouts/CardLayout.astro";
+---
+
+<CardLayout id="game">
+  <div class="bg-primary-light w-full h-screen" id="myElement">
+    <div
+      class="wrapper w-1/2 h-1/2 grid grid-flow-col auto-cols-max gap-1 mx-auto bg-primary-dark">
+      <div class="pixi w-4 h-4 bg-red-200"></div>
+      <!-- <div class="w-4 h-4 bg-red-200"></div>
+      <div class="w-4 h-4 bg-red-200"></div>
+      <div class="w-4 h-4 bg-red-200"></div>
+      <div class="w-4 h-4 bg-red-200"></div>
+      <div class="w-4 h-4 bg-red-200"></div>
+      <div class="w-4 h-4 bg-red-200"></div>
+      <div class="w-4 h-4 bg-red-200"></div>
+      <div class="w-4 h-4 bg-red-200"></div>
+      <div class="w-4 h-4 bg-red-200"></div>
+      <div class="w-4 h-4 bg-red-200"></div>
+      <div class="w-4 h-4 bg-red-200"></div> -->
+    </div>
+  </div>
+</CardLayout>
+<style>
+  .highlight {
+    background-color: green;
+  }
+</style>
+<script is:inline>
+$("#myElement").addClass("highlight");
+</script>

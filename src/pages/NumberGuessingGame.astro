@@ -1,0 +1,128 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Title from "@components/Typography/Title.astro";
+
+const seoDescription =
+  "Play the Number Guessing Game and test your skills! Guess the number and win the game. Fun and challenging game for all ages.";
+---
+
+<BaseLayout
+  pageTitle="Number Guessing Game"
+  seoTitle="Number Guessing Game"
+  seoDescription={seoDescription}>
+  <!-- <GuessTheNumber client:only="react" /> -->
+  <div
+    class="card text-center flex-1 section my-4 backdrop-filter backdrop-blur-lg bg-primary-light dark:bg-secondary/95 w-11/12 md:w-3/4 mx-auto p-8 rounded-xl shadow-xl lg:space-y-8">
+    <Title title="Number Guessing Game" />
+    <p class="my-4">Click on a number to make your guess:</p>
+    <div id="numberButtons" class=""></div>
+    <div>
+      <p id="message" class="my-4"></p>
+      <p>Number of attempts: <span id="attempts">0</span></p>
+    </div>
+    <div class="my-10">
+      <p class="text-xs">
+        <strong>Concept:</strong>, it's a simple interactive game where the
+        player clicks numbers to guess the correct random number, and the game
+        provides feedback on each guess. The player's goal is to guess the
+        number with the fewest attempts.
+      </p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style is:inline>
+  button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: rgb(22, 102, 102);
+    border-radius: 4px;
+  }
+  .incorrect {
+    background-color: rgb(172, 70, 70);
+  }
+
+  button:disabled,
+  button[disabled] {
+    background-color: rgb(30, 39, 39);
+  }
+  .correct {
+    background-color: rgb(43, 226, 171);
+  }
+</style>
+<script is:inline>
+  // Generate a random number between 1 and 15
+  const randomNumber = Math.floor(Math.random() * 15) + 1;
+
+  // Initialize variables
+  let attempts = 0;
+  let isGameOver = false;
+
+  // Function to check the guess
+  function checkGuess(guess) {
+    if (isGameOver) {
+      return;
+    }
+
+    const message = document.getElementById("message");
+    const attemptsElement = document.getElementById("attempts");
+
+    attempts++;
+
+    if (guess < randomNumber) {
+      message.textContent = "Too low! Try again.";
+      markAsIncorrect(guess);
+      disableNumbersLessThan(guess);
+    } else if (guess > randomNumber) {
+      message.textContent = "Too high! Try again.";
+      markAsIncorrect(guess);
+      disableNumbersGreaterThan(guess);
+    } else {
+      markAsCorrect(guess);
+      message.textContent = `Congratulations! You guessed the number ${randomNumber} in ${attempts} attempts.`;
+      isGameOver = true;
+    }
+
+    attemptsElement.textContent = attempts;
+  }
+
+  // Create number buttons
+  const numberButtonsContainer = document.getElementById("numberButtons");
+  for (let i = 1; i <= 15; i++) {
+    const button = document.createElement("button");
+    button.textContent = i;
+    button.addEventListener("click", function () {
+      checkGuess(i);
+    });
+    numberButtonsContainer.appendChild(button);
+  }
+
+  // Function to disable numbers greater than the guess
+  function disableNumbersGreaterThan(guess) {
+    const buttons = numberButtonsContainer.getElementsByTagName("button");
+    for (let i = guess + 1; i <= 15; i++) {
+      buttons[i - 1].disabled = true;
+    }
+  }
+
+  // Function to mark guessed number as green
+  function markAsCorrect(guess) {
+    const buttons = numberButtonsContainer.getElementsByTagName("button");
+    console.log(guess + "guessed");
+    buttons[guess - 1].classList.add("correct");
+  }
+  // Function to disable numbers less than the guess
+  function disableNumbersLessThan(guess) {
+    const buttons = numberButtonsContainer.getElementsByTagName("button");
+    for (let i = 1; i < guess; i++) {
+      buttons[i - 1].disabled = true;
+    }
+  }
+
+  // Function to mark incorrect guesses in red
+  function markAsIncorrect(guess) {
+    const buttons = numberButtonsContainer.getElementsByTagName("button");
+    buttons[guess - 1].classList.add("incorrect");
+  }
+</script>
