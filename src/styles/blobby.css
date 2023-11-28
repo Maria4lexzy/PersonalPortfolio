@@ -1,0 +1,54 @@
+:root {
+  --bodyW: 80px;
+  --bodyH: 84px;
+  --eyeH: calc(var(--bodyW) / 4);
+  --eyeW: calc(var(--bodyH) / 4);
+  --lipH: calc(var(--bodyW) / 4);
+  --lipW: calc(var(--bodyH) / 4);
+}
+
+.blobby-body {
+  width: var(--bodyW);
+  height: var(--bodyH);
+  background-color: rgb(32, 228, 202);
+  border-radius: 50%;
+  position: relative;
+}
+.blobby-body .eyes {
+  position: absolute;
+  top: calc(var(--bodyH) / 3 - var(--eyeH) / 2);
+  left: calc(var(--bodyW) / 2 - var(--eyeW) / 2);
+  width: var(--eyeW);
+  height: var(--eyeH);
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  background-color: white;
+}
+.blobby-body .eyes .pupils {
+  width: 2px;
+  height: 6px;
+  background-color: rgb(18, 106, 184);
+  position: absolute;
+  top: 10px;
+}
+.blobby-body .lips {
+  position: absolute;
+  top: calc(var(--bodyH) / 4 - var(--eyeH) / 2);
+  left: calc(var(--bodyW) / 2 - var(--eyeW) / 2);
+  width: 50px;
+  height: 10px;
+  border: 3px solid black; /* The mouth's border */
+  border-bottom-right-radius: 0.7rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}/*# sourceMappingURL=blobby.css.map */

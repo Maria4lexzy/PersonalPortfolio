@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono");
+.splash {
+  z-index: 400;
+  visibility: visible;
+  background: linear-gradient(45deg, #57003f 0%, #f57453 100%);
+  font-family: Ubuntu;
+}
+.splash .terminal-container {
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+  padding: 0;
+  box-sizing: border-box;
+}
+.splash .terminal-bar {
+  box-sizing: border-box;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: linear-gradient(#504b45 0%, #3c3b37 100%);
+}
+.splash .terminal-console {
+  background: rgba(56, 4, 40, 0.9);
+  font-family: "Ubuntu Mono";
+}
+
+.back-out-up {
+  visibility: hidden;
+  animation: backOutUp 0.6s ease-out;
+  z-index: 300;
+}
+
+@keyframes backOutUp {
+  from {
+    visibility: visible;
+    transform: translatex(0);
+    border-radius: 0;
+    opacity: 1;
+  }
+  to {
+    visibility: hidden;
+    transform: translateX(100%);
+    border-radius: 5% 0 0 5%;
+    opacity: 0;
+  }
+}/*# sourceMappingURL=splash.css.map */

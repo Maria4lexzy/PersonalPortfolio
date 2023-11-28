@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     intersectionObserverHandler();
-    splashScreenHandler();
+
 });
 
 
@@ -30,20 +30,22 @@ const intersectionObserverHandler = () => {
     });
 
 }
-const splashScreenHandler = () => {
-    const splash = document.querySelector('.splash');
-    setTimeout(() => {
-        splash?.classList.add('back-out-up');
-    }, 5000);
+// const splashScreenHandler = () => {
+//     const splash = document.querySelector('.splash');
 
-}
-const showPageHandler = () => {
-    const hiddenContent = document.querySelector('.hidden-content');
-    setTimeout(() => {
-        hiddenContent?.classList.remove('hidden-content');
-    }, 5300);
+//     setTimeout(() => {
+//         splash?.classList.add('back-out-up');
+//         showPageHandler()
+//     }, 5000);
 
-}
+// }
+// const showPageHandler = () => {
+//     const hiddenContent = document.querySelector('.hidden-content');
+//     setTimeout(() => {
+//         hiddenContent?.classList.remove('hidden-content');
+//     }, 5300);
+
+// }
 
 // const custom_cursor = document.getElementById('cursor');
 // const pointer = document.getElementById('pointer');

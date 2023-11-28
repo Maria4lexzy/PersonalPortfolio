@@ -69,9 +69,10 @@ const mobilemenu: IMenu[] = [...leftmenu, ...rightmenu];
         <ThemeIcon />
       </div>
 
-      <a id="smallLogo" class="w-32 mx-auto" href="/">
+      <a id="smallLogo" class="mx-auto w-32" href="/">
         <!-- <img src={bigLogo} alt=' Logo' /> -->
         <img
+          id="nav__image"
           src="/images/logo_profiles/maria-art.png"
           alt="logo"
           class="w-8 md:w-12 h-auto mx-auto"
@@ -147,16 +148,15 @@ const mobilemenu: IMenu[] = [...leftmenu, ...rightmenu];
 
 <script is:inline>
   const menuButton = document.getElementById("menu");
-  // const smallLogo = document.getElementById("smallLogo");
-  // const bigLogo = document.getElementById("bigLogo");
   const navbar = document.querySelector(".navbar");
+  const navImage = document.getElementById("nav__image");
+
   const htmlElement = document.documentElement;
   menuButton.addEventListener("click", () => {
     [...document.querySelectorAll(".navmenu-toggle")].forEach((Element) => {
       Element.classList.toggle("hidden");
     });
   });
-
   const updateScrollAttribute = () => {
     const scrollTop = htmlElement.scrollTop || document.body.scrollTop;
     if (scrollTop > 0) {
@@ -167,9 +167,9 @@ const mobilemenu: IMenu[] = [...leftmenu, ...rightmenu];
         "dark:bg-secondary",
         "nav-active"
       );
+      navImage.classList.remove("w-8", "md:w-12");
+      navImage.classList.add("w-12", "md:w-16");
       navbar.classList.remove("shadow-md");
-      // bigLogo.classList.remove("hidden");
-      // smallLogo.classList.add("hidden");
     } else {
       htmlElement.setAttribute("data-scroll", "0");
       navbar.classList.remove(
@@ -179,13 +179,11 @@ const mobilemenu: IMenu[] = [...leftmenu, ...rightmenu];
         "nav-active"
       );
       navbar.classList.add("shadow-md");
-
-      // bigLogo.classList.add("hidden");
-      // smallLogo.classList.remove("hidden");
+      navImage.classList.add("w-8", "md:w-12");
+      navImage.classList.remove("w-12", "md:w-16");
     }
   };
-  // Attach scroll event listener
+
   window.addEventListener("scroll", updateScrollAttribute);
-  // Initial call to update the scroll attribute on page load
   updateScrollAttribute();
 </script>

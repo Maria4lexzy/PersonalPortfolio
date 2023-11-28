@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  -webkit-tap-highlight-color: transparent;
+  transition: all ease 0.4s;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background: #acb7e1;
+}
+::-webkit-scrollbar-thumb {
+  background: #4577af;
+  border-radius: 10px;
+}
+
+.myBorder {
+  border: 2px solid purple;
+}
+
+.card {
+  opacity: 0;
+  transition: 0.8s ease;
+  transform: translateX(-8rem);
+}
+.card.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+@media (prefers-reduced-motion) {
+  .card .card {
+    transition: none;
+  }
+}
+
+.hidden-content {
+  display: none;
+}/*# sourceMappingURL=main.css.map */
