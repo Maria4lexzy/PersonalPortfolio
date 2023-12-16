@@ -7,6 +7,18 @@ interface ExperienceEntry {
 }
 export const experienceData: ExperienceEntry[] = [
   {
+    company: "Salling Group",
+    role: "Junior Backend Developer",
+    date: "December 2023 - Present",
+    image: "/images/companies/Salling.png",
+    responsibilities: [
+      "Java Development: Using Java to design and implement scalable backend solutions, ensuring the reliability and efficiency of digital infrastructure.",
+      "Version Control with Git: Employing Git for effective version control, facilitating collaboration and streamlined development workflows within the team.",
+      "Magnolia CMS Integration: Seamlessly integrating Magnolia CMS into backend processes, enhancing content management capabilities and user experiences.",
+      "Collaborative Engagements: Actively participating in standups and engaging in meetings with various departments, including front end, UI/UX, and product owners. This involvement ensures alignment of technical solutions with overarching business goals.",
+    ],
+  },
+  {
     company: "Master Thesis - IBM CIC & Smukfest",
     role: "React Native Performance Research & Implementation",
     date: "February 2023 - June 2023",
