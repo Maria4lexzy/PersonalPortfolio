@@ -24,7 +24,7 @@ const CookieBanner = () => {
             window.dataLayer.push(arguments);
         }
         gtag("js", new Date());
-        gtag("config", "G-7WTEYMG4ZZ");
+        gtag("config", "G-HRWVE3VMJ2");
     };
 
     return (

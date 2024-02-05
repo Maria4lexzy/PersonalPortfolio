@@ -8,23 +8,17 @@ interface ExperienceEntry {
 export const experienceData: ExperienceEntry[] = [
   {
     company: "Salling Group",
-    role: "Junior Backend Developer",
-    date: "",
+    role: "Developer",
+    date: "December 2023 - Present",
     image: "/images/companies/Salling.png",
     responsibilities: [
       "Java Development - Spring Boot: Developed and maintained existing systems using Java and Spring Boot framework.",
-      "Configuration Management: Managed configuration files and properties for integration with the backend",
       "Magnolia CMS: Managed backend operations of Magnolia CMS, including configuration, content management, and integration with other systems.",
-      "Collaboration with Frontend Team: Worked closely with the frontend team to ensure seamless integration of frontend components with Magnolia CMS.",
-      "Collaboration with DevOps Team: Collaborated with the DevOps team to optimize the deployment and hosting of Magnolia CMS, ensuring scalability and reliability.",
-      "Codebase Cleanup: Conducted a comprehensive cleanup, enhancing overall code quality.",
-      "Tech Upgrade: Led the Spring Boot 3.2.x upgrade for improved project features.",
-      "Bug Fixing: Addressed issues, including incorrect placeholder queries, for improved functionality.",
-      "Scheduling Features: Implemented user stories for enhanced scheduling capabilities.",
-      "Security Setup: Led a technical story for Active Directory Group Access, enhancing security measures.",
+      "Cross-Functional Collaboration: collaboration with the frontend, devops & ML/AI teams",
+      "React Development: Initiated react projects used internally as well as maintain and improve existing react apps",
+      "Zendesk: Creating agent apps & AI assistive apps within Zendesk as well as general overview of Zendesk admin system."
     ],
   },
-
   {
     company: "Master Thesis - IBM CIC & Smukfest",
     role: "React Native Performance Research & Implementation",

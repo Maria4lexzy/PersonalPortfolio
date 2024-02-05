@@ -2,6 +2,9 @@
 dist/
 # generated types
 .astro/
+/.idea
+/.idea/
+/.netlify
 
 # dependencies
 node_modules/
