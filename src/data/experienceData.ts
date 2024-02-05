@@ -9,15 +9,22 @@ export const experienceData: ExperienceEntry[] = [
   {
     company: "Salling Group",
     role: "Junior Backend Developer",
-    date: "December 2023 - Present",
+    date: "",
     image: "/images/companies/Salling.png",
     responsibilities: [
-      "Java Development: Using Java to design and implement scalable backend solutions, ensuring the reliability and efficiency of digital infrastructure.",
-      "Version Control with Git: Employing Git for effective version control, facilitating collaboration and streamlined development workflows within the team.",
-      "Magnolia CMS Integration: Seamlessly integrating Magnolia CMS into backend processes, enhancing content management capabilities and user experiences.",
-      "Collaborative Engagements: Actively participating in standups and engaging in meetings with various departments, including front end, UI/UX, and product owners. This involvement ensures alignment of technical solutions with overarching business goals.",
+      "Java Development - Spring Boot: Developed and maintained existing systems using Java and Spring Boot framework.",
+      "Configuration Management: Managed configuration files and properties for integration with the backend",
+      "Magnolia CMS: Managed backend operations of Magnolia CMS, including configuration, content management, and integration with other systems.",
+      "Collaboration with Frontend Team: Worked closely with the frontend team to ensure seamless integration of frontend components with Magnolia CMS.",
+      "Collaboration with DevOps Team: Collaborated with the DevOps team to optimize the deployment and hosting of Magnolia CMS, ensuring scalability and reliability.",
+      "Codebase Cleanup: Conducted a comprehensive cleanup, enhancing overall code quality.",
+      "Tech Upgrade: Led the Spring Boot 3.2.x upgrade for improved project features.",
+      "Bug Fixing: Addressed issues, including incorrect placeholder queries, for improved functionality.",
+      "Scheduling Features: Implemented user stories for enhanced scheduling capabilities.",
+      "Security Setup: Led a technical story for Active Directory Group Access, enhancing security measures.",
     ],
   },
+
   {
     company: "Master Thesis - IBM CIC & Smukfest",
     role: "React Native Performance Research & Implementation",

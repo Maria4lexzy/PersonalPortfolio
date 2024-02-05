@@ -9,7 +9,7 @@ export interface IDdataCloudSkill {
 const dataCloudSkills: IDdataCloudSkill[] = [
   {
     name: "MySQL",
-    progress: 76,
+    progress: 65,
     icon: "/images/mysql.svg",
     url: "https://en.wikipedia.org/wiki/MySQL",
     backgroundColor: "bg-blue-500",
@@ -30,14 +30,14 @@ const dataCloudSkills: IDdataCloudSkill[] = [
   // },
   {
     name: "Firebase",
-    progress: 90,
+    progress: 75,
     icon: "/images/firebase.svg",
     url: "https://firebase.google.com/",
     backgroundColor: "bg-yellow-500",
   },
   {
     name: "Google Cloud",
-    progress: 70,
+    progress: 60,
     icon: "/images/gcp.svg",
     url: "https://cloud.google.com/",
     backgroundColor: "bg-yellow-300",
@@ -51,21 +51,21 @@ const dataCloudSkills: IDdataCloudSkill[] = [
   },
   {
     name: "Terraform",
-    progress: 60,
+    progress: 40,
     icon: "/images/terraform.svg",
     url: "https://www.terraform.io/",
     backgroundColor: "bg-purple-600",
   },
   {
     name: "Docker",
-    progress: 60,
+    progress: 50,
     icon: "/images/docker.svg",
     url: "https://en.wikipedia.org/wiki/Docker_(software)",
     backgroundColor: "bg-sky-500",
   },
   {
     name: "Kubernetes",
-    progress: 40,
+    progress: 50,
     icon: "/images/kubernetes.svg",
     url: "https://kubernetes.io/",
     backgroundColor: "bg-blue-600",

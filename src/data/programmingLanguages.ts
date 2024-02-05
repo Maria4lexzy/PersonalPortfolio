@@ -9,7 +9,7 @@ export interface IProgrammingLanguage {
 const programmingLanguages: IProgrammingLanguage[] = [
   {
     name: "JavaScript",
-    progress: 85,
+    progress: 80,
     url: "https://en.wikipedia.org/wiki/JavaScript",
     icon: "/images/javascript.svg",
     backgroundColor: "bg-yellow-400",
@@ -30,14 +30,14 @@ const programmingLanguages: IProgrammingLanguage[] = [
   },
   {
     name: "Java",
-    progress: 70,
+    progress: 65,
     url: "https://en.wikipedia.org/wiki/Java_(programming_language)",
     icon: "/images/java.svg",
     backgroundColor: "bg-blue-700",
   },
   {
     name: "C#",
-    progress: 75,
+    progress: 55,
     url: "https://en.wikipedia.org/wiki/C_Sharp_(programming_language)#:~:text=C%23%20(pronounced%20See%20sharp)%20is,C%23",
     icon: "/images/csharp.svg",
     backgroundColor: "bg-green-600",

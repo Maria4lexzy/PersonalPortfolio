@@ -5,6 +5,17 @@ import Cookies from 'js-cookie';
 const CookieBanner = () => {
     const [isVisible, setIsVisible] = useState(!Cookies.get('cookieConsent'));
 
+
+    useEffect(() => {
+        const script = document.createElement('script');
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-7WTEYMG4ZZ';
+        script.async = true;
+        document.body.appendChild(script);
+
+        return () => {
+            document.body.removeChild(script);
+        };
+    }, []);
     const acceptCookies = () => {
         Cookies.set('cookieConsent', 'accepted', { expires: 365 });
         setIsVisible(false);
