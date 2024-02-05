@@ -1,7 +1,7 @@
 ---
-import { SEO } from "astro-seo";
-import tabLogo from "/images/logo_profiles/maria-art.png";
-import "../styles/main.scss";
+import { SEO } from 'astro-seo';
+import tabLogo from '/images/logo_profiles/maria-art.png';
+import '../styles/main.scss';
 
 interface Props {
   pageTitle: string;
@@ -16,7 +16,7 @@ const {
   // description,
   seoTitle,
   seoDescription,
-  image = "/images/pageIcon.png",
+  image = '/images/pageIcon.png',
 } = Astro.props;
 ---
 
@@ -28,46 +28,94 @@ const {
     openGraph={{
       basic: {
         title: "Maria's Portfolio",
-        type: "website",
+        type: 'website',
         image: image,
       },
     }}
   />
 
-  <meta charset="UTF-8" />
-  <link rel="sitemap" href="/sitemap-index.xml" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content={seoDescription} />
+  <meta charset='UTF-8' />
+  <link
+    rel='sitemap'
+    href='/sitemap-index.xml'
+  />
+  <meta
+    http-equiv='X-UA-Compatible'
+    content='IE=edge'
+  />
+  <meta
+    name='viewport'
+    content='width=device-width,initial-scale=1'
+  />
+  <meta
+    name='description'
+    content={seoDescription}
+  />
 
   <meta
-    name="theme-color"
-    media="(prefers-color-scheme: light)"
-    content="bg-primary/80 "
+    name='theme-color'
+    media='(prefers-color-scheme: light)'
+    content='bg-primary/80 '
   />
   <meta
-    name="theme-color"
-    media="(prefers-color-scheme: dark)"
-    content="bg-secondary-dark/90"
+    name='theme-color'
+    media='(prefers-color-scheme: dark)'
+    content='bg-secondary-dark/90'
   />
-  <link rel="icon" type="image/svg+xml" href={tabLogo} />
+  <link
+    rel='icon'
+    type='image/svg+xml'
+    href={tabLogo}
+  />
   <!-- <link rel="manifest" href="../../manifest.json" /> -->
-  <link rel="manifest" href="./manifest.webmanifest" />
+  <link
+    rel='manifest'
+    href='./manifest.webmanifest'
+  />
 
-  <link rel="apple-touch-icon" href="/images/pageIcon.png" />
+  <link
+    rel='apple-touch-icon'
+    href='/images/pageIcon.png'
+  />
 
   <title>{pageTitle}</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;600&family=Source+Code+Pro:wght@200;400;600&display=swap"
-    rel="stylesheet"
+    rel='preconnect'
+    href='https://fonts.googleapis.com'
+  />
+  <link
+    rel='preconnect'
+    href='https://fonts.gstatic.com'
+    crossorigin
+  />
+  <link
+    href='https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;600&family=Source+Code+Pro:wght@200;400;600&display=swap'
+    rel='stylesheet'
   />
   <script
-    src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-    type="text/javascript"></script>
-  <script src="/lib/theme-util.js" type="text/javascript" is:inline></script>
-  <script src="/lib/index.js" type="text/javascript" defer></script>
-  <script src="/lib/generate-sw.js" type="text/javascript"></script>
+    src='https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js'
+    type='text/javascript'
+  ></script>
+  <script
+    src='/lib/theme-util.js'
+    type='text/javascript'
+    is:inline
+  ></script>
+  <script
+    src='/lib/index.js'
+    type='text/javascript'
+    defer
+  ></script>
+  <script
+    src='/lib/generate-sw.js'
+    type='text/javascript'
+  ></script>
+  <script
+    async
+    src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3744601885843225'
+    crossorigin='anonymous'
+  ></script>
 </head>
