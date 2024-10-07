@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
 
 const CookieBanner = () => {
@@ -7,7 +7,7 @@ const CookieBanner = () => {
 
     useEffect(() => {
         const script = document.createElement('script');
-        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-7WTEYMG4ZZ';
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-HRWVE3VMJ2';
         script.async = true;
         document.body.appendChild(script);
 
