@@ -12,11 +12,12 @@ export const experienceData: ExperienceEntry[] = [
     date: "December 2023 - Present",
     image: "/images/companies/Salling.png",
     responsibilities: [
-      "Java Development - Spring Boot: Developed and maintained existing systems using Java and Spring Boot framework.",
-      "Magnolia CMS: Managed backend operations of Magnolia CMS, including configuration, content management, and integration with other systems.",
-      "Cross-Functional Collaboration: collaboration with the frontend, devops & ML/AI teams",
-      "React Development: Initiated react projects used internally as well as maintain and improve existing react apps",
-      "Zendesk: Creating agent apps & AI assistive apps within Zendesk as well as general overview of Zendesk admin system."
+      "Developed and maintained scalable systems using Java and Spring Boot framework for Denmark's largest retailing group, operating in Denmark, Germany, Poland, Estonia, Latvia, and Lithuania.",
+      "Managed backend operations of Magnolia CMS, handling configuration, content management, and seamless integration with other systems.",
+      "Collaborated cross-functionally with frontend, DevOps, and ML/AI teams to deliver user-focused solutions, earning an early promotion within 10 months by addressing end-user pain points.",
+      "Initiated and maintained internal React projects, implementing new features and improving existing codebases for enhanced performance.",
+      "Created agent apps and AI assistive apps within Zendesk, overseeing general administration of the Zendesk system.",
+      "Maintained CI/CD pipelines and contributed to decision-making for complex project deployment structures."
     ],
   },
   {
@@ -25,10 +26,10 @@ export const experienceData: ExperienceEntry[] = [
     date: "February 2023 - June 2023",
     image: "/images/companies/ibm.png",
     responsibilities: [
-      "Conducted extensive research on React Native performance, focusing on technical factors affecting performance and best practices for optimization",
-      "Performed in-depth performance analysis of React Native applications, identifying areas for improvement such as unnecessary re-renders, slow app startup time, thread bottlenecks, and slow list rendering",
-      "Developed a set of best practices for optimizing React Native performance, including the use of performance profiling tools, lazy loading, code splitting, memoization, and list optimization strategies",
-      "Applied research findings to the development of the Smukfest application in collaboration with IBM CIC and Smukfest festival, resulting in a 93% improvement in performance compared to the original application",
+      "Conducted extensive research on React Native performance, focusing on technical factors affecting performance and best practices for optimization.",
+      "Performed in-depth performance analysis of React Native applications, identifying areas for improvement such as unnecessary re-renders, slow app startup time, thread bottlenecks, and slow list rendering.",
+      "Developed a set of best practices for optimizing React Native performance, including the use of performance profiling tools, lazy loading, code splitting, memoization, and list optimization strategies.",
+      "Applied research findings to the development of the Smukfest application in collaboration with IBM CIC and Smukfest festival, resulting in a 93% improvement in performance compared to the original application."
     ],
   },
   {
