@@ -5,9 +5,9 @@ import { educationData } from "@data/educationData";
 import { experienceData } from "@data/experienceData";
 import SkillBarNoModal from "@components/Skills/SkillBarNoModal.astro";
 import web_MobileSkills from "@data/web_MobileSkills";
-import sWConcpetSkills from "@data/swConceptsSkills";
 import dataCloudSkills from "@data/dataCloudSkills";
 import programmingLanguages from "@data/programmingLanguages";
+import {blockchainSkills} from "@data/blockchainSkills";
 const pageTitle = "Maria's Resume";
 const seoTitle = "Maria's Resume";
 const seoDescription =
@@ -16,7 +16,7 @@ const seoDescription =
 const mergedSkills = [
   ...programmingLanguages,
   ...dataCloudSkills,
-
+    ...blockchainSkills,
   ...web_MobileSkills,
 ];
 ---
@@ -47,7 +47,7 @@ const mergedSkills = [
           <IconPill iconSrc="/images/github.svg" description="GitHub" />
         </a>
         <a
-          href="https://maria-louisa.com/"
+          href="https://mariaf.netlify.app/"
           class="cursor-pointer"
           target="_blank">
           <IconPill iconSrc="/images/portfolio.svg" description="Portfolio" />
@@ -78,9 +78,11 @@ const mergedSkills = [
         <div class="mt-1 w-2 h-2 rounded-full bg-gray-600"></div>
       </div>
       <div class="mt-4">
-        I am passionate about turning ideas into impactful products, be it building fun web applications, integrating hardware and software, or experimenting with creative side projects. I value clear communication with end users and stakeholders, ensuring that what I build not only works well but truly meets people’s needs. Outside of work, I enjoy exploring new technologies, working on personal projects, and creating something handmade like jewelry and crochet pieces. I love keeping curiosity and creativity at the heart of my every day life.
-
-
+       Backend-focused software engineer with experience building and maintaining scalable distributed systems in large organizations. Currently working with Java and Spring Boot at Salling Group, contributing to retail platforms operating across multiple European markets.
+       
+       I enjoy working on complex systems where reliability, data consistency, and collaboration across teams are essential. I take initiative in improving systems and processes, contributing to architectural discussions, and ensuring that solutions meet both technical and user needs.
+       
+       My background combines software engineering, systems thinking, and hardware experience, which helps me approach problems from both a software and infrastructure perspective
         
       </div>
     </div>
@@ -196,37 +198,6 @@ const mergedSkills = [
         <h1 class="mx-4 capitalize text-xl font-semibold">My Sparetime</h1>
         <div class="mt-1 bg-gray-600 dark:bg-gray-600/50 h-px flex-grow"></div>
         <div class="mt-1 w-2 h-2 rounded-full bg-gray-600"></div>
-      </div>
-
-      <!-- Content -->
-      <div class="flex mt-2 md:mt-5 gap-4">
-        <p class="mt-4 text-sm lg:text-base text-justify">
-          Besides improving my tech skills, I enjoy <span
-            class="text-primary-text dark:text-secondary-text"
-            >crocheting🧶</span
-          >, creating <span class="text-primary-text dark:text-secondary-text"
-            >IoT projects🤖</span
-          >. I've used my DIY skills to automate a few things in my home and
-          create various gadgets. I also like traveling🌍 and have traveled to <span
-            class="text-primary-text dark:text-secondary-text"
-            >26 countries</span
-          > on 2 continents, immersing myself in diverse cultures and trying out
-          new cuisines. Speaking of food 🍲, despite my <span
-            class="text-primary-text dark:text-secondary-text"
-            >Nigerian and Italian heritage</span
-          >, there's something about <span
-            class="text-primary-text dark:text-secondary-text"
-            >Nigerian cuisine</span
-          > that remains my all-time favorite. I'm an active person who enjoys playing
-          <span class="text-primary-text dark:text-secondary-text"
-            >frisbee🥏, badminton🏸, and dancing💃</span
-          >, I'm not great at them but I'm getting better and better. I'm
-          interested in learning <span
-            class="text-primary-text dark:text-secondary-text"
-            >disc golf and paddle</span
-          >. My hobbies and interests demonstrate my creativity, problem-solving
-          skills, adaptability, cultural awareness, and communication skills.
-        </p>
       </div>
     </div>
   </div>

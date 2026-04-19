@@ -7,16 +7,23 @@ export interface IProgrammingLanguage {
 }
 
 const programmingLanguages: IProgrammingLanguage[] = [
+  
   {
-    name: "JavaScript",
-    progress: 80,
+    name: "Java",
+    progress: 85,
+    url: "https://en.wikipedia.org/wiki/Java_(programming_language)",
+    icon: "/images/java.svg",
+    backgroundColor: "bg-blue-700",
+  },
+  {name: "JavaScript",
+    progress: 90,
     url: "https://en.wikipedia.org/wiki/JavaScript",
     icon: "/images/javascript.svg",
     backgroundColor: "bg-yellow-400",
   },
   {
     name: "HTML5",
-    progress: 90,
+    progress: 100,
     url: "https://en.wikipedia.org/wiki/HTML5#:~:text=HTML5%20(Hypertext%20Markup%20Language%205,as%20the%20HTML%20Living%20Standard.",
     icon: "/images/html.svg",
     backgroundColor: "bg-red-500",
@@ -28,13 +35,7 @@ const programmingLanguages: IProgrammingLanguage[] = [
     icon: "/images/css.svg",
     backgroundColor: "bg-blue-500",
   },
-  {
-    name: "Java",
-    progress: 65,
-    url: "https://en.wikipedia.org/wiki/Java_(programming_language)",
-    icon: "/images/java.svg",
-    backgroundColor: "bg-blue-700",
-  },
+
   {
     name: "C#",
     progress: 55,

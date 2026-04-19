@@ -5,99 +5,82 @@ interface ExperienceEntry {
   image: string;
   responsibilities: string[];
 }
+
 export const experienceData: ExperienceEntry[] = [
   {
     company: "Salling Group",
-    role: "Developer",
+    role: "Backend Software Engineer",
     date: "December 2023 - Present",
     image: "/images/companies/Salling.png",
     responsibilities: [
-      "Developed and maintained scalable systems using Java and Spring Boot framework for Denmark's largest retailing group, operating in Denmark, Germany, Poland, Estonia, Latvia, and Lithuania.",
-      "Managed backend operations of Magnolia CMS, handling configuration, content management, and seamless integration with other systems.",
-      "Collaborated cross-functionally with frontend, DevOps, and ML/AI teams to deliver user-focused solutions, earning an early promotion within 10 months by addressing end-user pain points.",
-      "Initiated and maintained internal React projects, implementing new features and improving existing codebases for enhanced performance.",
-      "Created agent apps and AI assistive apps within Zendesk, overseeing general administration of the Zendesk system.",
-      "Maintained CI/CD pipelines and contributed to decision-making for complex project deployment structures."
+      "Backend engineer working on distributed retail systems across multiple European markets using Java and Spring Boot.",
+      "Contributed to a large-scale master data initiative by helping define data contracts and integration patterns to improve consistency and reliability across systems.",
+      "Participated in technical and architectural discussions around system design, service boundaries, and deployment structures in an enterprise environment.",
+      "Supported backend integrations for Magnolia CMS and collaborated with frontend, DevOps, and ML/AI teams on cross-system solutions.",
+      "Contributed to CI/CD pipelines and multi-environment deployment workflows supporting internal systems.",
+      "Built internal tools and Zendesk-based applications to improve operational efficiency.",
+      "Promoted within 10 months based on technical contribution and initiative in improving internal systems."
     ],
   },
+
   {
     company: "Master Thesis - IBM CIC & Smukfest",
     role: "React Native Performance Research & Implementation",
     date: "February 2023 - June 2023",
     image: "/images/companies/ibm.png",
     responsibilities: [
-      "Conducted extensive research on React Native performance, focusing on technical factors affecting performance and best practices for optimization.",
-      "Performed in-depth performance analysis of React Native applications, identifying areas for improvement such as unnecessary re-renders, slow app startup time, thread bottlenecks, and slow list rendering.",
-      "Developed a set of best practices for optimizing React Native performance, including the use of performance profiling tools, lazy loading, code splitting, memoization, and list optimization strategies.",
-      "Applied research findings to the development of the Smukfest application in collaboration with IBM CIC and Smukfest festival, resulting in a 93% improvement in performance compared to the original application."
+      "Worked on performance analysis and optimization of React Native applications in collaboration with IBM CIC and Smukfest.",
+      "Identified system-level bottlenecks affecting rendering, startup performance, and thread usage.",
+      "Developed structured optimization practices including profiling, lazy loading, memoization, and rendering strategies.",
+      "Improved Smukfest application performance by 93% compared to the original version."
     ],
   },
+
   {
     company: "Art Caffe Sabinov",
-    role: "Software Developer ",
+    role: "Software Developer",
     date: "January 2022 - July 2022",
     image: "/images/companies/artcaffe.svg",
     responsibilities: [
-      "Design and implement user interface components using Astro and React, ensuring a responsive and visually appealing design",
-      "Integrate Firebase to handle data storage and retrieval, enabling dynamic content updates on the website",
-      "Set up and maintained CI/CD pipelines using GitHub Actions",
+      "Developed a web application using Astro and React with Firebase backend integration.",
+      "Implemented CI/CD pipelines using GitHub Actions.",
+      "Maintained deployment workflows and ensured smooth production releases."
     ],
   },
+
   {
     company: "Startup Central",
     role: "Software Developer Intern",
     date: "February 2020 - July 2020",
     image: "/images/companies/startupCentral.svg",
     responsibilities: [
-      "Acquired proficiency in Umbraco and actively contributed to web development projects.",
-      "Worked in an agile team environment, participating in sprint stand-ups and collaborating with cross-functional teams.",
-      "Engaged in technical discussions and contributed innovative ideas to enhance technical solutions.",
+      "Contributed to Umbraco-based web development projects in an Agile team.",
+      "Participated in sprint planning and feature development.",
+      "Engaged in technical discussions around implementation approaches."
     ],
   },
 
   {
-    company: "Biamp Denmark",
-    role: "Juinor Software/Hardware Tester",
+    company: "Biamp",
+    role: "Junior Software/Hardware Tester",
     date: "February 2017 - August 2018",
     image: "/images/companies/biamp.svg",
     responsibilities: [
-      "Tested new releases of the company's software and ensured seamless integration with hardware.",
-      "Assisted in the assembly of electronic devices, contributing to the production of high-quality products.",
-      "Collaborated with cross-functional teams to identify areas of improvement and enhance overall product performance.",
-    ],
-  },
-  {
-    company: "Klakring El, Denmark",
-    role: "Assistant Electronics Technician",
-    date: "July 2017 - January 2018",
-    image: "/images/companies/klakring.svg",
-    responsibilities: [
-      "Conducted soldering of electronic components and effectively mounted control panels used in mechanic shops.",
-      "Ensured the quality and reliability of electronic assemblies by adhering to industry standards and specifications.",
+      "Tested software releases and validated hardware integration in embedded systems.",
+      "Supported assembly and verification of electronic devices.",
+      "Contributed to improving system reliability through structured testing."
     ],
   },
 
   {
-    company: "European Laboratory for Non-Linear Spectroscopy, ITALY",
-    role: "Electronics Technician Intern",
-    date: "September 2016 - September 2016",
+    company: "Electronics Technician Roles",
+    role: "Hardware & Systems Intern",
+    date: "2016 - 2018",
     image: "/images/companies/lens.svg",
     responsibilities: [
-      "One month internship during my high school education in Italy.",
-      "Assisted in the development of hardware components for power lasers within the physics department.",
-      "Integrated Arduino IDE with Processing IDE and hardware components to create seamless connections.",
+      "Worked on hardware assembly, soldering, and system integration in electronics environments.",
+      "Supported development of laser-related systems in research settings.",
+      "Integrated Arduino-based systems with software tools for experimental setups."
     ],
   },
 ];
-
-// {
-//   company: "Geltec LTD Paignton, UK",
-//   role: "Electronics Technician Intern",
-//   date: "May 2016 - July 2016",
-//   image: "/images/companies/geltec.svg",
-//   responsibilities: [
-//     "Assisted in the development and documentation of a vibration detection sensor circuit for the company.",
-//     "Conducted maintenance tasks for 3D printers, amplifiers, and other electronic appliances.",
-//     "Contributed to the development of water detection sensors and optimized battery life for improved efficiency.",
-//   ],
-// },
